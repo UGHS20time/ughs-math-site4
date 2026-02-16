@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UGHS Math Material</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="homepage">
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade11.html">11th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Header / Hero -->
+<div class="header">
+    <!-- School Crest -->
+    <img src="images/UghsPR.jpg" alt="UGHS Crest" class="crest"/>
+
+    <!-- Page Title -->
+    <h1>UGHS Math Material</h1>
+
+    <!-- Description -->
+    <p class="description">Includes all material for grades 9th through 12th regarding mathematics.</p>
+</div>
+
+<!-- Grades 2x2 square -->
+<div class="grades">
+    <a href="grade9.html" class="card">
+        <i class="fas fa-calculator"></i>
+        <div class="card-title">9th Grade</div>
+        <div class="card-content">Algebra & Geometry</div>
+    </a>
+
+    <a href="grade10.html" class="card">
+        <i class="fas fa-square-root-alt"></i>
+        <div class="card-title">10th Grade</div>
+        <div class="card-content">Algebra 2 & Trigonometry</div>
+    </a>
+
+    <a href="grade11.html" class="card">
+        <i class="fas fa-chart-line"></i>
+        <div class="card-title">11th Grade</div>
+        <div class="card-content">Pre-Calculus</div>
+    </a>
+
+    <a href="grade12.html" class="card">
+        <i class="fas fa-chart-pie"></i>
+        <div class="card-title">12th Grade</div>
+        <div class="card-content">Calculus & Statistics</div>
+    </a>
+</div>
+
+<script>
+// Search index with all topics and their locations
+const searchIndex = [
+    // 9th Grade - Algebra 1
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "algebra1.html#forms-linear" },
+    
+    // 9th Grade - Geometry
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "geometry.html#unit5" },
+    { name: "Properties of Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 6", link: "geometry.html#unit6" },
+    { name: "Angles", class: "9th Grade", subject: "Geometry", unit: "Unit 7", link: "geometry.html#unit7" },
+    { name: "Volume and Surface Area", class: "9th Grade", subject: "Geometry", unit: "Unit 8", link: "geometry.html#unit8" },
+    { name: "3D Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 9", link: "geometry.html#unit9" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "geometry.html#unit10" },
+    { name: "Angle Relationships", class: "9th Grade", subject: "Geometry", unit: "Unit 11", link: "geometry.html#unit11" },
+    { name: "Proof and Logic", class: "9th Grade", subject: "Geometry", unit: "Unit 12", link: "geometry.html#unit12" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "geometry.html#unit13" },
+    
+    // 10th Grade - Algebra 2
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "algebra2.html#unit2" },
+    { name: "Factorization", class: "10th Grade", subject: "Algebra 2", unit: "Unit 3", link: "algebra2.html#unit3" },
+    { name: "Polynomial Division", class: "10th Grade", subject: "Algebra 2", unit: "Unit 4", link: "algebra2.html#unit4" },
+    { name: "Graphs of Functions", class: "10th Grade", subject: "Algebra 2", unit: "Unit 5", link: "algebra2.html#unit5" },
+    { name: "Rational Exponents", class: "10th Grade", subject: "Algebra 2", unit: "Unit 6", link: "algebra2.html#unit6" },
+    { name: "Exponential Models", class: "10th Grade", subject: "Algebra 2", unit: "Unit 7", link: "algebra2.html#unit7" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "algebra2.html#unit8" },
+    { name: "Transformations of Functions", class: "10th Grade", subject: "Algebra 2", unit: "Unit 9", link: "algebra2.html#unit9" },
+    { name: "Solving Equations", class: "10th Grade", subject: "Algebra 2", unit: "Unit 10", link: "algebra2.html#unit10" },
+    { name: "Systems of Equations", class: "10th Grade", subject: "Algebra 2", unit: "Unit 11", link: "algebra2.html#unit11" },
+    
+    // 10th Grade - Trigonometry
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "trigonometry.html#unit4" },
+    
+    // 11th Grade - Pre-Calculus
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "precalculus.html#unit1" },
+    { name: "Complex Numbers and Polar Form", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 2", link: "precalculus.html#unit2" },
+    { name: "Rational Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 3", link: "precalculus.html#unit3" },
+    { name: "Conic Sections", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 4", link: "precalculus.html#unit4" },
+    { name: "Vectors", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 5", link: "precalculus.html#unit5" },
+    { name: "Matrices", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 6", link: "precalculus.html#unit6" },
+    { name: "Probability and Combinatorics", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 7", link: "precalculus.html#unit7" },
+    { name: "Series and Sequences", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 8", link: "precalculus.html#unit8" },
+    { name: "Limits", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 9", link: "precalculus.html#unit9" },
+    
+    // 12th Grade - Calculus
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "calculus.html#unit2" },
+    { name: "Applications of Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 3", link: "calculus.html#unit3" },
+    { name: "Integration", class: "12th Grade", subject: "Calculus", unit: "Unit 4", link: "calculus.html#unit4" },
+    { name: "Differential Equations", class: "12th Grade", subject: "Calculus", unit: "Unit 5", link: "calculus.html#unit5" },
+    
+    // 12th Grade - Statistics
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "statistics.html#unit4" },
+    { name: "Bivariate Data", class: "12th Grade", subject: "Statistics", unit: "Unit 5", link: "statistics.html#unit5" },
+    { name: "Study Design", class: "12th Grade", subject: "Statistics", unit: "Unit 6", link: "statistics.html#unit6" },
+    { name: "Probability", class: "12th Grade", subject: "Statistics", unit: "Unit 7", link: "statistics.html#unit7" },
+    { name: "Counting and Combinations", class: "12th Grade", subject: "Statistics", unit: "Unit 8", link: "statistics.html#unit8" },
+    { name: "Random Variables", class: "12th Grade", subject: "Statistics", unit: "Unit 9", link: "statistics.html#unit9" },
+    { name: "Sampling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 10", link: "statistics.html#unit10" },
+    { name: "Confidence Intervals", class: "12th Grade", subject: "Statistics", unit: "Unit 11", link: "statistics.html#unit11" },
+    { name: "Significance Tests", class: "12th Grade", subject: "Statistics", unit: "Unit 12", link: "statistics.html#unit12" },
+    { name: "Two-Sample Inference", class: "12th Grade", subject: "Statistics", unit: "Unit 13", link: "statistics.html#unit13" },
+    { name: "Categorical Data Inference", class: "12th Grade", subject: "Statistics", unit: "Unit 14", link: "statistics.html#unit14" },
+    { name: "Advanced Regression", class: "12th Grade", subject: "Statistics", unit: "Unit 15", link: "statistics.html#unit15" }
+];
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+// Filter and display results
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+
+// Event listeners
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+
+// Close results when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+

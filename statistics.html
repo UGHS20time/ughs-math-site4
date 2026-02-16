@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade11.html">11th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade12.html">12th Grade</a>
+    <span>›</span>
+    Statistics
+</div>
+
+<div class="header">
+    <h1>Statistics</h1>
+    <!-- PDF link placeholder -->
+    <a href="#" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Analyzing categorical data</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#categorical-one">Analyzing one categorical variable</a></li>
+                <li><a href="#two-way-tables">Two-way tables</a></li>
+                <li><a href="#two-way-distribution">Distribution in two-way tables</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Displaying and comparing quantitative data</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#quantitative-graphs">Displaying quantitative data with graphs</a></li>
+                <li><a href="#describing-distributions">Describing and comparing distributions</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Summarizing quantitative data</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#measuring-center">Measuring center in quantitative data</a></li>
+                <li><a href="#mean-median">Mean and median</a></li>
+                <li><a href="#interquartile-range">Interquartile range</a></li>
+                <li><a href="#variance-population">Variance and standard deviation of a population</a></li>
+                <li><a href="#variance-sample">Variance and standard deviation of a sample</a></li>
+                <li><a href="#box-whisker">Box and whisker plot</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Modeling data distributions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#percentiles">Percentiles</a></li>
+                <li><a href="#z-scores">Z-scores</a></li>
+                <li><a href="#linear-transformations">Effects of linear transformations</a></li>
+                <li><a href="#density-curves">Density curves</a></li>
+                <li><a href="#normal-empirical">Normal distribution and empirical rule</a></li>
+                <li><a href="#normal-calculations">Normal distribution calculations</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit5">Unit 5: Exploring bivariate numerical data</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#scatterplots-intro">Intro to scatterplots</a></li>
+                <li><a href="#correlation">Correlation coefficients</a></li>
+                <li><a href="#trend-lines">Intro to trend lines</a></li>
+                <li><a href="#least-squares">Least-squared regression equations</a></li>
+                <li><a href="#regression-fit">Assessing the fit in least-squares regression</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit6">Unit 6: Study design</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#statistical-questions">Statistical questions</a></li>
+                <li><a href="#sampling-studies">Sampling and observational studies</a></li>
+                <li><a href="#sampling-methods">Sampling methods</a></li>
+                <li><a href="#types-studies">Types of studies</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit7">Unit 7: Probability</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#theoretical-probability">Basic theoretical probability</a></li>
+                <li><a href="#sample-space">Probability using sample space</a></li>
+                <li><a href="#set-operations">Basic set operations</a></li>
+                <li><a href="#experimental-probability">Experimental probability</a></li>
+                <li><a href="#randomness-simulation">Randomness, probability and simulation</a></li>
+                <li><a href="#addition-rule">Addition rule</a></li>
+                <li><a href="#multiplication-independent">Multiplication rule for independent events</a></li>
+                <li><a href="#multiplication-dependent">Multiplication for dependent events</a></li>
+                <li><a href="#conditional-probability">Conditional probability and independence</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit8">Unit 8: Counting, permutations, and combinations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#counting-factorial">Counting principle and factorial</a></li>
+                <li><a href="#permutations">Permutations</a></li>
+                <li><a href="#combinations">Combinations</a></li>
+                <li><a href="#combinatorics-probability">Combinatorics and probability</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit9">Unit 9: Random variables</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#discrete-random">Discrete random variables</a></li>
+                <li><a href="#continuous-random">Continuous random variables</a></li>
+                <li><a href="#transforming-random">Transforming random variables</a></li>
+                <li><a href="#combining-random">Combining random variables</a></li>
+                <li><a href="#binomial-random">Binomial Random variables</a></li>
+                <li><a href="#binomial-formulas">Binomial mean and standard deviation formulas</a></li>
+                <li><a href="#geometric-random">Geometric random variables</a></li>
+                <li><a href="#poisson">Poisson distribution</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit10">Unit 10: Sampling distribution</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#sampling-intro">Intro to sampling distribution</a></li>
+                <li><a href="#sampling-proportion">Sampling distribution of a sample proportion</a></li>
+                <li><a href="#sampling-mean">Estimating a population mean</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit11">Unit 11: Confidence intervals</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#ci-intro">Intro to confidence intervals</a></li>
+                <li><a href="#ci-proportion">Estimating a population proportion</a></li>
+                <li><a href="#ci-mean">Estimating a population mean</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit12">Unit 12: Significance tests</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#sig-tests-intro">Intro to significance tests</a></li>
+                <li><a href="#error-power">Error probabilities and power</a></li>
+                <li><a href="#tests-proportion">Tests about a population proportion</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit13">Unit 13: Two-sample inference for the difference between groups</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#comparing-populations">Comparing two populations</a></li>
+                <li><a href="#comparing-means">Comparing two means</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit14">Unit 14: Inference for categorical data</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#chi-square-goodness">Chi-square goodness of fit tests</a></li>
+                <li><a href="#chi-square-relationship">Chi-square tests for relationship</a></li>
+            </ul>
+        </div>
+
+        <div class="toc-unit">
+            <h4><a href="#unit15">Unit 15: Advanced regression</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#slopes-inference">Inference about slopes</a></li>
+                <li><a href="#nonlinear-regression">Non-linear regression</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Unit 1: Analyzing Categorical Data -->
+    <section id="unit1">
+        <h2>Unit 1: Analyzing categorical data</h2>
+
+        <article id="categorical-one">
+            <h3>Analyzing one categorical variable</h3>
+            <p><strong>Categorical data</strong> describes qualities or categories rather than numerical measurements. Analyzing one categorical variable involves determining the frequency (count) and relative frequency (proportion) of each category. This foundational analysis helps identify which categories are most common and how data is distributed across categories.</p>
+            <p><strong>Key tools for analyzing one categorical variable:</strong></p>
+            <ul>
+                <li><strong>Frequency table:</strong> Lists each category and how many observations fall into it</li>
+                <li><strong>Relative frequency:</strong> Proportion = (Frequency / Total count). Convert to percentage by multiplying by 100</li>
+                <li><strong>Bar chart:</strong> Visual representation where bar height represents frequency or relative frequency</li>
+                <li><strong>Pie chart:</strong> Shows proportions of the whole; angle for each slice = (relative frequency × 360°)</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Survey of 100 students' favorite colors:
+            <ul>
+                <li>Red: 25 students (relative frequency = 0.25 or 25%)</li>
+                <li>Blue: 40 students (relative frequency = 0.40 or 40%)</li>
+                <li>Green: 20 students (relative frequency = 0.20 or 20%)</li>
+                <li>Yellow: 15 students (relative frequency = 0.15 or 15%)</li>
+            </ul>
+            </div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If 30 out of 150 students prefer coffee, the relative frequency is <input data-answer="0.2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="two-way-tables">
+            <h3>Two-way tables</h3>
+            <p>A <strong>two-way table</strong> (also called a <strong>contingency table</strong>) displays the relationship between two categorical variables simultaneously. Rows represent categories of one variable, columns represent categories of the other, and cells show the frequency of each combination. Two-way tables reveal whether two categorical variables are associated or independent.</p>
+            <p><strong>Structure of a two-way table:</strong></p>
+            <ul>
+                <li><strong>Row totals:</strong> Sum across each row (marginal frequencies for row variable)</li>
+                <li><strong>Column totals:</strong> Sum down each column (marginal frequencies for column variable)</li>
+                <li><strong>Grand total:</strong> Sum of all cells; also equals sum of all row totals or all column totals</li>
+                <li><strong>Cell entries:</strong> Joint frequencies (counts for specific combinations)</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Two-way table of Gender × Preferred Sport:
+            <table style="width: 100%; border-collapse: collapse; margin: 10px 0;">
+            <tr style="border-bottom: 2px solid #333;">
+                <th style="padding: 8px; text-align: left; border-right: 1px solid #ddd;">Gender</th>
+                <th style="padding: 8px; text-align: center;">Basketball</th>
+                <th style="padding: 8px; text-align: center;">Soccer</th>
+                <th style="padding: 8px; text-align: center;">Tennis</th>
+                <th style="padding: 8px; text-align: center;">Total</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px; border-right: 1px solid #ddd;">Male</td>
+                <td style="padding: 8px; text-align: center;">25</td>
+                <td style="padding: 8px; text-align: center;">30</td>
+                <td style="padding: 8px; text-align: center;">15</td>
+                <td style="padding: 8px; text-align: center;"><strong>70</strong></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px; border-right: 1px solid #ddd;">Female</td>
+                <td style="padding: 8px; text-align: center;">20</td>
+                <td style="padding: 8px; text-align: center;">25</td>
+                <td style="padding: 8px; text-align: center;">35</td>
+                <td style="padding: 8px; text-align: center;"><strong>80</strong></td>
+            </tr>
+            <tr style="border-top: 2px solid #333;">
+                <td style="padding: 8px; border-right: 1px solid #ddd;"><strong>Total</strong></td>
+                <td style="padding: 8px; text-align: center;"><strong>45</strong></td>
+                <td style="padding: 8px; text-align: center;"><strong>55</strong></td>
+                <td style="padding: 8px; text-align: center;"><strong>50</strong></td>
+                <td style="padding: 8px; text-align: center;"><strong>150</strong></td>
+            </tr>
+            </table>
+            </div>
+        </article>
+
+        <article id="two-way-distribution">
+            <h3>Distribution in two-way tables</h3>
+            <p><strong>Conditional distributions</strong> describe the distribution of one variable given a specific category of the other variable. They're computed by dividing cell counts by the appropriate row or column total, not the grand total. Comparing conditional distributions reveals whether an association exists between variables.</p>
+            <p><strong>Types of distributions from a two-way table:</strong></p>
+            <ul>
+                <li><strong>Joint distribution:</strong> Frequencies (or relative frequencies) for all cell combinations</li>
+                <li><strong>Marginal distribution:</strong> Distribution of one variable ignoring the other; computed from row or column totals</li>
+                <li><strong>Conditional distribution:</strong> Distribution of one variable given a specific value of the other; divide by the marginal total of the given variable</li>
+            </ul>
+            <p><strong>Independence:</strong> Two variables are <strong>independent</strong> if the conditional distribution of one variable is the same for all categories of the other.</p>
+            <div class="example"><strong>Example:</strong> From the previous table, conditional distribution of sport preference given Male:
+            <ul>
+                <li>P(Basketball | Male) = 25/70 ≈ 0.357</li>
+                <li>P(Soccer | Male) = 30/70 ≈ 0.429</li>
+                <li>P(Tennis | Male) = 15/70 ≈ 0.214</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+
+    <!-- Unit 2: Displaying and Comparing Quantitative Data -->
+    <section id="unit2">
+        <h2>Unit 2: Displaying and comparing quantitative data</h2>
+
+        <article id="quantitative-graphs">
+            <h3>Displaying quantitative data with graphs</h3>
+            <p><strong>Quantitative data</strong> consists of numerical measurements. Selecting the appropriate graphical display is crucial for revealing patterns, trends, and outliers. Different graph types emphasize different aspects of the data distribution.</p>
+            <p><strong>Common displays for quantitative data:</strong></p>
+            <ul>
+                <li><strong>Dotplot:</strong> Each data point represented by a dot above a number line; effective for small datasets; shows individual values and clusters</li>
+                <li><strong>Histogram:</strong> Groups data into bins; bar height represents frequency in each bin; reveals overall shape, center, and spread</li>
+                <li><strong>Stemplot (stem-and-leaf):</strong> Shows actual data values organized by leading digits (stem) and trailing digits (leaf); preserves exact values while showing distribution</li>
+                <li><strong>Box plot:</strong> Displays quartiles, median, and outliers compactly; excellent for comparing multiple distributions</li>
+            </ul>
+            <p><strong>Choosing the right display:</strong> Use dotplots for small samples (< 20 observations), histograms for larger samples or continuous data, and box plots when comparing multiple groups.</p>
+            <div class="example"><strong>Example:</strong> Dataset of test scores {62, 68, 68, 73, 75, 78, 80, 82, 85, 90, 92, 95} could be displayed as histogram with bins [60-70), [70-80), [80-90), [90-100].</div>
+        </article>
+
+        <article id="describing-distributions">
+            <h3>Describing and comparing distributions</h3>
+            <p><strong>Describing a distribution</strong> involves discussing its shape, center, and spread. When comparing multiple distributions, use these characteristics to explain similarities and differences. Outliers—data points far from the overall pattern—should be identified and explained.</p>
+            <p><strong>Key characteristics for describing distributions:</strong></p>
+            <ul>
+                <li><strong>Shape:</strong> Symmetric (bell-shaped, uniform) vs. skewed (left-skewed with tail left, right-skewed with tail right); unimodal (one peak) vs. bimodal (two peaks)</li>
+                <li><strong>Center:</strong> Use median for skewed distributions, mean for symmetric distributions</li>
+                <li><strong>Spread:</strong> Compare using range, interquartile range, or standard deviation</li>
+                <li><strong>Outliers:</strong> Unusual values that don't fit the overall pattern; investigate their cause</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Distribution A is symmetric and centered at 75 with range 20. Distribution B is right-skewed, centered at 70 with range 35. Distribution B shows more variability and a tail toward higher values.</div>
+        </article>
+    </section>
+
+    <!-- Unit 3: Summarizing Quantitative Data -->
+    <section id="unit3">
+        <h2>Unit 3: Summarizing quantitative data</h2>
+
+        <article id="measuring-center">
+            <h3>Measuring center in quantitative data</h3>
+            <p>The <strong>center</strong> (or <strong>location</strong>) of a distribution is a single value representing the "typical" data point. Three common measures—mean, median, and mode—offer different perspectives on centrality.</p>
+            <ul>
+                <li><strong>Mean (average):</strong> Sum of all values divided by count; sensitive to outliers and skewness</li>
+                <li><strong>Median (middle value):</strong> 50th percentile; resistant to outliers; use for skewed data</li>
+                <li><strong>Mode:</strong> Most frequent value; the only appropriate center for categorical data</li>
+            </ul>
+            <p><strong>Choosing the appropriate measure:</strong> For symmetric distributions, mean and median are similar and interchangeable. For skewed distributions, median better represents the typical value because the mean is pulled toward the tail.</p>
+            <div class="example"><strong>Example:</strong> Dataset {5, 8, 10, 12, 100}: Mean = 27, Median = 10, Mode = none. The outlier (100) inflates the mean, making median more representative of typical values.</div>
+        </article>
+
+        <article id="mean-median">
+            <h3>Mean and median</h3>
+            <p>The <strong>mean</strong> and <strong>median</strong> are the two primary measures of center. Understanding their properties and appropriate uses is essential for statistical analysis.</p>
+            <p><strong>Mean properties:</strong></p>
+            <ul>
+                <li>Formula: x̄ = (Σx) / n (sum of all values divided by count)</li>
+                <li>Sensitive to every data point; one extreme value changes the mean significantly</li>
+                <li>Preferred for symmetric distributions without outliers</li>
+                <li>Used in most statistical inference procedures</li>
+            </ul>
+            <p><strong>Median properties:</strong></p>
+            <ul>
+                <li>Middle value when data ordered; if even number of points, average the two middle values</li>
+                <li>Resistant (robust) to outliers and extreme values</li>
+                <li>Preferred for skewed distributions or data with outliers</li>
+                <li>Represents the "typical" value when extreme values exist</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Annual salaries {$30k, $35k, $38k, $40k, $200k}: Mean = $68.6k (pulled up by outlier), Median = $38k (better represents typical salary). Choose median to report typical salary.</div>
+        </article>
+
+        <article id="interquartile-range">
+            <h3>Interquartile range</h3>
+            <p>The <strong>interquartile range (IQR)</strong> measures spread by capturing the range of the middle 50% of data. Unlike the full range, IQR is resistant to outliers and gives a clearer picture of typical variability.</p>
+            <p><strong>Quartiles and IQR:</strong></p>
+            <ul>
+                <li><strong>Q1 (first quartile):</strong> 25th percentile; 25% of data below this value</li>
+                <li><strong>Q2 (second quartile):</strong> 50th percentile; the median</li>
+                <li><strong>Q3 (third quartile):</strong> 75th percentile; 75% of data below this value</li>
+                <li><strong>IQR = Q3 − Q1:</strong> Range containing the middle 50% of data; not affected by extremes</li>
+            </ul>
+            <p><strong>Identifying outliers:</strong> A data point is typically considered an outlier if it falls below Q1 − 1.5(IQR) or above Q3 + 1.5(IQR).</p>
+            <div class="example"><strong>Example:</strong> For dataset {5, 7, 9, 11, 13, 15, 17}: Q1 = 8, Q3 = 14, IQR = 6. Outlier threshold: below 8 − 9 = −1 or above 14 + 9 = 23. No outliers in this dataset.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If Q1 = 20 and Q3 = 40, then IQR = <input data-answer="20" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="variance-population">
+            <h3>Variance and standard deviation of a population</h3>
+            <p><strong>Variance</strong> and <strong>standard deviation</strong> measure how spread out data is from the mean. Population variance (σ²) and population standard deviation (σ) describe the entire population's variability.</p>
+            <p><strong>Formulas for population parameters:</strong></p>
+            <ul>
+                <li><strong>Population variance:</strong> σ² = Σ(x − μ)² / N (sum of squared deviations divided by population size)</li>
+                <li><strong>Population standard deviation:</strong> σ = √σ² (square root of variance; same units as original data)</li>
+                <li><strong>Interpretation:</strong> Standard deviation represents average deviation from the mean</li>
+            </ul>
+            <p><strong>Why squared deviations:</strong> Squaring ensures all deviations contribute positively (eliminate negatives) and emphasizes larger deviations.</p>
+            <div class="example"><strong>Example:</strong> Population {2, 4, 6}: μ = 4. σ² = [(2−4)² + (4−4)² + (6−4)²] / 3 = 8/3 ≈ 2.67. σ = √2.67 ≈ 1.63.</div>
+        </article>
+
+        <article id="variance-sample">
+            <h3>Variance and standard deviation of a sample</h3>
+            <p>When working with sample data (not the entire population), we use <strong>sample variance</strong> (s²) and <strong>sample standard deviation</strong> (s). The denominator uses n − 1 instead of n to correct for bias and provide an unbiased estimate of the population parameters.</p>
+            <p><strong>Formulas for sample statistics:</strong></p>
+            <ul>
+                <li><strong>Sample variance:</strong> s² = Σ(x − x̄)² / (n − 1) (sum of squared deviations divided by n − 1, not n)</li>
+                <li><strong>Sample standard deviation:</strong> s = √s² (square root of sample variance)</li>
+                <li><strong>Why n − 1:</strong> Called Bessel's correction; accounts for one degree of freedom lost when estimating the mean from the sample</li>
+                <li><strong>Important:</strong> Always use n − 1 for sample data unless explicitly told otherwise</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Sample {2, 4, 6}: x̄ = 4. s² = [(2−4)² + (4−4)² + (6−4)²] / (3−1) = 8/2 = 4. s = √4 = 2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) For sample {1, 3, 5}, x̄ = <input data-answer="3" type="text"> and Σ(x − x̄)² = <input data-answer="8" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="box-whisker">
+            <h3>Box and whisker plot</h3>
+            <p>A <strong>box-and-whisker plot</strong> (or <strong>boxplot</strong>) is a compact graphical summary showing five-number summary: minimum, Q1, median, Q3, and maximum. Boxplots are excellent for comparing multiple distributions and identifying outliers visually.</p>
+            <p><strong>Components of a boxplot:</strong></p>
+            <ul>
+                <li><strong>Box:</strong> Spans from Q1 to Q3 (the IQR); vertical line inside shows median</li>
+                <li><strong>Whiskers:</strong> Lines extending from box to minimum and maximum values (or to outlier cutoff)</li>
+                <li><strong>Outliers:</strong> Plotted as individual points beyond the whiskers; show unusual values</li>
+                <li><strong>Width of box and whiskers:</strong> Reveals skewness; asymmetric whiskers indicate skewed data</li>
+            </ul>
+            <p><strong>Five-number summary:</strong> {Min, Q1, Median, Q3, Max} completely describes a distribution's location and spread.</p>
+            <div class="example"><strong>Example:</strong> Five-number summary {5, 10, 15, 20, 25}: minimum = 5, Q1 = 10, median = 15, Q3 = 20, maximum = 25. Boxplot shows balanced distribution (symmetric whiskers, median centered in box).</div>
+        </article>
+    </section>
+
+    <!-- Unit 4: Modeling Data Distributions -->
+    <section id="unit4">
+        <h2>Unit 4: Modeling data distributions</h2>
+
+        <article id="percentiles">
+            <h3>Percentiles</h3>
+            <p>A <strong>percentile</strong> is a value below which a specific percentage of observations fall. Percentiles divide data into 100 equal parts, providing detailed information about distribution position. The p-th percentile has approximately p% of the data below it.</p>
+            <p><strong>Common percentiles:</strong></p>
+            <ul>
+                <li><strong>Quartiles:</strong> 25th = Q1, 50th = median (Q2), 75th = Q3</li>
+                <li><strong>Deciles:</strong> 10th, 20th, ..., 90th percentiles (divide into 10 parts)</li>
+                <li><strong>Interpretation:</strong> If you score at the 85th percentile on a test, you performed better than 85% of test-takers</li>
+            </ul>
+            <p><strong>Finding percentiles:</strong> Order data, find the position k = (p/100) × n, then interpolate if needed.</p>
+            <div class="example"><strong>Example:</strong> In a dataset of 100 test scores, the 80th percentile is the score with 80 students scoring at or below it. If your score is at the 90th percentile, you're in the top 10%.</div>
+        </article>
+
+        <article id="z-scores">
+            <h3>Z-scores</h3>
+            <p>A <strong>z-score</strong> measures how many standard deviations a value is from the mean. Z-scores standardize data on a common scale (mean = 0, standard deviation = 1), allowing comparison of values from different distributions.</p>
+            <p><strong>Z-score formula and interpretation:</strong></p>
+            <ul>
+                <li><strong>Formula:</strong> z = (x − μ) / σ (for population) or z = (x − x̄) / s (for sample)</li>
+                <li><strong>Positive z:</strong> Value above mean</li>
+                <li><strong>Negative z:</strong> Value below mean</li>
+                <li><strong>Magnitude:</strong> |z| tells distance from mean in standard deviations; z = 2 means 2 standard deviations away</li>
+                <li><strong>Outlier detection:</strong> Values with |z| > 3 are often considered outliers in normal distributions</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Test score x = 85, mean = 75, st.dev = 5. z = (85 − 75)/5 = 2. Score is 2 standard deviations above mean. Comparing with another test (mean = 70, s.d. = 4): score 80 gives z = (80−70)/4 = 2.5, relatively further above mean.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If x = 100, μ = 90, σ = 5, then z = <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="linear-transformations">
+            <h3>Effects of linear transformations</h3>
+            <p>A <strong>linear transformation</strong> of the form x' = a + bx changes all data values by the same multiplicative and additive factors. Understanding how transformations affect distribution properties is essential for statistical modeling.</p>
+            <p><strong>Effects of linear transformation x' = a + bx:</strong></p>
+            <ul>
+                <li><strong>Mean:</strong> μ'  = a + b·μ (transformed mean affected by both a and b)</li>
+                <li><strong>Standard deviation:</strong> σ' = |b|·σ (spread scaled by absolute value of b; additive constant a doesn't affect spread)</li>
+                <li><strong>Shape:</strong> Unchanged (symmetric stays symmetric, skewed stays skewed)</li>
+                <li><strong>Example transformations:</strong> Converting temperature (°C to °F: F = 9/5·C + 32), converting units (inches to centimeters: cm = 2.54·in)</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Dataset with mean = 100, s.d. = 20. Transform: x' = 10 + 2x. New mean = 10 + 2(100) = 210. New s.d. = |2|(20) = 40. Distribution shape unchanged, but location and spread both changed.</div>
+        </article>
+
+        <article id="density-curves">
+            <h3>Density curves</h3>
+            <p>A <strong>density curve</strong> is a smooth, continuous function representing the probability distribution of data. The area under a density curve represents probability: the area between two values equals the proportion of data in that interval.</p>
+            <p><strong>Properties of density curves:</strong></p>
+            <ul>
+                <li><strong>Total area = 1:</strong> The curve must enclose exactly 1 unit of area (represents 100% of probability)</li>
+                <li><strong>Always non-negative:</strong> Density is never below the x-axis</li>
+                <li><strong>Use with continuous data:</strong> Approximates distribution for large samples of continuous variables</li>
+                <li><strong>Median:</strong> Value where 50% of area is to the left</li>
+                <li><strong>Mean:</strong> Balance point of the density curve; may differ from median if skewed</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Density curve for heights is roughly bell-shaped. Area between 170 cm and 180 cm represents proportion of population with heights in that range.</div>
+        </article>
+
+        <article id="normal-empirical">
+            <h3>Normal distribution and empirical rule</h3>
+            <p>The <strong>normal distribution</strong> (also called Gaussian distribution) is the most important continuous probability distribution in statistics. It's symmetric, bell-shaped, and described by two parameters: mean (μ) and standard deviation (σ).</p>
+            <p><strong>Normal distribution properties:</strong></p>
+            <ul>
+                <li><strong>Symmetric around mean:</strong> μ is both mean and median</li>
+                <li><strong>Described by two parameters:</strong> Mean μ and standard deviation σ completely determine the distribution</li>
+                <li><strong>Empirical Rule (68-95-99.7 rule):</strong> For normal distributions:
+                    <ul style="margin-top: 8px;">
+                        <li>≈68% of data within 1 standard deviation of mean: P(μ − σ < x < μ + σ) ≈ 0.68</li>
+                        <li>≈95% within 2 standard deviations: P(μ − 2σ < x < μ + 2σ) ≈ 0.95</li>
+                        <li>≈99.7% within 3 standard deviations: P(μ − 3σ < x < μ + 3σ) ≈ 0.997</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Test scores are normally distributed with mean = 75, s.d. = 10. About 68% of scores fall between 65 and 85. About 95% fall between 55 and 95. About 99.7% fall between 45 and 105.</div>
+        </article>
+
+        <article id="normal-calculations">
+            <h3>Normal distribution calculations</h3>
+            <p>Calculating probabilities for normal distributions requires standardization using z-scores and reference to the standard normal distribution (mean = 0, s.d. = 1). Standard normal tables or calculators provide cumulative probabilities P(Z ≤ z).</p>
+            <p><strong>Process for normal probability calculations:</strong></p>
+            <ol>
+                <li>Standardize: Convert the value x to z-score: z = (x − μ) / σ</li>
+                <li>Find probability: Use standard normal table or calculator to find P(Z ≤ z)</li>
+                <li>Adjust for direction: 
+                    <ul style="margin-top: 8px;">
+                        <li>P(X ≤ x) = P(Z ≤ z) [directly from table]</li>
+                        <li>P(X > x) = 1 − P(Z ≤ z)</li>
+                        <li>P(x₁ < X < x₂) = P(Z ≤ z₂) − P(Z ≤ z₁)</li>
+                    </ul>
+                </li>
+            </ol>
+            <div class="example"><strong>Example:</strong> Heights normally distributed, μ = 170 cm, σ = 5 cm. Find P(X > 175). z = (175−170)/5 = 1. P(Z > 1) = 1 − 0.8413 ≈ 0.1587 (about 15.87%).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If X ~ N(100, 15) and we want P(X < 85), z = <input data-answer="-1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Remaining Units 5-15 (Brief Framework) -->
+    <section id="unit5">
+        <h2>Unit 5: Exploring bivariate numerical data</h2>
+
+        <article id="scatterplots-intro">
+            <h3>Intro to scatterplots</h3>
+            <p><strong>Scatterplots</strong> display the relationship between two quantitative variables. Each point represents one observation with x-coordinate from one variable and y-coordinate from another. Scatterplots reveal associations, patterns, and potential outliers in bivariate data.</p>
+            <p><strong>Interpreting scatterplots:</strong> Look for direction (positive or negative association), form (linear or curved relationship), and strength (how close points cluster around a pattern). Strong associations show clear patterns; weak associations show scattered points with no clear trend.</p>
+            <div class="example"><strong>Example:</strong> Scatterplot of height vs. weight typically shows positive association—taller people tend to weigh more, though the relationship isn't perfect.</div>
+        </article>
+
+        <article id="correlation">
+            <h3>Correlation coefficients</h3>
+            <p>The <strong>Pearson correlation coefficient</strong> (r) quantifies the strength and direction of linear association between two quantitative variables. r ranges from −1 to 1: positive values indicate positive association, negative values indicate negative association, and 0 indicates no linear relationship.</p>
+            <p><strong>Interpretation of r:</strong> r near ±1 indicates strong linear relationship; r near 0 indicates weak linear relationship. r² (coefficient of determination) represents the proportion of variation in one variable explained by the other.</p>
+            <div class="example"><strong>Example:</strong> Height and weight: r ≈ 0.7 (strong positive correlation). Study hours and test score: r ≈ 0.8 (strong positive). Temperature and ice cream sales: r ≈ 0.9 (very strong positive).</div>
+        </article>
+
+        <article id="trend-lines">
+            <h3>Intro to trend lines</h3>
+            <p>A <strong>trend line</strong> (or line of best fit) summarizes the linear relationship between two variables. It shows the general direction and rate of change in the data, useful for prediction and understanding association strength.</p>
+            <div class="example"><strong>Example:</strong> Trend line through scatterplot of house size vs. price shows that each additional 100 square feet adds approximately $10,000 to house price.</div>
+        </article>
+
+        <article id="least-squares">
+            <h3>Least-squared regression equations</h3>
+            <p>The <strong>least-squares regression line</strong> minimizes the sum of squared vertical distances (residuals) from points to the line. The equation is ŷ = a + bx, where b (slope) and a (y-intercept) are calculated to minimize prediction error.</p>
+            <p><strong>Regression formulas:</strong> Slope b = r(sy/sx) and intercept a = ȳ − b·x̄, where r is correlation, sy and sx are standard deviations.</p>
+            <div class="example"><strong>Example:</strong> Regression of test score (y) on study hours (x) might give ŷ = 50 + 5x, meaning expected score increases by 5 points per hour studied, with base score 50.</div>
+        </article>
+
+        <article id="regression-fit">
+            <h3>Assessing the fit in least-squares regression</h3>
+            <p>The <strong>coefficient of determination</strong> (R² or r²) measures how well the regression line fits the data, representing the proportion of variation in y explained by x. Residual plots (scatter of residuals vs. predicted values) reveal whether linear regression assumptions are reasonable.</p>
+            <div class="example"><strong>Example:</strong> R² = 0.81 means 81% of variation in y is explained by x; 19% remains unexplained (due to other factors or random variation).</div>
+        </article>
+    </section>
+
+    <!-- Unit 6-15 Summary Sections (Abbreviated) -->
+    <section id="unit6">
+        <h2>Unit 6: Study design</h2>
+        <article id="statistical-questions">
+            <h3>Statistical questions</h3>
+            <p>A <strong>statistical question</strong> anticipates variability in answers and asks about distributions, not single values. "How many students are in our class?" is not statistical (definite answer). "How tall are 10th graders?" is statistical (varied answers).</p>
+        </article>
+        <article id="sampling-studies">
+            <h3>Sampling and observational studies</h3>
+            <p><strong>Observational studies</strong> observe subjects without intervention; cannot establish causation. <strong>Randomized experiments</strong> randomly assign subjects to treatments; can establish causation by controlling confounding variables.</p>
+        </article>
+        <article id="sampling-methods">
+            <h3>Sampling methods</h3>
+            <p><strong>Simple random sampling:</strong> Every individual equally likely chosen. <strong>Stratified sampling:</strong> Population divided into strata; random sample from each. <strong>Cluster sampling:</strong> Random selection of clusters, then sample all individuals in clusters.</p>
+        </article>
+        <article id="types-studies">
+            <h3>Types of studies</h3>
+            <p><strong>Surveys:</strong> Observational; ask questions. <strong>Experiments:</strong> Manipulate variables; assign subjects to treatments. <strong>Observational studies:</strong> Collect data without intervention; cannot infer causation.</p>
+        </article>
+    </section>
+
+    <section id="unit7">
+        <h2>Unit 7: Probability</h2>
+        <article id="theoretical-probability">
+            <h3>Basic theoretical probability</h3>
+            <p><strong>Theoretical probability</strong> P(A) = (number of favorable outcomes) / (total number of equally likely outcomes). Used when outcomes are equally likely (fair dice, coins, cards).</p>
+            <div class="example"><strong>Example:</strong> P(rolling 2 on fair die) = 1/6.</div>
+        </article>
+        <article id="sample-space">
+            <h3>Probability using sample space</h3>
+            <p>The <strong>sample space</strong> is the set of all possible outcomes. Listing or visualizing the sample space systematically ensures we count all outcomes.</p>
+        </article>
+        <article id="set-operations">
+            <h3>Basic set operations</h3>
+            <p><strong>Complement:</strong> A' is all outcomes not in A. <strong>Union:</strong> A ∪ B contains outcomes in A or B (or both). <strong>Intersection:</strong> A ∩ B contains outcomes in both A and B.</p>
+        </article>
+        <article id="experimental-probability">
+            <h3>Experimental probability</h3>
+            <p><strong>Experimental probability</strong> P(A) = (number of times A occurred) / (total number of trials). Approaches theoretical probability as trials increase (Law of Large Numbers).</p>
+        </article>
+        <article id="randomness-simulation">
+            <h3>Randomness, probability and simulation</h3>
+            <p><strong>Simulation</strong> uses random experiments to approximate probability of complex events. Random number generators or physical methods (dice, spinners) provide randomness.</p>
+        </article>
+        <article id="addition-rule">
+            <h3>Addition rule</h3>
+            <p><strong>Addition rule:</strong> P(A ∪ B) = P(A) + P(B) − P(A ∩ B). The subtraction term prevents double-counting when A and B overlap.</p>
+            <div class="example"><strong>Example:</strong> P(card is red or ace) = P(red) + P(ace) − P(red ace) = 26/52 + 4/52 − 2/52 = 28/52 = 7/13.</div>
+        </article>
+        <article id="multiplication-independent">
+            <h3>Multiplication rule for independent events</h3>
+            <p><strong>For independent events:</strong> P(A and B) = P(A) × P(B). Events are independent if occurrence of one doesn't affect probability of the other.</p>
+            <div class="example"><strong>Example:</strong> P(heads on 1st flip and tails on 2nd flip) = 0.5 × 0.5 = 0.25.</div>
+        </article>
+        <article id="multiplication-dependent">
+            <h3>Multiplication for dependent events</h3>
+            <p><strong>For dependent events:</strong> P(A and B) = P(A) × P(B|A), where P(B|A) is conditional probability of B given A occurred.</p>
+        </article>
+        <article id="conditional-probability">
+            <h3>Conditional probability and independence</h3>
+            <p><strong>Conditional probability:</strong> P(A|B) = P(A ∩ B) / P(B) (probability of A given B happened). Events are independent if P(A|B) = P(A).</p>
+        </article>
+    </section>
+
+    <section id="unit8">
+        <h2>Unit 8: Counting, permutations, and combinations</h2>
+        <article id="counting-factorial">
+            <h3>Counting principle and factorial</h3>
+            <p><strong>Fundamental Counting Principle:</strong> If task 1 has m ways and task 2 has n ways, combined task has m × n ways. <strong>Factorial:</strong> n! = n × (n−1) × ... × 1; represents arrangements of n distinct objects.</p>
+            <div class="example"><strong>Example:</strong> 5! = 5 × 4 × 3 × 2 × 1 = 120.</div>
+        </article>
+        <article id="permutations">
+            <h3>Permutations</h3>
+            <p><strong>Permutations</strong> count ordered arrangements. nPr = n! / (n−r)! counts ways to arrange r objects from n objects where order matters.</p>
+            <div class="example"><strong>Example:</strong> 5P3 = 5! / 2! = 60 ways to arrange 3 items from 5.</div>
+        </article>
+        <article id="combinations">
+            <h3>Combinations</h3>
+            <p><strong>Combinations</strong> count unordered selections. nCr = n! / [r!(n−r)!] counts ways to choose r objects from n objects where order doesn't matter.</p>
+            <div class="example"><strong>Example:</strong> 5C3 = 5! / (3!×2!) = 10 ways to choose 3 items from 5.</div>
+        </article>
+        <article id="combinatorics-probability">
+            <h3>Combinatorics and probability</h3>
+            <p>Combine counting techniques with probability: P(event) = (# favorable outcomes) / (# total outcomes) where counting determines both numerator and denominator.</p>
+        </article>
+    </section>
+
+    <section id="unit9">
+        <h2>Unit 9: Random variables</h2>
+        <article id="discrete-random">
+            <h3>Discrete random variables</h3>
+            <p>A <strong>discrete random variable</strong> takes on countable values. Its <strong>probability distribution</strong> lists each value and its probability; probabilities sum to 1. Mean μ = Σ(x·P(x)), variance σ² = Σ([x−μ]²·P(x)).</p>
+        </article>
+        <article id="continuous-random">
+            <h3>Continuous random variables</h3>
+            <p><strong>Continuous random variables</strong> take any value in an interval; described by density curves. Probability for specific value is 0; probabilities are areas under the curve.</p>
+        </article>
+        <article id="transforming-random">
+            <h3>Transforming random variables</h3>
+            <p>Linear transformation of random variable: if Y = a + bX, then E(Y) = a + b·E(X) and Var(Y) = b²·Var(X).</p>
+        </article>
+        <article id="combining-random">
+            <h3>Combining random variables</h3>
+            <p>If X and Y are independent: E(X + Y) = E(X) + E(Y) and Var(X + Y) = Var(X) + Var(Y).</p>
+        </article>
+        <article id="binomial-random">
+            <h3>Binomial Random variables</h3>
+            <p><strong>Binomial setting:</strong> Fixed number n of independent trials, two outcomes (success/failure), constant probability p of success. X ~ Binomial(n,p) counts successes.</p>
+        </article>
+        <article id="binomial-formulas">
+            <h3>Binomial mean and standard deviation formulas</h3>
+            <p>For X ~ Binomial(n,p): μ = np, σ = √(np(1−p)). Use when checking if normal approximation is reasonable (np ≥ 10 and n(1−p) ≥ 10).</p>
+        </article>
+        <article id="geometric-random">
+            <h3>Geometric random variables</h3>
+            <p><strong>Geometric:</strong> Number of trials until first success. X ~ Geometric(p) has μ = 1/p, σ = √((1−p)/p²).</p>
+        </article>
+        <article id="poisson">
+            <h3>Poisson distribution</h3>
+            <p><strong>Poisson:</strong> Counts rare events in fixed time/space; uses parameter λ (average rate). X ~ Poisson(λ) has μ = λ, σ = √λ.</p>
+        </article>
+    </section>
+
+    <section id="unit10">
+        <h2>Unit 10: Sampling distribution</h2>
+        <article id="sampling-intro">
+            <h3>Intro to sampling distribution</h3>
+            <p>A <strong>sampling distribution</strong> describes the distribution of a sample statistic (like sample mean) across all possible samples of fixed size. Central Limit Theorem states sample means are approximately normal for large n.</p>
+        </article>
+        <article id="sampling-proportion">
+            <h3>Sampling distribution of a sample proportion</h3>
+            <p>For sample proportion p̂ from samples of size n: μ(p̂) = p, σ(p̂) = √(p(1−p)/n). Approximately normal when np ≥ 10 and n(1−p) ≥ 10.</p>
+        </article>
+        <article id="sampling-mean">
+            <h3>Estimating a population mean</h3>
+            <p>Sample mean x̄ is unbiased estimator of population mean μ. Standard error SE(x̄) = σ/√n decreases as sample size increases, giving more precise estimates.</p>
+        </article>
+    </section>
+
+    <section id="unit11">
+        <h2>Unit 11: Confidence intervals</h2>
+        <article id="ci-intro">
+            <h3>Intro to confidence intervals</h3>
+            <p>A <strong>confidence interval</strong> (CI) is a range of plausible values for a parameter, computed from sample data. Confidence level (90%, 95%, 99%) indicates the long-run success rate if procedure repeated.</p>
+        </article>
+        <article id="ci-proportion">
+            <h3>Estimating a population proportion</h3>
+            <p>For population proportion: p̂ ± z* √(p̂(1−p̂)/n), where z* depends on confidence level (1.96 for 95%).</p>
+        </article>
+        <article id="ci-mean">
+            <h3>Estimating a population mean</h3>
+            <p>For population mean: x̄ ± t* (s/√n) when σ unknown, using t-distribution with df = n−1.</p>
+        </article>
+    </section>
+
+    <section id="unit12">
+        <h2>Unit 12: Significance tests</h2>
+        <article id="sig-tests-intro">
+            <h3>Intro to significance tests</h3>
+            <p><strong>Significance test</strong> (hypothesis test) evaluates whether evidence contradicts a null hypothesis H₀. P-value measures strength of evidence: small p-value (usually < 0.05) suggests rejecting H₀ in favor of alternative Ha.</p>
+        </article>
+        <article id="error-power">
+            <h3>Error probabilities and power</h3>
+            <p><strong>Type I error (α):</strong> Reject H₀ when true. <strong>Type II error (β):</strong> Fail to reject H₀ when false. <strong>Power:</strong> 1−β = probability correctly rejecting false H₀.</p>
+        </article>
+        <article id="tests-proportion">
+            <h3>Tests about a population proportion</h3>
+            <p>Test H₀: p = p₀ using z-statistic z = (p̂−p₀)/√(p₀(1−p₀)/n), compare to standard normal distribution.</p>
+        </article>
+    </section>
+
+    <section id="unit13">
+        <h2>Unit 13: Two-sample inference for the difference between groups</h2>
+        <article id="comparing-populations">
+            <h3>Comparing two populations</h3>
+            <p>Compare two population proportions using difference p̂₁ − p̂₂, standard error SE = √(p̂₁(1−p̂₁)/n₁ + p̂₂(1−p̂₂)/n₂), and confidence interval or hypothesis test.</p>
+        </article>
+        <article id="comparing-means">
+            <h3>Comparing two means</h3>
+            <p>Compare two population means using difference x̄₁ − x̄₂, t-statistic with pooled or unpooled variance, and t-distribution with appropriate degrees of freedom.</p>
+        </article>
+    </section>
+
+    <section id="unit14">
+        <h2>Unit 14: Inference for categorical data</h2>
+        <article id="chi-square-goodness">
+            <h3>Chi-square goodness of fit tests</h3>
+            <p>Test whether categorical variable distribution matches hypothesized distribution using χ² = Σ[(O−E)²/E], where O = observed, E = expected frequencies.</p>
+        </article>
+        <article id="chi-square-relationship">
+            <h3>Chi-square tests for relationship</h3>
+            <p>Test independence of two categorical variables using two-way table and χ² statistic; large values indicate association.</p>
+        </article>
+    </section>
+
+    <section id="unit15">
+        <h2>Unit 15: Advanced regression</h2>
+        <article id="slopes-inference">
+            <h3>Inference about slopes</h3>
+            <p>Test whether regression slope β differs from 0 using t-statistic; confidence interval for slope describes estimated change in y per unit x with associated uncertainty.</p>
+        </article>
+        <article id="nonlinear-regression">
+            <h3>Non-linear regression</h3>
+            <p>Model curves by transforming variables (logs, powers) or fitting polynomials; interpret transformed relationships carefully.</p>
+        </article>
+    </section>
+
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>

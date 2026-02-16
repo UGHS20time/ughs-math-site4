@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12th Grade Math</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade11.html">11th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    12th Grade
+</div>
+
+<div class="header">
+    <h1>12th Grade Mathematics</h1>
+</div>
+
+<div class="grades">
+    <!-- Pre-Calculus -->
+    <a href="calculus.html" class="topic-card">
+        <div class="topic-card-title">Calculus</div>
+        <div class="topic-card-content">Prof. Juan Mulero Torres</div>
+    </a>
+
+    <a href="statistics.html" class="topic-card">
+        <div class="topic-card-title">Statistics</div>
+        <div class="topic-card-content">Prof. Norberto Hernández Ramos</div>
+    </a>
+</div>
+
+<script>
+    const searchIndex = [
+        // Algebra 1
+        { name: 'Algebra 1', class: 'Grade 9', subject: 'Algebra', unit: 'Full Course', link: 'algebra1.html' },
+        { name: 'Polynomials', class: 'Grade 9', subject: 'Algebra', unit: 'Unit 5', link: 'algebra1.html#unit5' },
+        { name: 'Quadratic Functions', class: 'Grade 9', subject: 'Algebra', unit: 'Unit 6', link: 'algebra1.html#unit6' },
+        { name: 'Radical Expressions', class: 'Grade 9', subject: 'Algebra', unit: 'Unit 7', link: 'algebra1.html#unit7' },
+        { name: 'Exponential Functions', class: 'Grade 9', subject: 'Algebra', unit: 'Unit 8', link: 'algebra1.html#unit8' },
+        
+        // Geometry
+        { name: 'Geometry', class: 'Grade 9', subject: 'Geometry', unit: 'Full Course', link: 'geometry.html' },
+        { name: 'Lines and Angles', class: 'Grade 9', subject: 'Geometry', unit: 'Unit 1', link: 'geometry.html#unit1' },
+        { name: 'Triangles and Congruence', class: 'Grade 9', subject: 'Geometry', unit: 'Unit 2', link: 'geometry.html#unit2' },
+        { name: 'Similarity and Proportions', class: 'Grade 9', subject: 'Geometry', unit: 'Unit 3', link: 'geometry.html#unit3' },
+        { name: 'Circles', class: 'Grade 9', subject: 'Geometry', unit: 'Unit 4', link: 'geometry.html#unit4' },
+        
+        // Algebra 2
+        { name: 'Algebra 2', class: 'Grade 10', subject: 'Algebra', unit: 'Full Course', link: 'algebra2.html' },
+        { name: 'Polynomials and Factoring', class: 'Grade 10', subject: 'Algebra', unit: 'Unit 1', link: 'algebra2.html#unit1' },
+        { name: 'Rational Expressions', class: 'Grade 10', subject: 'Algebra', unit: 'Unit 2', link: 'algebra2.html#unit2' },
+        { name: 'Exponential and Logarithmic Functions', class: 'Grade 10', subject: 'Algebra', unit: 'Unit 3', link: 'algebra2.html#unit3' },
+        { name: 'Sequences and Series', class: 'Grade 10', subject: 'Algebra', unit: 'Unit 4', link: 'algebra2.html#unit4' },
+        
+        // Trigonometry
+        { name: 'Trigonometry', class: 'Grade 10', subject: 'Trigonometry', unit: 'Full Course', link: 'trigonometry.html' },
+        { name: 'Right Triangle Trigonometry', class: 'Grade 10', subject: 'Trigonometry', unit: 'Unit 1', link: 'trigonometry.html#unit1' },
+        { name: 'Unit Circle and Radians', class: 'Grade 10', subject: 'Trigonometry', unit: 'Unit 2', link: 'trigonometry.html#unit2' },
+        { name: 'Trigonometric Functions', class: 'Grade 10', subject: 'Trigonometry', unit: 'Unit 3', link: 'trigonometry.html#unit3' },
+        { name: 'Trigonometric Identities', class: 'Grade 10', subject: 'Trigonometry', unit: 'Unit 4', link: 'trigonometry.html#unit4' },
+        
+        // Pre-Calculus
+        { name: 'Pre-Calculus', class: 'Grade 11', subject: 'Pre-Calculus', unit: 'Full Course', link: 'precalculus.html' },
+        { name: 'Polynomial and Rational Functions', class: 'Grade 11', subject: 'Pre-Calculus', unit: 'Unit 1', link: 'precalculus.html#unit1' },
+        { name: 'Trigonometric Functions and Graphs', class: 'Grade 11', subject: 'Pre-Calculus', unit: 'Unit 2', link: 'precalculus.html#unit2' },
+        { name: 'Conic Sections', class: 'Grade 11', subject: 'Pre-Calculus', unit: 'Unit 3', link: 'precalculus.html#unit3' },
+        { name: 'Systems of Equations and Inequalities', class: 'Grade 11', subject: 'Pre-Calculus', unit: 'Unit 4', link: 'precalculus.html#unit4' },
+        
+        // Calculus
+        { name: 'Calculus', class: 'Grade 12', subject: 'Calculus', unit: 'Full Course', link: 'calculus.html' },
+        { name: 'Limits and Continuity', class: 'Grade 12', subject: 'Calculus', unit: 'Unit 1', link: 'calculus.html#unit1' },
+        { name: 'Derivatives', class: 'Grade 12', subject: 'Calculus', unit: 'Unit 2', link: 'calculus.html#unit2' },
+        { name: 'Applications of Derivatives', class: 'Grade 12', subject: 'Calculus', unit: 'Unit 3', link: 'calculus.html#unit3' },
+        { name: 'Integration', class: 'Grade 12', subject: 'Calculus', unit: 'Unit 4', link: 'calculus.html#unit4' },
+        
+        // Statistics
+        { name: 'Statistics', class: 'Grade 12', subject: 'Statistics', unit: 'Full Course', link: 'statistics.html' },
+        { name: 'Data Collection and Sampling', class: 'Grade 12', subject: 'Statistics', unit: 'Unit 1', link: 'statistics.html#unit1' },
+        { name: 'Descriptive Statistics', class: 'Grade 12', subject: 'Statistics', unit: 'Unit 2', link: 'statistics.html#unit2' },
+        { name: 'Probability', class: 'Grade 12', subject: 'Statistics', unit: 'Unit 3', link: 'statistics.html#unit3' },
+        { name: 'Inferential Statistics', class: 'Grade 12', subject: 'Statistics', unit: 'Unit 4', link: 'statistics.html#unit4' }
+    ];
+    
+    function performSearch(query) {
+        const resultsDiv = document.getElementById('searchResults');
+        if (!query.trim()) {
+            resultsDiv.innerHTML = '';
+            return;
+        }
+        
+        const filtered = searchIndex.filter(item => 
+            item.name.toLowerCase().includes(query.toLowerCase()) ||
+            item.subject.toLowerCase().includes(query.toLowerCase()) ||
+            item.unit.toLowerCase().includes(query.toLowerCase())
+        );
+        
+        if (filtered.length === 0) {
+            resultsDiv.innerHTML = '<div class="search-result">No results found</div>';
+            return;
+        }
+        
+        resultsDiv.innerHTML = filtered.map(item => `
+            <a href="${item.link}" class="search-result">
+                <div class="search-result-title">${item.name}</div>
+                <div class="search-result-meta">
+                    <span class="badge badge-class">${item.class}</span>
+                    <span class="badge badge-subject">${item.subject}</span>
+                    <span class="badge badge-unit">${item.unit}</span>
+                </div>
+            </a>
+        `).join('');
+    }
+    
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    
+    searchInput.addEventListener('input', (e) => performSearch(e.target.value));
+    searchInput.addEventListener('focus', (e) => performSearch(e.target.value));
+    
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.search-container')) {
+            searchResults.innerHTML = '';
+        }
+    });
+</script>
+</html>

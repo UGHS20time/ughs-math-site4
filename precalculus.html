@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pre-Calculus</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade11.html">11th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade11.html">11th Grade</a>
+    <span>›</span>
+    Pre-Calculus
+</div>
+
+<div class="header">
+    <h1>Pre-Calculus</h1>
+    <!-- PDF link placeholder -->
+    <a href="prontuarios/Copia de PRECALCULO (PRONT) 2024-25.pdf" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Composite and inverse functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#compose-functions">Composing functions</a></li>
+                <li><a href="#invertible-functions">Invertible functions</a></li>
+                <li><a href="#inverse-functions">Inverse functions</a></li>
+                <li><a href="#verify-inverses">Verifying inverse functions by composition</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Complex numbers</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#complex-plane">Complex plane</a></li>
+                <li><a href="#complex-distance">Distance and midpoint of complex numbers</a></li>
+                <li><a href="#complex-conjugates">Complex conjugates and dividing complex numbers</a></li>
+                <li><a href="#complex-identities">Identities with complex numbers</a></li>
+                <li><a href="#complex-mod-arg">Modulus and argument of complex numbers</a></li>
+                <li><a href="#complex-polar">Polar form of complex numbers</a></li>
+                <li><a href="#complex-polar-ops">Multiplying and dividing complex numbers in polar form</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Rational functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#rational-reduce">Reducing rational expressions to lowest terms</a></li>
+                <li><a href="#rational-end">End behavior of rational functions</a></li>
+                <li><a href="#rational-discont">Discontinuities of rational functions</a></li>
+                <li><a href="#rational-graphs">Graphs of rational functions</a></li>
+                <li><a href="#rational-mult-div">Multiplying and dividing rational expressions</a></li>
+                <li><a href="#rational-add-sub">Adding and subtracting rational expressions</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Conic sections</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#conic-intro">Intro to conic sections</a></li>
+                <li><a href="#ellipse-center">Center and radii of an ellipse</a></li>
+                <li><a href="#ellipse-foci">Foci of an ellipse</a></li>
+                <li><a href="#hyperbola-intro">Intro to hyperbolas</a></li>
+                <li><a href="#hyperbola-foci">Foci of a hyperbola</a></li>
+                <li><a href="#hyperbola-shifted">Hyperbolas not centered at the origin</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit5">Unit 5: Vectors</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#vectors-intro">Intro to vectors</a></li>
+                <li><a href="#vector-components">Vector components</a></li>
+                <li><a href="#vector-magnitude">Magnitude of vectors</a></li>
+                <li><a href="#vector-scalar">Scalar multiplication</a></li>
+                <li><a href="#vector-add-sub">Vector addition and subtraction</a></li>
+                <li><a href="#vector-direction">Direction of vectors</a></li>
+                <li><a href="#vector-from-mag">Vector components from magnitude and direction</a></li>
+                <li><a href="#vector-mag-dir">Adding vectors in magnitude and direction form</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit6">Unit 6: Matrices</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#matrices-intro">Intro to matrices</a></li>
+                <li><a href="#matrices-data">Using matrices to represent data</a></li>
+                <li><a href="#matrices-scalar">Multiplying matrices by scalars</a></li>
+                <li><a href="#matrices-add-sub">Adding and subtracting matrices</a></li>
+                <li><a href="#matrices-properties">Properties of matrix addition and scalar multiplication</a></li>
+                <li><a href="#matrices-inverses">Matrix inverses</a></li>
+                <li><a href="#matrices-systems">Solving linear systems with matrices</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit7">Unit 7: Probability and combinatorics</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#prob-venn">Venn diagrams and the addition rule</a></li>
+                <li><a href="#prob-mult">Multiplication rule for probabilities</a></li>
+                <li><a href="#prob-perm">Permutations</a></li>
+                <li><a href="#prob-comb">Combinations</a></li>
+                <li><a href="#prob-comb-apply">Probability using combinatorics</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit8">Unit 8: Series</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#series-geom">Geometric series</a></li>
+                <li><a href="#series-binomial">The binomial theorem</a></li>
+                <li><a href="#series-arith">Arithmetic series</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit9">Unit 9: Limits and continuity</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#limits-notation">Defining limits using limit notation</a></li>
+                <li><a href="#limits-graphs">Estimating values from graphs</a></li>
+                <li><a href="#limits-tables">Estimating limit from tables and graphs</a></li>
+                <li><a href="#limits-properties">Limit properties</a></li>
+                <li><a href="#limits-algebra">Algebraic manipulation</a></li>
+                <li><a href="#limits-discont">Removing discontinuities</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="unit1">
+        <h2>Unit 1: Composite and inverse functions</h2>
+
+        <article id="compose-functions">
+            <h3>Composing functions</h3>
+            <p><strong>Function composition</strong> means using the output of one function as the input to another. Written as (f ∘ g)(x) = f(g(x)), composition chains functions together in a specific order. The key insight is that <strong>the order matters</strong>—f ∘ g is generally different from g ∘ f.</p>
+            <p><strong>How to compute (f ∘ g)(x) = f(g(x)):</strong></p>
+            <ol>
+                <li>Evaluate the inside function first: compute g(x)</li>
+                <li>Take that result and use it as input to f: compute f(result)</li>
+                <li>Simplify the overall expression if possible</li>
+            </ol>
+            <p><strong>Domain of composition:</strong> x must be in the domain of g, AND g(x) must be in the domain of f.</p>
+            <div class="example"><strong>Example:</strong> If f(x) = 2x + 1 and g(x) = x², then:
+            <ul>
+                <li>f(g(x)) = f(x²) = 2(x²) + 1 = 2x² + 1</li>
+                <li>g(f(x)) = g(2x + 1) = (2x + 1)² = 4x² + 4x + 1</li>
+                <li>Notice f ∘ g ≠ g ∘ f (composition order matters!)</li>
+            </ul>
+            </div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = x + 3 and g(x) = 2x, find f(g(x)) = <input data-answer="2x+3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="invertible-functions">
+            <h3>Invertible functions</h3>
+            <p>A function has an inverse if and only if it is <strong>one-to-one</strong> (injective)—meaning each output value comes from exactly one input value. Visually, this means the function passes the <strong>horizontal line test</strong>: every horizontal line crosses the graph at most once.</p>
+            <p><strong>Why invertibility matters:</strong> Inverse functions "undo" the original function, swapping the roles of input and output.</p>
+            <p><strong>Testing for invertibility:</strong></p>
+            <ul>
+                <li>Graph the function and apply the horizontal line test</li>
+                <li>If any horizontal line crosses the graph more than once, the function is NOT one-to-one</li>
+                <li>For many non-invertible functions, you can restrict the domain to make them invertible (e.g., f(x) = x² is not one-to-one on all reals, but is one-to-one on [0, ∞))</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> f(x) = 3x - 2 is invertible because it's a non-horizontal line (strictly increasing). Any horizontal line crosses it exactly once. f(x) = x² is NOT invertible on all reals because horizontal lines (like y = 4) cross it twice. But it IS invertible on [0, ∞).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Is f(x) = x² invertible over all real numbers? (answer: no) <input data-answer="no" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="inverse-functions">
+            <h3>Inverse functions</h3>
+            <p>The <strong>inverse function</strong> f⁻¹ reverses the action of f: if f takes x to y, then f⁻¹ takes y back to x. The graphs of f and f⁻¹ are reflections of each other across the line y = x. The domain of f⁻¹ is the range of f, and vice versa.</p>
+            <p><strong>Finding the inverse algebraically:</strong></p>
+            <ol>
+                <li>Start with y = f(x)</li>
+                <li>Swap x and y to get x = f(y)</li>
+                <li>Solve for y in terms of x</li>
+                <li>This gives y = f⁻¹(x)</li>
+            </ol>
+            <p><strong>Important notation:</strong> f⁻¹(x) means "the inverse function of f applied to x", NOT "1/f(x)". These are completely different!</p>
+            <div class="example"><strong>Example:</strong> If f(x) = 2x - 5, find f⁻¹(x):
+            <ul>
+                <li>Start: y = 2x - 5</li>
+                <li>Swap: x = 2y - 5</li>
+                <li>Solve: x + 5 = 2y, so y = (x + 5)/2</li>
+                <li>Therefore: f⁻¹(x) = (x + 5)/2</li>
+            </ul>
+            </div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = 4x + 1, find f⁻¹(x) = <input data-answer="(x-1)/4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="verify-inverses">
+            <h3>Verifying inverse functions by composition</h3>
+            <p>To confirm that two functions f and g are inverses of each other, you must verify <strong>both</strong> composition equations on their appropriate domains:</p>
+            <ul>
+                <li>f(g(x)) = x for all x in the domain of g</li>
+                <li>g(f(x)) = x for all x in the domain of f</li>
+            </ul>
+            <p>If both are true, then f and g are inverses. If either fails, they are not inverses. This composition property directly follows from the definition—each function undoes the other when applied in sequence.</p>
+            <p><strong>Why we need both directions:</strong> Checking only one direction is insufficient. For example, f(g(x)) = x might hold without g(f(x)) = x also holding, meaning they're not true inverses.</p>
+            <div class="example"><strong>Example:</strong> Verify that f(x) = 2x + 1 and g(x) = (x - 1)/2 are inverses:
+            <ul>
+                <li>f(g(x)) = f((x-1)/2) = 2((x-1)/2) + 1 = (x-1) + 1 = x ✓</li>
+                <li>g(f(x)) = g(2x+1) = ((2x+1)-1)/2 = 2x/2 = x ✓</li>
+                <li>Both check out, so they are inverses.</li>
+            </ul>
+            </div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = x - 3 and g(x) = x + 3, is f(g(x)) = x? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit2">
+        <h2>Unit 2: Complex numbers</h2>
+
+        <article id="complex-plane">
+            <h3>Complex plane</h3>
+            <p>The complex plane uses the horizontal axis for the real part and the vertical axis for the imaginary part. A + bi is plotted as the point (a, b). This lets you visualize complex numbers like points or vectors.</p>
+            <div class="example"><strong>Example:</strong> 3 - 2i is plotted at (3, -2).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Plot 1 + 4i as (1, 4). Is the imaginary part 4? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="complex-distance">
+            <h3>Distance and midpoint of complex numbers</h3>
+            <p>Distance between complex numbers is the distance between their points in the plane. Midpoint is the average of real and imaginary parts. Use the distance formula just like with ordered pairs.</p>
+            <div class="example"><strong>Example:</strong> Between 1 + i and 5 + 3i, midpoint is (3, 2) or 3 + 2i.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Midpoint of 2 + 4i and 6 + 0i is <input data-answer="4+2i" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="complex-conjugates">
+            <h3>Complex conjugates and dividing complex numbers</h3>
+            <p>The conjugate of a + bi is a - bi. Multiply by the conjugate to divide complex numbers and make the denominator real. This is called rationalizing the denominator.</p>
+            <div class="example"><strong>Example:</strong> (3 + 2i)/(1 - i) = (3 + 2i)(1 + i)/(1 + 1) = (1 + 5i)/2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Conjugate of 4 - 7i is <input data-answer="4+7i" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="complex-identities">
+            <h3>Identities with complex numbers</h3>
+            <p>Use identities like i^2 = -1 and i^4 = 1 to simplify. Powers of i repeat every four. Reduce exponents by dividing by 4 and using the remainder.</p>
+            <div class="example"><strong>Example:</strong> i^7 = i^4 * i^3 = 1 * (-i) = -i.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Simplify i^5: <input data-answer="i" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="complex-mod-arg">
+            <h3>Modulus and argument of complex numbers</h3>
+            <p>The modulus is the distance from the origin: |a + bi| = sqrt(a^2 + b^2). The argument is the angle from the positive real axis. Use arctan(b/a) and adjust for the correct quadrant.</p>
+            <div class="example"><strong>Example:</strong> |3 + 4i| = 5, and its argument is arctan(4/3).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) |5 + 12i| = <input data-answer="13" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="complex-polar">
+            <h3>Polar form of complex numbers</h3>
+            <p>Polar form is r(cos theta + i sin theta), where r is the modulus and theta is the argument. This form is useful for multiplication and division. You can also write it as r cis theta.</p>
+            <div class="example"><strong>Example:</strong> 3 + 3i has r = 3*sqrt(2) and theta = 45 degrees.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If r = 2 and theta = 0, the complex number is <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="complex-polar-ops">
+            <h3>Multiplying and dividing complex numbers in polar form</h3>
+            <p>Multiply by multiplying moduli and adding angles. Divide by dividing moduli and subtracting angles. Convert back to a + bi form if a rectangular answer is needed.</p>
+            <div class="example"><strong>Example:</strong> 2(cos 30 + i sin 30) * 3(cos 20 + i sin 20) = 6(cos 50 + i sin 50).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If r1=4, r2=2, then the product modulus is <input data-answer="8" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit3">
+        <h2>Unit 3: Rational functions</h2>
+
+        <article id="rational-reduce">
+            <h3>Reducing rational expressions to lowest terms</h3>
+            <p>Factor numerator and denominator, then cancel common factors. Always note values that make the denominator zero. Canceled factors create holes, not asymptotes.</p>
+            <div class="example"><strong>Example:</strong> (x^2 - 4)/(x^2 - x) = (x+2)(x-2)/(x(x-1)).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Reduce (x^2 - 9)/(x^2 - 3x): <input data-answer="(x+3)/(x)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="rational-end">
+            <h3>End behavior of rational functions</h3>
+            <p>End behavior depends on the degrees of numerator and denominator. Compare leading terms to find horizontal or slant asymptotes. If the numerator degree is larger by one, expect a slant asymptote.</p>
+            <div class="example"><strong>Example:</strong> (2x^2 + 1)/(x^2 - 3) has end behavior near y = 2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) For (3x^3)/(x^3 + 1), the horizontal asymptote is y = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="rational-discont">
+            <h3>Discontinuities of rational functions</h3>
+            <p>Discontinuities occur where the denominator is zero. If a factor cancels, the discontinuity is a hole; otherwise it is a vertical asymptote. Always check the original function for excluded x-values.</p>
+            <div class="example"><strong>Example:</strong> (x^2 - 1)/(x - 1) has a hole at x = 1.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) For (x+2)/(x-3), the vertical asymptote is x = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="rational-graphs">
+            <h3>Graphs of rational functions</h3>
+            <p>Graph rational functions by finding intercepts, holes, and asymptotes. Then sketch behavior in each interval. Use test points to see whether the graph is above or below the asymptotes.</p>
+            <div class="example"><strong>Example:</strong> y = 1/(x-2) has a vertical asymptote at x=2 and horizontal asymptote at y=0.</div>
+        </article>
+
+        <article id="rational-mult-div">
+            <h3>Multiplying and dividing rational expressions</h3>
+            <p>Factor and cancel before multiplying. For division, multiply by the reciprocal. Always state domain restrictions before canceling.</p>
+            <div class="example"><strong>Example:</strong> (x/2) / (x/4) = (x/2) * (4/x) = 2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) (x/3) * (6/x) = <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="rational-add-sub">
+            <h3>Adding and subtracting rational expressions</h3>
+            <p>Find a common denominator, then add or subtract numerators. Simplify the result if possible. Keep track of excluded values from every denominator.</p>
+            <div class="example"><strong>Example:</strong> 1/x + 1/(x+1) = (2x+1)/(x(x+1)).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) 1/x - 1/(x+2) has denominator <input data-answer="x(x+2)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit4">
+        <h2>Unit 4: Conic sections</h2>
+
+        <article id="conic-intro">
+            <h3>Intro to conic sections</h3>
+            <p>Conic sections are curves formed by slicing a cone: circles, ellipses, parabolas, and hyperbolas. Each has a standard equation and key features. You identify a conic by the signs and placement of x^2 and y^2 terms.</p>
+            <div class="example"><strong>Example:</strong> x^2 + y^2 = 9 is a circle of radius 3.</div>
+        </article>
+
+        <article id="ellipse-center">
+            <h3>Center and radii of an ellipse</h3>
+            <p>An ellipse centered at (h,k) has equation (x-h)^2/a^2 + (y-k)^2/b^2 = 1. The semi-axes are a and b. The larger denominator tells the direction of the major axis.</p>
+            <div class="example"><strong>Example:</strong> (x-1)^2/9 + (y+2)^2/4 = 1 has center (1,-2), radii 3 and 2.</div>
+        </article>
+
+        <article id="ellipse-foci">
+            <h3>Foci of an ellipse</h3>
+            <p>For an ellipse, c^2 = a^2 - b^2. The foci are at (h ± c, k) or (h, k ± c) depending on orientation. The foci lie on the major axis inside the ellipse.</p>
+            <div class="example"><strong>Example:</strong> For a=5, b=3, c = 4.</div>
+        </article>
+
+        <article id="hyperbola-intro">
+            <h3>Intro to hyperbolas</h3>
+            <p>A hyperbola has equation (x-h)^2/a^2 - (y-k)^2/b^2 = 1 or the reverse. It opens left-right or up-down. The signs tell which variable opens in the positive and negative direction.</p>
+            <div class="example"><strong>Example:</strong> x^2/4 - y^2/9 = 1 opens left-right.</div>
+        </article>
+
+        <article id="hyperbola-foci">
+            <h3>Foci of a hyperbola</h3>
+            <p>For a hyperbola, c^2 = a^2 + b^2. The foci are farther from the center than the vertices. This is why the branches approach but never touch the asymptotes.</p>
+            <div class="example"><strong>Example:</strong> For a=3, b=4, c = 5.</div>
+        </article>
+
+        <article id="hyperbola-shifted">
+            <h3>Hyperbolas not centered at the origin</h3>
+            <p>Shifted hyperbolas use (x-h) and (y-k) in the equation. The center moves to (h,k). Asymptotes shift the same way as the center.</p>
+            <div class="example"><strong>Example:</strong> (x-2)^2/9 - (y+1)^2/4 = 1 has center (2,-1).</div>
+        </article>
+    </section>
+
+    <section id="unit5">
+        <h2>Unit 5: Vectors</h2>
+
+        <article id="vectors-intro">
+            <h3>Intro to vectors</h3>
+            <p>Vectors have magnitude and direction and are often written as bold letters or arrows. In the plane, a vector can be written as <x, y>. Vectors can represent movement, force, or displacement.</p>
+            <div class="example"><strong>Example:</strong> v = <3, -2> represents 3 units right and 2 units down.</div>
+        </article>
+
+        <article id="vector-components">
+            <h3>Vector components</h3>
+            <p>Components are the horizontal and vertical parts of a vector. They show how far the vector moves in each direction. You can treat components like ordered pairs for calculations.</p>
+            <div class="example"><strong>Example:</strong> v = <4, 1> has components 4 and 1.</div>
+        </article>
+
+        <article id="vector-magnitude">
+            <h3>Magnitude of vectors</h3>
+            <p>Magnitude is the length of the vector: |v| = sqrt(x^2 + y^2). It is always nonnegative and represents distance from the origin.</p>
+            <div class="example"><strong>Example:</strong> |<3,4>| = 5.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) |<6,8>| = <input data-answer="10" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="vector-scalar">
+            <h3>Scalar multiplication</h3>
+            <p>Multiply each component by the scalar. This changes magnitude but not direction (unless the scalar is negative). A negative scalar flips the direction by 180 degrees.</p>
+            <div class="example"><strong>Example:</strong> 2<3, -1> = <6, -2>.</div>
+        </article>
+
+        <article id="vector-add-sub">
+            <h3>Vector addition and subtraction</h3>
+            <p>Add or subtract vectors by combining components. This gives the resultant vector. Graphically, this matches the tip-to-tail method.</p>
+            <div class="example"><strong>Example:</strong> <2,3> + <1,-4> = <3,-1>.</div>
+        </article>
+
+        <article id="vector-direction">
+            <h3>Direction of vectors</h3>
+            <p>The direction angle is found with tan(theta) = y/x, measured from the positive x-axis. Adjust the angle based on the quadrant of the vector.</p>
+            <div class="example"><strong>Example:</strong> For <3,3>, theta = 45 degrees.</div>
+        </article>
+
+        <article id="vector-from-mag">
+            <h3>Vector components from magnitude and direction</h3>
+            <p>If a vector has magnitude r and angle theta, components are <r cos(theta), r sin(theta)>. This is the same idea as converting polar coordinates to rectangular.</p>
+            <div class="example"><strong>Example:</strong> r=10, theta=0 gives <10,0>.</div>
+        </article>
+
+        <article id="vector-mag-dir">
+            <h3>Adding vectors in magnitude and direction form</h3>
+            <p>Convert each vector to components, add components, then convert back if needed. This avoids adding angles directly.</p>
+            <div class="example"><strong>Example:</strong> Add r=5 at 0 deg and r=5 at 90 deg to get <5,5>.</div>
+        </article>
+    </section>
+
+    <section id="unit6">
+        <h2>Unit 6: Matrices</h2>
+
+        <article id="matrices-intro">
+            <h3>Intro to matrices</h3>
+            <p>A matrix is a rectangular array of numbers with rows and columns. Matrices represent data and linear transformations. The size is written as rows by columns.</p>
+            <div class="example"><strong>Example:</strong> [[1, 2], [3, 4]] is a 2x2 matrix.</div>
+        </article>
+
+        <article id="matrices-data">
+            <h3>Using matrices to represent data</h3>
+            <p>Matrices store information like tables. Rows and columns can represent categories or variables. This makes it easy to apply operations to entire datasets.</p>
+            <div class="example"><strong>Example:</strong> A 2x3 matrix can represent two students and three test scores.</div>
+        </article>
+
+        <article id="matrices-scalar">
+            <h3>Multiplying matrices by scalars</h3>
+            <p>Multiply every entry in the matrix by the scalar. The matrix size does not change.</p>
+            <div class="example"><strong>Example:</strong> 2[[1,2],[3,4]] = [[2,4],[6,8]].</div>
+        </article>
+
+        <article id="matrices-add-sub">
+            <h3>Adding and subtracting matrices</h3>
+            <p>Only matrices of the same size can be added or subtracted. Add entries in the same position. The result has the same dimensions.</p>
+            <div class="example"><strong>Example:</strong> [[1,2],[3,4]] + [[2,1],[0,1]] = [[3,3],[3,5]].</div>
+        </article>
+
+        <article id="matrices-properties">
+            <h3>Properties of matrix addition and scalar multiplication</h3>
+            <p>Matrix addition is commutative and associative, and scalar multiplication distributes over addition. These properties let you simplify expressions just like with numbers.</p>
+            <div class="example"><strong>Example:</strong> A + B = B + A, and k(A + B) = kA + kB.</div>
+        </article>
+
+        <article id="matrices-inverses">
+            <h3>Matrix inverses</h3>
+            <p>A matrix inverse A^-1 satisfies A A^-1 = I. Only square matrices with nonzero determinant are invertible. Inverses undo the effect of the matrix transformation.</p>
+            <div class="example"><strong>Example:</strong> The inverse of [[1,0],[0,1]] is itself.</div>
+        </article>
+
+        <article id="matrices-systems">
+            <h3>Solving linear systems with matrices</h3>
+            <p>Systems can be written as AX = B. If A is invertible, then X = A^-1 B. This method is most useful for larger systems and consistent data.</p>
+            <div class="example"><strong>Example:</strong> Use A^-1 to solve two equations in two variables.</div>
+        </article>
+    </section>
+
+    <section id="unit7">
+        <h2>Unit 7: Probability and combinatorics</h2>
+
+        <article id="prob-venn">
+            <h3>Venn diagrams and the addition rule</h3>
+            <p>The addition rule for probability is P(A or B) = P(A) + P(B) - P(A and B). Venn diagrams help visualize overlap. Subtract the overlap so it is not counted twice.</p>
+            <div class="example"><strong>Example:</strong> If P(A)=0.6, P(B)=0.5, P(A and B)=0.2, then P(A or B)=0.9.</div>
+        </article>
+
+        <article id="prob-mult">
+            <h3>Multiplication rule for probabilities</h3>
+            <p>P(A and B) = P(A) * P(B|A). If events are independent, P(B|A) = P(B). Independence means one event does not change the probability of the other.</p>
+            <div class="example"><strong>Example:</strong> Rolling two dice: P(both 6) = 1/6 * 1/6 = 1/36.</div>
+        </article>
+
+        <article id="prob-perm">
+            <h3>Permutations</h3>
+            <p>Permutations count ordered arrangements. For n items taken r at a time: nPr = n!/(n-r)!. Order matters, so swapping two items gives a different outcome.</p>
+            <div class="example"><strong>Example:</strong> 5P2 = 5*4 = 20.</div>
+        </article>
+
+        <article id="prob-comb">
+            <h3>Combinations</h3>
+            <p>Combinations count unordered selections: nCr = n!/(r!(n-r)!). Order does not matter, so the same group is counted once.</p>
+            <div class="example"><strong>Example:</strong> 5C2 = 10.</div>
+        </article>
+
+        <article id="prob-comb-apply">
+            <h3>Probability using combinatorics</h3>
+            <p>Use combinations or permutations to count favorable outcomes over total outcomes. Choose permutations when order matters and combinations when it does not.</p>
+            <div class="example"><strong>Example:</strong> Choosing 2 hearts from 5 cards: favorable = 13C2, total = 52C2.</div>
+        </article>
+    </section>
+
+    <section id="unit8">
+        <h2>Unit 8: Series</h2>
+
+        <article id="series-geom">
+            <h3>Geometric series</h3>
+            <p>Sum of a geometric series: S_n = a(1 - r^n)/(1 - r) for r != 1. Here a is the first term and r is the common ratio.</p>
+            <div class="example"><strong>Example:</strong> 2 + 4 + 8 + 16 = 30.</div>
+        </article>
+
+        <article id="series-binomial">
+            <h3>The binomial theorem</h3>
+            <p>(a + b)^n expands into a sum with binomial coefficients. These coefficients come from Pascal's triangle. Each term has decreasing powers of a and increasing powers of b.</p>
+            <div class="example"><strong>Example:</strong> (x + 1)^3 = x^3 + 3x^2 + 3x + 1.</div>
+        </article>
+
+        <article id="series-arith">
+            <h3>Arithmetic series</h3>
+            <p>Sum of an arithmetic series: S_n = n/2 (first + last). This works because pairs of terms have the same sum.</p>
+            <div class="example"><strong>Example:</strong> 1 + 2 + 3 + 4 + 5 = 15.</div>
+        </article>
+    </section>
+
+    <section id="unit9">
+        <h2>Unit 9: Limits and continuity</h2>
+
+        <article id="limits-notation">
+            <h3>Defining limits using limit notation</h3>
+            <p>Limit notation describes the value a function approaches as x approaches a number. The symbol is lim x->a f(x). The function value at x = a can be different from the limit.</p>
+            <div class="example"><strong>Example:</strong> lim x->2 (x^2) = 4.</div>
+        </article>
+
+        <article id="limits-graphs">
+            <h3>Estimating values from graphs</h3>
+            <p>Use a graph to see what y-value the curve approaches near a point, even if the function is not defined there. The left and right sides should approach the same value for the limit to exist.</p>
+            <div class="example"><strong>Example:</strong> If the graph approaches y=3 as x->1, the limit is 3.</div>
+        </article>
+
+        <article id="limits-tables">
+            <h3>Estimating limit from tables and graphs</h3>
+            <p>Tables show values close to the target x-value from both sides. Use them with graphs to estimate limits. Compare left-hand and right-hand values to check consistency.</p>
+            <div class="example"><strong>Example:</strong> If f(1.9)=3.8 and f(2.1)=4.2, the limit near 2 is about 4.</div>
+        </article>
+
+        <article id="limits-properties">
+            <h3>Limit properties</h3>
+            <p>Limits distribute over addition, subtraction, multiplication, and division (when the denominator is not zero). These properties let you break a hard limit into easier ones.</p>
+            <div class="example"><strong>Example:</strong> lim (f+g) = lim f + lim g.</div>
+        </article>
+
+        <article id="limits-algebra">
+            <h3>Algebraic manipulation</h3>
+            <p>Factor, simplify, or rationalize to evaluate limits that give 0/0 forms. After simplifying, substitute again to finish.</p>
+            <div class="example"><strong>Example:</strong> lim x->2 (x^2-4)/(x-2) = lim x->2 (x+2) = 4.</div>
+        </article>
+
+        <article id="limits-discont">
+            <h3>Removing discontinuities</h3>
+            <p>Removable discontinuities occur when a factor cancels. Define the function at that point to make it continuous. The limit value tells what to fill in.</p>
+            <div class="example"><strong>Example:</strong> f(x) = (x^2-1)/(x-1) has a hole at x=1 but can be defined as 2 there.</div>
+        </article>
+    </section>
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>

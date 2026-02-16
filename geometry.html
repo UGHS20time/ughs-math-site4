@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geometry</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade9.html">9th Grade</a>
+    <span>›</span>
+    Geometry
+</div>
+
+<div class="header">
+    <h1>Geometry</h1>
+    <!-- PDF link placeholder -->
+    <a href="#" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Intro to area and perimeter</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#area-intuition">Area formula intuition</a></li>
+                <li><a href="#area-distributive">Area and distributive property</a></li>
+                <li><a href="#perimeter">Perimeter</a></li>
+                <li><a href="#compare-area-perimeter">Comparing area and perimeter</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Mass and volume</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#mass">Mass</a></li>
+                <li><a href="#volume">Volume</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Measuring angles</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#angles-intro">Intro to angles</a></li>
+                <li><a href="#angle-types">Angle types</a></li>
+                <li><a href="#angle-measure">Angle measurement</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Plane figures</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#quadrilaterals">Quadrilaterals</a></li>
+                <li><a href="#classify-triangles">Classifying triangles</a></li>
+                <li><a href="#parallel-perpendicular">Parallel and perpendicular</a></li>
+                <li><a href="#classify-shapes">Classifying geometric shapes</a></li>
+                <li><a href="#lines-symmetry">Lines of symmetry</a></li>
+                <li><a href="#shape-properties">Properties of shapes</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit5">Unit 5: Units of measurement</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#estimate-length">Estimating length</a></li>
+                <li><a href="#convert-mass-volume">Converting units of mass and volume</a></li>
+                <li><a href="#convert-length">Converting units of length</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit6">Unit 6: Volume</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#volume-cubes">Volume with unit cubes</a></li>
+                <li><a href="#volume-rect-prism">Volume of rectangular prisms</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit7">Unit 7: Coordinate plane</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#coord-plane-intro">Intro to coordinate plane</a></li>
+                <li><a href="#four-quadrants">Points in all four quadrants</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit8">Unit 8: Decomposing to find area</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#area-parallelograms">Area of parallelograms</a></li>
+                <li><a href="#area-triangles">Area of triangles</a></li>
+                <li><a href="#area-coord-plane">Area and perimeter on the coordinate plane</a></li>
+                <li><a href="#area-composite">Area of composite figures</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit9">Unit 9: 3D figures</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#rect-prism-volume">Rectangular prism volume</a></li>
+                <li><a href="#surface-area">Surface area</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit10">Unit 10: Circles, cylinders, cones, and spheres</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#circle-area-circ">Area and circumference of circles</a></li>
+                <li><a href="#circle-fractions">Area and circumference of fractions of circles</a></li>
+                <li><a href="#volume-cyl-sphere-cone">Volume of cylinders, spheres and cones</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit11">Unit 11: Angle relationships</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#angle-relationships">Vertical, complementary, and supplementary angles</a></li>
+                <li><a href="#missing-angles">Missing angle problems</a></li>
+                <li><a href="#parallel-transversals">Parallel lines and transversals</a></li>
+                <li><a href="#triangle-angles">Triangle angles</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit12">Unit 12: Triangle side lengths</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#construct-triangles">Constructing triangles</a></li>
+                <li><a href="#pythagorean">Pythagorean theorem</a></li>
+                <li><a href="#distance-points">Distance between points</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit13">Unit 13: Geometric transformations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#transformations-intro">Intro to transformations</a></li>
+                <li><a href="#translations">Translations</a></li>
+                <li><a href="#rotations">Rotations</a></li>
+                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#transform-properties">Properties and definitions of transformations</a></li>
+                <li><a href="#dilations">Dilations</a></li>
+                <li><a href="#congruence-similarity">Congruence and similarity</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="unit1">
+        <h2>Unit 1: Intro to area and perimeter</h2>
+
+        <article id="area-intuition">
+            <h3>Area formula intuition</h3>
+            <p>Area measures how much space a shape covers. Counting unit squares helps build intuition for why formulas work.</p>
+            <div class="example"><strong>Example:</strong> A 3 by 4 rectangle covers 12 unit squares, so area is 12.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) A 5 by 2 rectangle has area <input data-answer="10" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="area-distributive">
+            <h3>Area and distributive property</h3>
+            <p>Breaking a shape into parts shows area is additive. This matches the distributive property.</p>
+            <div class="example"><strong>Example:</strong> A 3 by 7 rectangle can be split into 3 by 5 and 3 by 2: 21 = 15 + 6.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Split 4 by 9 into 4 by 6 and 4 by 3: total area <input data-answer="36" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="perimeter">
+            <h3>Perimeter</h3>
+            <p>Perimeter is the distance around a shape. Add the lengths of all sides.</p>
+            <div class="example"><strong>Example:</strong> A 3 by 4 rectangle has perimeter 2(3 + 4) = 14.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Perimeter of a 2 by 6 rectangle is <input data-answer="16" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="compare-area-perimeter">
+            <h3>Comparing area and perimeter</h3>
+            <p>Shapes can have the same area but different perimeters, or the same perimeter but different areas.</p>
+            <div class="example"><strong>Example:</strong> A 2 by 6 rectangle and a 3 by 4 rectangle both have area 12 but different perimeters.</div>
+        </article>
+    </section>
+
+    <section id="unit2">
+        <h2>Unit 2: Mass and volume</h2>
+
+        <article id="mass">
+            <h3>Mass</h3>
+            <p>Mass measures the amount of matter in an object. It is commonly measured in grams or kilograms.</p>
+            <div class="example"><strong>Example:</strong> A textbook might have a mass of about 1 kg.</div>
+        </article>
+
+        <article id="volume">
+            <h3>Volume</h3>
+            <p>Volume measures the space inside a 3D object. It is measured in cubic units.</p>
+            <div class="example"><strong>Example:</strong> A box 2 by 3 by 4 has volume 24 cubic units.</div>
+        </article>
+    </section>
+
+    <section id="unit3">
+        <h2>Unit 3: Measuring angles</h2>
+
+        <article id="angles-intro">
+            <h3>Intro to angles</h3>
+            <p>An angle is formed by two rays with a common endpoint called the vertex. Angles measure rotation.</p>
+            <div class="example"><strong>Example:</strong> A quarter turn is a 90 degree angle.</div>
+        </article>
+
+        <article id="angle-types">
+            <h3>Angle types</h3>
+            <p>Angles are classified by their measure. Understanding angle types is essential for analyzing shapes and geometric relationships.</p>
+            <ul>
+                <li><strong>Acute angle:</strong> Measures between 0° and 90°</li>
+                <li><strong>Right angle:</strong> Measures exactly 90° (often marked with a small square)</li>
+                <li><strong>Obtuse angle:</strong> Measures between 90° and 180°</li>
+                <li><strong>Straight angle:</strong> Measures exactly 180° (forms a straight line)</li>
+                <li><strong>Reflex angle:</strong> Measures between 180° and 360°</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> 30° is acute; 90° is right; 120° is obtuse; 180° is straight.</div>
+        </article>
+
+        <article id="angle-measure">
+            <h3>Angle measurement</h3>
+            <p>Angles are measured in degrees using a protractor. Full rotation is 360 degrees.</p>
+            <div class="example"><strong>Example:</strong> Straight line angle is 180 degrees.</div>
+        </article>
+    </section>
+
+    <section id="unit4">
+        <h2>Unit 4: Plane figures</h2>
+
+        <article id="quadrilaterals">
+            <h3>Quadrilaterals</h3>
+            <p>Quadrilaterals are four-sided polygons. They are classified by their sides (parallel, equal, or perpendicular) and angles. Understanding relationships between quadrilateral types helps organize geometric properties.</p>
+            <p><strong>Main types of quadrilaterals:</strong></p>
+            <ul>
+                <li><strong>Square:</strong> All sides equal, all angles 90°, opposite sides parallel</li>
+                <li><strong>Rectangle:</strong> Opposite sides equal, all angles 90°, opposite sides parallel</li>
+                <li><strong>Rhombus:</strong> All sides equal, opposite sides parallel, opposite angles equal</li>
+                <li><strong>Parallelogram:</strong> Opposite sides parallel and equal, opposite angles equal</li>
+                <li><strong>Trapezoid:</strong> Exactly one pair of parallel sides (or at least one pair for inclusive definition)</li>
+                <li><strong>Kite:</strong> Two pairs of adjacent sides equal</li>
+            </ul>
+            <p><strong>Hierarchy:</strong> A square is a special rectangle and a special rhombus. A rectangle and rhombus are special parallelograms.</p>
+            <div class="example"><strong>Example:</strong> A rectangle has opposite sides parallel and equal, with all angles 90°. A square is a rectangle where all sides are also equal.</div>
+        </article>
+
+        <article id="classify-triangles">
+            <h3>Classifying triangles</h3>
+            <p>Triangles are classified in two ways: by their <strong>sides</strong> and by their <strong>angles</strong>. Understanding triangle classification helps identify properties and solve problems.</p>
+            <p><strong>By side lengths:</strong></p>
+            <ul>
+                <li><strong>Equilateral:</strong> All three sides equal; all three angles are 60°</li>
+                <li><strong>Isosceles:</strong> Two sides equal; two angles equal (base angles)</li>
+                <li><strong>Scalene:</strong> All three sides different; all three angles different</li>
+            </ul>
+            <p><strong>By angles:</strong></p>
+            <ul>
+                <li><strong>Acute triangle:</strong> All three angles less than 90°</li>
+                <li><strong>Right triangle:</strong> One angle equals 90°</li>
+                <li><strong>Obtuse triangle:</strong> One angle greater than 90°</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> A 3-4-5 triangle is a right triangle (one 90° angle) and scalene (all sides different). An equilateral triangle is automatically acute because each angle is 60°.</div>
+        </article>
+
+        <article id="parallel-perpendicular">
+            <h3>Parallel and perpendicular</h3>
+            <p>Parallel lines never intersect. Perpendicular lines intersect at right angles.</p>
+            <div class="example"><strong>Example:</strong> The x and y axes are perpendicular.</div>
+        </article>
+
+        <article id="classify-shapes">
+            <h3>Classifying geometric shapes</h3>
+            <p>Shapes are classified by number of sides, lengths, angles, and symmetry.</p>
+            <div class="example"><strong>Example:</strong> A square is a rectangle and a rhombus.</div>
+        </article>
+
+        <article id="lines-symmetry">
+            <h3>Lines of symmetry</h3>
+            <p>A line of symmetry splits a figure into two mirror-image halves.</p>
+            <div class="example"><strong>Example:</strong> A square has four lines of symmetry.</div>
+        </article>
+
+        <article id="shape-properties">
+            <h3>Properties of shapes</h3>
+            <p>Properties include side lengths, angle measures, parallel sides, and symmetry. These help identify shapes.</p>
+            <div class="example"><strong>Example:</strong> A rectangle has four right angles.</div>
+        </article>
+    </section>
+
+    <section id="unit5">
+        <h2>Unit 5: Units of measurement</h2>
+
+        <article id="estimate-length">
+            <h3>Estimating length</h3>
+            <p>Estimation uses familiar references to approximate length. This helps check if answers are reasonable.</p>
+            <div class="example"><strong>Example:</strong> A door is about 2 meters tall.</div>
+        </article>
+
+        <article id="convert-mass-volume">
+            <h3>Converting units of mass and volume</h3>
+            <p>Use conversion factors to change between units like grams and kilograms or liters and milliliters.</p>
+            <div class="example"><strong>Example:</strong> 1 kg = 1000 g.</div>
+        </article>
+
+        <article id="convert-length">
+            <h3>Converting units of length</h3>
+            <p>Use conversion factors like 1 m = 100 cm or 1 km = 1000 m.</p>
+            <div class="example"><strong>Example:</strong> 2.5 m = 250 cm.</div>
+        </article>
+    </section>
+
+    <section id="unit6">
+        <h2>Unit 6: Volume</h2>
+
+        <article id="volume-cubes">
+            <h3>Volume with unit cubes</h3>
+            <p>Volume can be found by counting unit cubes that fill a space. Each cube is one cubic unit.</p>
+            <div class="example"><strong>Example:</strong> A 2 by 2 by 2 cube has volume 8.</div>
+        </article>
+
+        <article id="volume-rect-prism">
+            <h3>Volume of rectangular prisms</h3>
+            <p>Volume of a rectangular prism is length x width x height.</p>
+            <div class="example"><strong>Example:</strong> A 3 by 4 by 5 prism has volume 60.</div>
+        </article>
+    </section>
+
+    <section id="unit7">
+        <h2>Unit 7: Coordinate plane</h2>
+
+        <article id="coord-plane-intro">
+            <h3>Intro to coordinate plane</h3>
+            <p>The coordinate plane uses perpendicular axes to locate points with ordered pairs (x, y).</p>
+            <div class="example"><strong>Example:</strong> The point (2, -1) is 2 right and 1 down.</div>
+        </article>
+
+        <article id="four-quadrants">
+            <h3>Points in all four quadrants</h3>
+            <p>The plane is divided into four quadrants based on the signs of x and y.</p>
+            <div class="example"><strong>Example:</strong> (-3, 4) is in Quadrant II.</div>
+        </article>
+    </section>
+
+    <section id="unit8">
+        <h2>Unit 8: Decomposing to find area</h2>
+
+        <article id="area-parallelograms">
+            <h3>Area of parallelograms</h3>
+            <p>Area = base x height. The height is perpendicular to the base.</p>
+            <div class="example"><strong>Example:</strong> Base 6, height 4 gives area 24.</div>
+        </article>
+
+        <article id="area-triangles">
+            <h3>Area of triangles</h3>
+            <p>Area = 1/2 x base x height.</p>
+            <div class="example"><strong>Example:</strong> Base 10, height 6 gives area 30.</div>
+        </article>
+
+        <article id="area-coord-plane">
+            <h3>Area and perimeter on the coordinate plane</h3>
+            <p>Use distance between points for side lengths, then apply area or perimeter formulas.</p>
+            <div class="example"><strong>Example:</strong> A rectangle with vertices (0,0), (4,0), (4,3), (0,3) has area 12.</div>
+        </article>
+
+        <article id="area-composite">
+            <h3>Area of composite figures</h3>
+            <p>Break complex shapes into simpler shapes, then add or subtract areas.</p>
+            <div class="example"><strong>Example:</strong> Find area of a shape made of a rectangle plus a triangle.</div>
+        </article>
+    </section>
+
+    <section id="unit9">
+        <h2>Unit 9: 3D figures</h2>
+
+        <article id="rect-prism-volume">
+            <h3>Rectangular prism volume</h3>
+            <p>Volume = length x width x height for rectangular prisms.</p>
+            <div class="example"><strong>Example:</strong> 2 by 3 by 7 prism has volume 42.</div>
+        </article>
+
+        <article id="surface-area">
+            <h3>Surface area</h3>
+            <p><strong>Surface area</strong> is the total area of all faces and surfaces of a 3D shape. It measures how much material you need to wrap or cover the shape. Different shapes have different formulas based on their geometry.</p>
+            <ul>
+                <li><strong>Rectangular prism (box):</strong> SA = 2(lw + lh + wh)</li>
+                <li><strong>Cube (special prism):</strong> SA = 6s² (where s = side length)</li>
+                <li><strong>Cylinder:</strong> SA = 2πr² + 2πrh (two circular bases plus lateral surface)</li>
+                <li><strong>Sphere:</strong> SA = 4πr²</li>
+            </ul>
+            <p><strong>Relationship:</strong> Volume and surface area scale differently. If you double all dimensions, volume increases by 2³ = 8 times, but surface area increases by 2² = 4 times.</p>
+            <div class="example"><strong>Example:</strong> A cube with side 2 has surface area 6(2)² = 24 square units. A cube with side 4 has surface area 6(4)² = 96 square units (4 times larger, even though volume went from 8 to 64).</div>
+        </article>
+    </section>
+
+    <section id="unit10">
+        <h2>Unit 10: Circles, cylinders, cones, and spheres</h2>
+
+        <article id="circle-area-circ">
+            <h3>Area and circumference of circles</h3>
+            <p>Circles have two fundamental measurements: <strong>circumference</strong> (the distance around) and <strong>area</strong> (the space inside). Both formulas depend on the <strong>radius</strong> r or <strong>diameter</strong> d (where d = 2r).</p>
+            <ul>
+                <li><strong>Circumference:</strong> C = 2πr or C = πd (distance around the circle)</li>
+                <li><strong>Area:</strong> A = πr² (space inside the circle)</li>
+            </ul>
+            <p><strong>Important:</strong> Always use the radius (not diameter) when calculating area. Common approximation: π ≈ 3.14 or 22/7.</p>
+            <div class="example"><strong>Example:</strong> A circle with radius 3:
+            <ul>
+                <li>Circumference = 2π(3) = 6π ≈ 18.85</li>
+                <li>Area = π(3)² = 9π ≈ 28.27</li>
+            </ul>
+            </div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Circle with radius 5 has area 25π and circumference 10π. (Are both correct?) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="circle-fractions">
+            <h3>Area and circumference of fractions of circles</h3>
+            <p>When you need the area or circumference of only <strong>part</strong> of a circle, use the fraction of the circle to adjust the full circle formulas. The fraction is typically measured as a central angle.</p>
+            <ul>
+                <li><strong>Arc length:</strong> For a central angle θ (in degrees): Arc length = (θ/360°) × 2πr</li>
+                <li><strong>Sector area:</strong> For a central angle θ: Sector area = (θ/360°) × πr²</li>
+            </ul>
+            <p><strong>Intuition:</strong> A quarter circle (90°) has 1/4 the arc length and area of the full circle. A semicircle (180°) has 1/2.</p>
+            <div class="example"><strong>Example:</strong> A sector with central angle 60° and radius 6:
+            <ul>
+                <li>Arc length = (60°/360°) × 2π(6) = (1/6) × 12π = 2π</li>
+                <li>Sector area = (60°/360°) × π(6)² = (1/6) × 36π = 6π</li>
+            </ul>
+            </div>
+        </article>
+
+        <article id="volume-cyl-sphere-cone">
+            <h3>Volume of cylinders, spheres and cones</h3>
+            <p>3D shapes formed from circles have volume formulas that extend 2D circle concepts. Each uses radius (not diameter) as the key measurement.</p>
+            <ul>
+                <li><strong>Cylinder:</strong> V = πr²h (area of circular base times height)</li>
+                <li><strong>Cone:</strong> V = (1/3)πr²h (one-third the volume of a cylinder with same base and height)</li>
+                <li><strong>Sphere:</strong> V = (4/3)πr³ (related to the sphere's radius cubed)</li>
+            </ul>
+            <p><strong>Intuition:</strong> A cone fits exactly 3 times into a cylinder of the same base and height. A sphere is roughly 2π/3 times a cube circumscribed around it.</p>
+            <div class="example"><strong>Example:</strong> A cone with radius r = 3 and height h = 9:
+            <ul>
+                <li>Volume = (1/3)π(3)²(9) = (1/3)π(81) = 27π ≈ 84.8 cubic units</li>
+                <li>Compare to a cylinder with same dimensions: V = π(3)²(9) = 81π</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit11">
+        <h2>Unit 11: Angle relationships</h2>
+
+        <article id="angle-relationships">
+            <h3>Vertical, complementary, and supplementary angles</h3>
+            <p>When two lines or angles intersect or combine, they create special relationships. Recognizing these relationships helps solve for unknown angle measures.</p>
+            <ul>
+                <li><strong>Vertical angles:</strong> Formed when two lines intersect. Non-adjacent angles are equal. Always come in two pairs.</li>
+                <li><strong>Complementary angles:</strong> Two angles that sum to 90°. Each angle is the complement of the other.</li>
+                <li><strong>Supplementary angles:</strong> Two angles that sum to 180°. Each angle is the supplement of the other. Form a linear pair.</li>
+            </ul>
+            <p><strong>Important property:</strong> Vertical angles are <strong>always</strong> equal. If you know one angle formed by two intersecting lines, you can find all four angles.</p>
+            <div class="example"><strong>Example:</strong> If two angles form a straight line and one is 110°, the other is 180° - 110° = 70° (supplementary). If two lines intersect and one angle is 55°, the vertical angle opposite it is also 55°, and the adjacent angles are each 125°.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If an angle is 35°, its complement is <input data-answer="55" type="text">° <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="missing-angles">
+            <h3>Missing angle problems</h3>
+            <p>Use angle relationships to set up equations for unknown measures.</p>
+            <div class="example"><strong>Example:</strong> If angles are complementary and one is x, the other is 90 - x.</div>
+        </article>
+
+        <article id="parallel-transversals">
+            <h3>Parallel lines and transversals</h3>
+            <p>Transversals create angle pairs like corresponding, alternate interior, and same-side interior angles.</p>
+            <div class="example"><strong>Example:</strong> Corresponding angles are equal when lines are parallel.</div>
+        </article>
+
+        <article id="triangle-angles">
+            <h3>Triangle angles</h3>
+            <p>The sum of interior angles in any triangle is 180 degrees.</p>
+            <div class="example"><strong>Example:</strong> If two angles are 50 and 60, the third is 70.</div>
+        </article>
+    </section>
+
+    <section id="unit12">
+        <h2>Unit 12: Triangle side lengths</h2>
+
+        <article id="construct-triangles">
+            <h3>Constructing triangles</h3>
+            <p>The triangle inequality says the sum of two sides must be greater than the third.</p>
+            <div class="example"><strong>Example:</strong> Sides 2, 3, and 6 do not form a triangle.</div>
+        </article>
+
+        <article id="pythagorean">
+            <h3>Pythagorean theorem</h3>
+            <p>In a right triangle, a^2 + b^2 = c^2.</p>
+            <div class="example"><strong>Example:</strong> 3^2 + 4^2 = 5^2.</div>
+        </article>
+
+        <article id="distance-points">
+            <h3>Distance between points</h3>
+            <p>Distance formula: d = sqrt((x2 - x1)^2 + (y2 - y1)^2).</p>
+            <div class="example"><strong>Example:</strong> Distance between (0,0) and (3,4) is 5.</div>
+        </article>
+    </section>
+
+    <section id="unit13">
+        <h2>Unit 13: Geometric transformations</h2>
+
+        <article id="transformations-intro">
+            <h3>Intro to transformations</h3>
+            <p>Transformations are operations that move or resize geometric figures. They preserve certain properties and are fundamental to understanding congruence and similarity. The four main types are:</p>
+            <ul>
+                <li><strong>Translations (shifts):</strong> Move every point the same distance in the same direction</li>
+                <li><strong>Rotations (turns):</strong> Turn a figure around a fixed center point by a specified angle</li>
+                <li><strong>Reflections (flips):</strong> Mirror a figure across a line of reflection</li>
+                <li><strong>Dilations (resizing):</strong> Enlarge or reduce a figure from a center point by a scale factor</li>
+            </ul>
+            <p>The first three types (translations, rotations, reflections) are <strong>rigid transformations</strong> because they preserve distance and angle measures.</p>
+            <div class="example"><strong>Example:</strong> Sliding a triangle 5 units to the right and 3 units up is a translation that preserves all side lengths and angles.</div>
+        </article>
+
+        <article id="translations">
+            <h3>Translations</h3>
+            <p>A <strong>translation</strong> (or shift) moves every point of a figure the same distance in the same direction. This preserves the shape, size, and orientation of the original figure. Translations can be described using vectors or by specifying how far to move right/left and up/down.</p>
+            <p><strong>Important:</strong> Translations are <strong>rigid transformations</strong> — all distances and angles remain unchanged.</p>
+            <div class="example"><strong>Example:</strong> If vertex A is at (1, 2) and we translate 3 units right and 2 units down, the new position is (1+3, 2-2) = (4, 0). If point B is at (3, 5), it moves to (6, 3).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Translate point (2, 3) by 4 right and 1 down: (<input data-answer="6" type="text">, <input data-answer="2" type="text">) <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="rotations">
+            <h3>Rotations</h3>
+            <p>A <strong>rotation</strong> turns a figure around a fixed point (called the <strong>center of rotation</strong>) by a specified angle. The direction of rotation is usually measured in degrees, rotating <strong>counterclockwise</strong> by convention (negative angles rotate <strong>clockwise</strong>). Every point moves the same angular distance from the center, and the distance from each point to the center remains unchanged.</p>
+            <p><strong>Special rotations:</strong></p>
+            <ul>
+                <li>90° rotation: Quarter turn</li>
+                <li>180° rotation: Half turn</li>
+                <li>270° rotation: Three-quarter turn</li>
+                <li>360° rotation: Full turn (returns to original)</li>
+            </ul>
+            <p><strong>Important:</strong> Rotations preserve all distances and angles, making them rigid transformations.</p>
+            <div class="example"><strong>Example:</strong> A 90° counterclockwise rotation of point (3, 0) about the origin moves it to (0, 3). A 180° rotation of (2, 1) about the origin moves it to (-2, -1).</div>
+        </article>
+
+        <article id="reflections">
+            <h3>Reflections</h3>
+            <p>A <strong>reflection</strong> flips a figure across a line called the <strong>line of reflection</strong>. Points on the line of reflection stay fixed, while all other points move to the opposite side of the line, equidistant from it. The result is a <strong>mirror image</strong> of the original figure.</p>
+            <p><strong>Common lines of reflection:</strong></p>
+            <ul>
+                <li><strong>Reflection across the x-axis:</strong> (x, y) → (x, -y)</li>
+                <li><strong>Reflection across the y-axis:</strong> (x, y) → (-x, y)</li>
+                <li><strong>Reflection across y = x:</strong> (x, y) → (y, x)</li>
+                <li><strong>Reflection across any vertical or horizontal line:</strong> Mirror across that line</li>
+            </ul>
+            <p><strong>Important:</strong> Reflections are rigid transformations that preserve distances and angles but reverse orientation (left becomes right, clockwise becomes counterclockwise).</p>
+            <div class="example"><strong>Example:</strong> Reflecting triangle with vertices (0,0), (2,0), (2,1) across the y-axis gives (0,0), (-2,0), (-2,1).</div>
+        </article>
+
+        <article id="transform-properties">
+            <h3>Properties and definitions of transformations</h3>
+            <p><strong>Rigid transformations</strong> preserve all distances and angle measures, meaning the image is <strong>congruent</strong> to the original. <strong>Non-rigid transformations</strong> may change distances or angles.</p>
+            <p><strong>Types of transformations:</strong></p>
+            <ul>
+                <li><strong>Rigid (isometric):</strong> Preserve all distances and angles. Translations, rotations, and reflections are rigid. Any composition of these is also rigid.</li>
+                <li><strong>Non-rigid:</strong> Change distances or angles. Dilations are non-rigid because they change size.</li>
+            </ul>
+            <p><strong>Key invariants under rigid transformations:</strong></p>
+            <ul>
+                <li>Side lengths remain the same</li>
+                <li>Angle measures remain the same</li>
+                <li>Straight lines remain straight</li>
+                <li>Parallel lines remain parallel</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> A triangle with sides 3-4-5 translated, rotated, or reflected will still have sides 3-4-5. A dilation with scale factor 2 would have sides 6-8-10.</div>
+        </article>
+
+        <article id="dilations">
+            <h3>Dilations</h3>
+            <p>A <strong>dilation</strong> resizes a figure by a <strong>scale factor</strong> k, measured from a fixed <strong>center of dilation</strong>. If k > 1, the figure enlarges; if 0 < k < 1, the figure shrinks; if k = 1, there is no change. Each point moves away from (or toward) the center such that its new distance equals k times its original distance.</p>
+            <p><strong>Important properties:</strong></p>
+            <ul>
+                <li>Angle measures are preserved</li>
+                <li>Side lengths are multiplied by the scale factor</li>
+                <li>Area is multiplied by k²</li>
+                <li>Dilation is a <strong>non-rigid</strong> transformation because it changes size</li>
+            </ul>
+            <p><strong>Scale factor effects:</strong></p>
+            <ul>
+                <li>k > 1: Enlargement</li>
+                <li>0 < k < 1: Reduction</li>
+                <li>k < 0: Dilation combined with 180° rotation</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Dilate a triangle with sides 2-3-4 by scale factor 3 from any center. The result has sides 6-9-12. If the original area is 3 square units, the new area is 3 × 3² = 27 square units.</div>
+        </article>
+
+        <article id="congruence-similarity">
+            <h3>Congruence and similarity</h3>
+            <p><strong>Congruent figures</strong> have the same size and shape. <strong>Similar figures</strong> have the same shape but different size. Understanding the distinction is crucial for solving geometry problems and proving relationships.</p>
+            <p><strong>Congruence:</strong> Two figures are <strong>congruent</strong> (denoted ≅) if one can be transformed into the other using rigid transformations (translations, rotations, reflections, or combinations). Congruent figures have:</p>
+            <ul>
+                <li>Matching side lengths</li>
+                <li>Matching angle measures</li>
+                <li>Same perimeter</li>
+                <li>Same area</li>
+            </ul>
+            <p><strong>Similarity:</strong> Two figures are <strong>similar</strong> (denoted ~) if their corresponding angles are equal and their corresponding sides are proportional. Similar figures have:</p>
+            <ul>
+                <li>Matching angle measures</li>
+                <li>Proportional side lengths (with constant ratio k)</li>
+                <li>Ratio of perimeters equals k</li>
+                <li>Ratio of areas equals k²</li>
+            </ul>
+            <p><strong>Relationship:</strong> Congruence is a special case of similarity where k = 1.</p>
+            <div class="example"><strong>Example:</strong> A 3-4-5 triangle and a 6-8-10 triangle are similar with scale factor 2 (ratio of corresponding sides). They are NOT congruent because sizes differ. A 3-4-5 triangle and another 3-4-5 triangle are congruent.</div>
+        </article>
+    </section>
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>

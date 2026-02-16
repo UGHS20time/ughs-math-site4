@@ -1,0 +1,601 @@
+/* ============================
+   Global Styles
+============================ */
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+/* ============================
+   Toolbar (top menu icon)
+============================ */
+.toolbar {
+    height: 60px;
+    background-color: #0a3d91;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.toolbar img {
+    height: 40px;
+    cursor: pointer;
+}
+
+/* ============================
+   Navbar
+============================ */
+.navbar {
+    background-color: #082f6b;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 55px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   Search Bar
+============================ */
+.search-container {
+    background-color: #0a3d91;
+    padding: 15px 20px;
+    border-bottom: 2px solid #082f6b;
+}
+
+.search-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #0a3d91;
+    box-shadow: 0 0 0 3px rgba(10, 61, 145, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    font-size: 1rem;
+}
+
+/* Search Results Dropdown */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: -4px;
+}
+
+.search-results:empty {
+    display: none;
+}
+
+.result-item {
+    display: block;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item:hover {
+    background-color: #f9f9f9;
+}
+
+.result-title {
+    font-weight: 600;
+    color: #082f6b;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+.result-info {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+}
+
+.result-class {
+    background-color: #e3f2fd;
+    color: #0a3d91;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.result-subject {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.result-unit {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.no-results {
+    padding: 16px;
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* ============================
+   Breadcrumbs
+============================ */
+.breadcrumbs {
+    max-width: 900px;
+    margin: 15px auto 0;
+    padding: 0 15px;
+    font-size: 0.95rem;
+}
+
+.breadcrumbs a {
+    color: #0a3d91;
+}
+
+.breadcrumbs span {
+    margin: 0 6px;
+    color: #666;
+}
+
+/* ============================
+   Header
+============================ */
+.header {
+    text-align: center;
+    padding: 30px 15px 10px;
+}
+
+.logo {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.description {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* ============================
+   Grades Section
+============================ */
+.grades {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 square */
+    gap: 20px;
+}
+
+/* ============================
+   Grade Cards (Clickable)
+============================ */
+.card {
+    background-color: #0a3d91; /* full blue background */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    text-decoration: none;
+    color: white; /* white text */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    background-color: #0950c5; /* slightly lighter blue on hover */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    font-size: 1.1rem;
+}
+
+/* ============================
+   Responsive Design
+============================ */
+@media (max-width: 600px) {
+    .grades {
+        grid-template-columns: 1fr; /* stack cards on small screens */
+    }
+}
+
+/* Topic Cards - same style as front page cards */
+.topic-card {
+    background-color: #0a3d91; /* full blue */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px; /* slightly smaller than front page cards */
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    background-color: #0950c5; /* hover color */
+}
+
+.topic-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.topic-card-content {
+    font-size: 1rem;
+}
+
+/* Center a single topic card in grades container */
+.grades.single {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    flex-wrap: wrap;
+    gap: 5px; /* keeps spacing if more cards are added later */
+}
+.pdf-link {
+    display: inline-block;
+    margin: 10px 0 30px 0;
+    padding: 8px 15px;
+    background-color: #0950c5; /* slightly lighter blue */
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.pdf-link:hover {
+    background-color: #0c66e0; /* hover effect */
+}
+
+/* Decorations for front page */
+
+/* -----------------------------
+   Background Gradient for Front Page
+------------------------------- */
+/* Front page gradient */
+body.homepage {
+    background: linear-gradient(120deg, #e0f0ff, #f0f6ff);
+}
+
+/* Header / Hero banner */
+.header {
+    text-align: center;
+    padding: 40px 15px 20px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/math-banner.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Description decoration */
+.description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #0a3d91;
+    margin-bottom: 40px;
+}
+
+.description::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 3px;
+    background-color: #0a3d91;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Grades 2x2 square cards */
+.grades {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Clickable blue cards */
+.card {
+    background-color: #0a3d91;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.card i {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #ffffffcc;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card-content {
+    font-size: 1.1rem;
+}
+
+.card:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 16px 25px rgba(0,0,0,0.2);
+    background-color: #0950c5;
+}
+
+/* Responsive stacking */
+@media (max-width: 600px) {
+    .grades {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* School crest above header */
+.crest {
+    height: 200px;
+    width: auto;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================
+   Units / Topic pages
+============================ */
+.units {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 0 15px;
+}
+
+.units section h2 {
+    color: #082f6b;
+    margin-bottom: 18px;
+    font-size: 1.8rem;
+}
+
+.units article {
+    background: #f4f6f9;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+    margin-bottom: 18px;
+}
+
+.units article h3 {
+    color: #0a3d91;
+    margin-top: 0;
+}
+
+.example {
+    background: #eef6ff;
+    border-left: 4px solid #0950c5;
+    padding: 10px 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+}
+
+.practice {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+.practice .problem {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.practice input[type="text"]{
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 110px;
+}
+
+.practice button{
+    background-color: #0950c5;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.practice button:hover{ background-color: #0c66e0 }
+
+.result{ margin-left: 6px; font-weight: 600 }
+
+/* Table of Contents */
+.table-of-contents {
+    background: linear-gradient(135deg, #e8f4ff 0%, #f0f8ff 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid #0950c5;
+    box-shadow: 0 4px 12px rgba(10, 61, 145, 0.08);
+}
+
+.table-of-contents h3 {
+    color: #082f6b;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.toc-unit {
+    margin-bottom: 18px;
+}
+
+.toc-unit h4 {
+    color: #082f6b;
+    margin: 0 0 10px 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.toc-unit h4 a {
+    color: #082f6b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.toc-unit h4 a:hover {
+    color: #0950c5;
+}
+
+.toc-topics {
+    list-style: none;
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+.toc-topics li {
+    margin: 6px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.toc-topics li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #0950c5;
+    font-weight: bold;
+}
+
+.toc-topics a {
+    color: #0950c5;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.toc-topics a:hover {
+    color: #0c66e0;
+    text-decoration: underline;
+}

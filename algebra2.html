@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algebra 2</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade10.html">10th Grade</a>
+    <span>›</span>
+    Algebra 2
+</div>
+
+<div class="header">
+    <h1>Algebra 2</h1>
+    <!-- PDF link placeholder -->
+    <a href="#" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Polynomial arithmetic</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#poly-arith-intro">Intro to polynomials arithmetic</a></li>
+                <li><a href="#poly-avg-rate">Average rate of change of polynomials</a></li>
+                <li><a href="#poly-add-sub">Adding and subtracting polynomials</a></li>
+                <li><a href="#poly-monomial-mult">Multiplying monomials by polynomials</a></li>
+                <li><a href="#poly-binom-mult">Multiplying binomials by polynomials</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Complex numbers</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#imaginary-unit">Imaginary Unit i</a></li>
+                <li><a href="#complex-intro">Intro to complex numbers</a></li>
+                <li><a href="#complex-plane">Complex plane</a></li>
+                <li><a href="#complex-add-sub">Adding and subtracting complex numbers</a></li>
+                <li><a href="#complex-mult">Multiplying complex numbers</a></li>
+                <li><a href="#complex-quadratic">Quadratic equations with complex solutions</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Polynomial Factorization</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#factor-monomials">Factoring monomials</a></li>
+                <li><a href="#gcf">Greatest common factor</a></li>
+                <li><a href="#common-factors">Taking common factors</a></li>
+                <li><a href="#factor-higher">Factoring higher degree polynomials</a></li>
+                <li><a href="#factor-structure">Factoring using structure</a></li>
+                <li><a href="#poly-identities">Polynomial identities</a></li>
+                <li><a href="#geometric-series">Geometric series</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Polynomial Division</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#divide-x">Dividing polynomials by x</a></li>
+                <li><a href="#divide-quad-linear">Dividing quadratics by linear factors</a></li>
+                <li><a href="#divide-poly-linear">Dividing polynomials by linear factors</a></li>
+                <li><a href="#remainder-theorem">Remainder Theorem</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit5">Unit 5: Polynomial Graphs</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#poly-zeros">Zeros of polynomials</a></li>
+                <li><a href="#poly-pos-neg">Positive and negative intervals of polynomials</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit6">Unit 6: Rational exponents and radicals</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#rational-exponents">Rational exponents</a></li>
+                <li><a href="#rational-exponent-props">Properties of rational exponents</a></li>
+                <li><a href="#eval-exponents-radicals">Evaluating exponents & radicals</a></li>
+                <li><a href="#exp-equiv-forms">Equivalent forms of exponential expressions</a></li>
+                <li><a href="#solve-exp-eq">Solving exponential equations using properties of exponents</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit7">Unit 7: Exponential models</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#exp-rate-change">Interpreting the rate of change</a></li>
+                <li><a href="#exp-models-building">Building exponential models according to rate of change</a></li>
+                <li><a href="#exp-models-advanced">Advanced interpretation of exponential models</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit8">Unit 8: Logarithms</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#log-intro">Introduction to logarithms</a></li>
+                <li><a href="#log-e">Constant e and natural logarithm</a></li>
+                <li><a href="#log-props">Properties of logarithms</a></li>
+                <li><a href="#log-change-base">Change of base formula for logarithms</a></li>
+                <li><a href="#log-solve-exp">Solving exponential equations with logarithms</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit9">Unit 9: Transformation of functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#shift-functions">Shifting functions</a></li>
+                <li><a href="#reflect-functions">Reflecting functions</a></li>
+                <li><a href="#symmetry-functions">Symmetry of functions</a></li>
+                <li><a href="#scale-functions">Scaling functions</a></li>
+                <li><a href="#graph-sqrt-cube">Graphs of square and cubre root functions</a></li>
+                <li><a href="#graph-exponential">Graphs of exponential functions</a></li>
+                <li><a href="#graph-log">Graphs of logarithmic funcitons</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit10">Unit 10: Equations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#rational-eq">Rational equations</a></li>
+                <li><a href="#sqrt-eq">Square root equations</a></li>
+                <li><a href="#extraneous">Extraneous solutions</a></li>
+                <li><a href="#cube-root-eq">Cube-root equations</a></li>
+                <li><a href="#quadratic-systems">Quadratic systems</a></li>
+                <li><a href="#solve-graphing">Solving equations by graphing</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit11">Unit 11: Trigonometry</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#unit-circle">Unit circle introduction</a></li>
+                <li><a href="#radians">Radians</a></li>
+                <li><a href="#pythagorean-id">Pythagorean Identity</a></li>
+                <li><a href="#trig-special-angles">Trigonometric value for special angles</a></li>
+                <li><a href="#amplitude-period">Amplitude, midline, period</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Unit 1: Polynomial arithmetic -->
+    <section id="unit1">
+        <h2>Unit 1: Polynomial arithmetic</h2>
+        <article id="poly-arith-intro">
+            <h3>Intro to polynomials arithmetic</h3>
+            <p>A polynomial is an expression made up of terms added or subtracted, each term being a constant times a variable raised to a non-negative integer power. The highest exponent determines the degree of the polynomial.</p>
+            <div class="example"><strong>Example:</strong> 3x^2 + 2x - 5 is a polynomial of degree 2.</div>
+        </article>
+        <article id="poly-avg-rate">
+            <h3>Average rate of change of polynomials</h3>
+            <p>The average rate of change of a polynomial f(x) from x=a to x=b is [f(b) - f(a)] / (b - a). This is the slope of the secant line over the interval.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x^2, from x=1 to x=3: [9-1]/2 = 4.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) For f(x) = x^2 + 2x, find average rate of change from x=0 to x=2: <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="poly-add-sub">
+            <h3>Adding and subtracting polynomials</h3>
+            <p>Add or subtract polynomials by combining like terms (same variable and exponent). Keep the signs of each term as you combine.</p>
+            <div class="example"><strong>Example:</strong> (2x^2 + 3x) + (x^2 - x) = 3x^2 + 2x.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) (3x^2 + 2x) - (x^2 + x) = <input data-answer="2x^2+x" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="poly-monomial-mult">
+            <h3>Multiplying monomials by polynomials</h3>
+            <p>Distribute the monomial to each term in the polynomial. Multiply coefficients and add exponents for like bases.</p>
+            <div class="example"><strong>Example:</strong> 2x(x^2 + 3x) = 2x^3 + 6x^2.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) 3x(x^2 + 2) = <input data-answer="3x^3+6x" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="poly-binom-mult">
+            <h3>Multiplying binomials by polynomials</h3>
+            <p>Use distributive property or FOIL for binomials: (a+b)(c+d) = ac + ad + bc + bd. Always combine like terms at the end.</p>
+            <div class="example"><strong>Example:</strong> (x+2)(x+3) = x^2 + 5x + 6.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) (x+1)(x+4) = <input data-answer="x^2+5x+4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+    </section>
+
+    <!-- Unit 2: Complex numbers -->
+    <section id="unit2">
+        <h2>Unit 2: Complex numbers</h2>
+        <article id="imaginary-unit">
+            <h3>Imaginary Unit i</h3>
+            <p>The <strong>imaginary unit</strong> is a special number denoted <strong>i</strong>, defined by the property <strong>i² = -1</strong>. It is the solution to equations like x² = -1, which have no real solutions. The imaginary unit allows us to work with square roots of negative numbers.</p>
+            <p><strong>Powers of i cycle every four steps:</strong></p>
+            <ul>
+                <li>i¹ = i</li>
+                <li>i² = -1</li>
+                <li>i³ = i² · i = -1 · i = -i</li>
+                <li>i⁴ = (i²)² = (-1)² = 1</li>
+                <li>i⁵ = i (cycle repeats)</li>
+            </ul>
+            <p><strong>Key insight:</strong> To find i^n for large n, divide n by 4 and evaluate i^(remainder).</p>
+            <div class="example"><strong>Example:</strong> i² = -1; i³ = -i; 2i · 3i = 6i² = 6(-1) = -6. Find i^17: 17 ÷ 4 = 4 remainder 1, so i^17 = i^1 = i.</div>
+        </article>
+        <article id="complex-intro">
+            <h3>Intro to complex numbers</h3>
+            <p>A <strong>complex number</strong> has the form <strong>a + bi</strong>, where a and b are real numbers. The number a is called the <strong>real part</strong>, and b is called the <strong>imaginary part</strong>. Complex numbers extend the number system to include square roots of negative numbers.</p>
+            <ul>
+                <li><strong>Real part:</strong> The coefficient a (the part without i)</li>
+                <li><strong>Imaginary part:</strong> The coefficient b (the number multiplying i)</li>
+                <li><strong>Purely real:</strong> When b = 0, e.g., 5 + 0i = 5</li>
+                <li><strong>Purely imaginary:</strong> When a = 0, e.g., 0 + 3i = 3i</li>
+            </ul>
+            <p><strong>Note:</strong> The set of complex numbers includes all real numbers (as the special case where the imaginary part is 0). Real numbers are a subset of complex numbers.</p>
+            <div class="example"><strong>Example:</strong> 3 + 2i (a = 3, b = 2); -1 - 4i (a = -1, b = -4); 7i (a = 0, b = 7); 5 (a = 5, b = 0).</div>
+        </article>
+        <article id="complex-plane">
+            <h3>Complex plane</h3>
+            <p>The <strong>complex plane</strong> (also called the <strong>Argand diagram</strong>) is a 2D coordinate system for visualizing complex numbers. The <strong>horizontal axis</strong> represents the real part, and the <strong>vertical axis</strong> represents the imaginary part. Any complex number a + bi is plotted as the point (a, b).</p>
+            <p><strong>Key features:</strong></p>
+            <ul>
+                <li><strong>Real axis:</strong> Horizontal axis (y = 0) containing purely real numbers</li>
+                <li><strong>Imaginary axis:</strong> Vertical axis (x = 0) containing purely imaginary numbers</li>
+                <li><strong>Distance from origin:</strong> The modulus (or absolute value) of a + bi is |a + bi| = √(a² + b²)</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> 2 + 3i is plotted at point (2, 3). Its distance from origin is √(2² + 3²) = √13 ≈ 3.61. The point -1 - 2i is at (-1, -2).</div>
+        </article>
+        <article id="complex-add-sub">
+            <h3>Adding and subtracting complex numbers</h3>
+            <p>To add or subtract complex numbers, combine <strong>real parts with real parts</strong> and <strong>imaginary parts with imaginary parts</strong> separately. Think of (a + bi) and (c + di) as separate real and imaginary components.</p>
+            <p><strong>Addition:</strong> (a + bi) + (c + di) = (a + c) + (b + d)i</p>
+            <p><strong>Subtraction:</strong> (a + bi) - (c + di) = (a - c) + (b - d)i</p>
+            <div class="example"><strong>Example:</strong> (3 + 2i) + (1 - 4i) = (3 + 1) + (2 - 4)i = 4 - 2i. Another example: (5 + 3i) - (2 + 7i) = (5 - 2) + (3 - 7)i = 3 - 4i.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) (2 + 5i) - (1 + 3i) = <input data-answer="1+2i" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="complex-mult">
+            <h3>Multiplying complex numbers</h3>
+            <p>Multiply complex numbers using the <strong>distributive property (FOIL)</strong>, then replace i² with -1. The key is remembering that i² = -1, which converts imaginary terms to real numbers.</p>
+            <p><strong>Process:</strong></p>
+            <ol>
+                <li>Apply FOIL: (a + bi)(c + di)</li>
+                <li>Multiply: ac + adi + bci + bdi²</li>
+                <li>Replace i² with -1: ac + adi + bci - bd</li>
+                <li>Combine real and imaginary parts: (ac - bd) + (ad + bc)i</li>
+            </ol>
+            <div class="example"><strong>Example:</strong> (2 + i)(1 - 3i):
+            <ul>
+                <li>= 2(1) + 2(-3i) + i(1) + i(-3i)</li>
+                <li>= 2 - 6i + i - 3i²</li>
+                <li>= 2 - 6i + i - 3(-1)</li>
+                <li>= 2 - 5i + 3 = 5 - 5i</li>
+            </ul>
+            </div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) (1 + 2i)(3 - i) = <input data-answer="5+5i" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="complex-quadratic">
+            <h3>Quadratic equations with complex solutions</h3>
+            <p>A quadratic equation ax² + bx + c = 0 has complex solutions when the <strong>discriminant</strong> (b² - 4ac) is <strong>negative</strong>. When this happens, the quadratic formula produces square roots of negative numbers, leading to complex solutions. These complex solutions always come in <strong>conjugate pairs</strong>.</p>
+            <p><strong>Conjugate pairs:</strong> If p + qi is a solution, then p - qi is also a solution. They differ only in the sign of the imaginary part.</p>
+            <p><strong>Using the quadratic formula with negative discriminant:</strong></p>
+            <ol>
+                <li>Calculate discriminant b² - 4ac (which is negative)</li>
+                <li>The square root √(negative number) = i√(positive number)</li>
+                <li>Apply quadratic formula: x = [-b ± i√(|discriminant|)] / (2a)</li>
+                <li>Solutions come as a pair: p + qi and p - qi</li>
+            </ol>
+            <div class="example"><strong>Example:</strong> x² + 4 = 0: x² = -4, so x = ±√(-4) = ±2i. The solutions are 0 + 2i and 0 - 2i (conjugate pair). Another example: x² - 2x + 5 = 0 has discriminant 4 - 20 = -16. Solutions: x = [2 ± √(-16)] / 2 = [2 ± 4i] / 2 = 1 ± 2i.</div>
+        </article>
+    </section>
+
+    <!-- Unit 3: Polynomial Factorization -->
+    <section id="unit3">
+        <h2>Unit 3: Polynomial Factorization</h2>
+        <article id="factor-monomials">
+            <h3>Factoring monomials</h3>
+            <p>Factoring a monomial means writing it as a product of its factors. Break coefficients into primes and use exponent rules.</p>
+            <div class="example"><strong>Example:</strong> 12x^3 = 2*2*3*x*x*x.</div>
+        </article>
+        <article id="gcf">
+            <h3>Greatest common factor</h3>
+            <p>The GCF is the largest factor shared by all terms. It includes the greatest shared coefficient and lowest powers of shared variables.</p>
+            <div class="example"><strong>Example:</strong> GCF of 6x^2 and 9x = 3x.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) GCF of 8x^3 and 12x^2: <input data-answer="4x^2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="common-factors">
+            <h3>Taking common factors</h3>
+            <p>Factor out the GCF from each term. This simplifies expressions and reveals structure for further factoring.</p>
+            <div class="example"><strong>Example:</strong> 4x^2 + 6x = 2x(2x + 3).</div>
+        </article>
+        <article id="factor-higher">
+            <h3>Factoring higher degree polynomials</h3>
+            <p>Look for patterns (difference of squares, cubes, grouping) to factor polynomials of degree 3 or higher. Synthetic division can also help find factors.</p>
+            <div class="example"><strong>Example:</strong> x^3 - 8 = (x - 2)(x^2 + 2x + 4).</div>
+        </article>
+        <article id="factor-structure">
+            <h3>Factoring using structure</h3>
+            <p>Sometimes, substitute a variable to reveal a pattern, then factor and substitute back. This works well for expressions like x^4 + 5x^2 + 4.</p>
+            <div class="example"><strong>Example:</strong> x^4 - 16 = (x^2 - 4)(x^2 + 4) = (x - 2)(x + 2)(x^2 + 4).</div>
+        </article>
+        <article id="poly-identities">
+            <h3>Polynomial identities</h3>
+            <p>Identities like (a + b)^2 = a^2 + 2ab + b^2 help factor and expand polynomials. Memorizing these saves time.</p>
+            <div class="example"><strong>Example:</strong> (x + 3)^2 = x^2 + 6x + 9.</div>
+        </article>
+        <article id="geometric-series">
+            <h3>Geometric series</h3>
+            <p>A geometric series is the sum of a geometric sequence: a + ar + ar^2 + ... + ar^{n-1}. The sum formula depends on the ratio r.</p>
+            <div class="example"><strong>Example:</strong> 2 + 4 + 8 + 16 = 2(1 - 2^4)/(1 - 2) = 30.</div>
+        </article>
+    </section>
+
+    <!-- Unit 4: Polynomial Division -->
+    <section id="unit4">
+        <h2>Unit 4: Polynomial Division</h2>
+        <article id="divide-x">
+            <h3>Dividing polynomials by x</h3>
+            <p>Divide each term by x. For example, (2x^3 + 4x^2) / x = 2x^2 + 4x. Make sure x is not zero.</p>
+        </article>
+        <article id="divide-quad-linear">
+            <h3>Dividing quadratics by linear factors</h3>
+            <p>Use long division or synthetic division to divide quadratics by linear factors. This helps rewrite rational expressions or find factors.</p>
+            <div class="example"><strong>Example:</strong> (x^2 + 3x + 2) / (x + 1) = x + 2.</div>
+        </article>
+        <article id="divide-poly-linear">
+            <h3>Dividing polynomials by linear factors</h3>
+            <p>Similar to above, use long or synthetic division for higher degree polynomials. Always check your quotient by multiplying back.</p>
+        </article>
+        <article id="remainder-theorem">
+            <h3>Remainder Theorem</h3>
+            <p>The remainder when f(x) is divided by (x - a) is f(a). This makes evaluating remainders fast without full division.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x^2 + 2x + 3, divided by x - 1: remainder is f(1) = 1 + 2 + 3 = 6.</div>
+        </article>
+    </section>
+
+    <!-- Unit 5: Polynomial Graphs -->
+    <section id="unit5">
+        <h2>Unit 5: Polynomial Graphs</h2>
+        <article id="poly-zeros">
+            <h3>Zeros of polynomials</h3>
+            <p>Zeros are x-values where the polynomial equals zero (roots). They are the x-intercepts of the graph.</p>
+            <div class="example"><strong>Example:</strong> x^2 - 4 = 0 → x = 2, -2.</div>
+        </article>
+        <article id="poly-pos-neg">
+            <h3>Positive and negative intervals of polynomials</h3>
+            <p>Intervals where the polynomial is above (positive) or below (negative) the x-axis. Sign changes occur at zeros and turning points.</p>
+            <div class="example"><strong>Example:</strong> For f(x) = x^2 - 4, f(x) > 0 for x < -2 or x > 2.</div>
+        </article>
+    </section>
+
+    <!-- Unit 6: Rational exponents and radicals -->
+    <section id="unit6">
+        <h2>Unit 6: Rational exponents and radicals</h2>
+        <article id="rational-exponents">
+            <h3>Rational exponents</h3>
+            <p>Rational exponents are fractional powers: a^{m/n} = n-th root of a^m. They connect radicals and exponential form.</p>
+            <div class="example"><strong>Example:</strong> 8^{1/3} = 2.</div>
+        </article>
+        <article id="rational-exponent-props">
+            <h3>Properties of rational exponents</h3>
+            <p>Same rules as integer exponents: a^{m} * a^{n} = a^{m+n}, (a^{m})^{n} = a^{mn}. Apply these before simplifying radicals.</p>
+        </article>
+        <article id="eval-exponents-radicals">
+            <h3>Evaluating exponents & radicals</h3>
+            <p>Convert between radical and exponent form to evaluate. This makes it easier to use exponent rules.</p>
+            <div class="example"><strong>Example:</strong> √9 = 9^{1/2} = 3.</div>
+        </article>
+        <article id="exp-equiv-forms">
+            <h3>Equivalent forms of exponential expressions</h3>
+            <p>Write expressions in different but equal forms: √x = x^{1/2}. This helps compare and simplify expressions.</p>
+        </article>
+        <article id="solve-exp-eq">
+            <h3>Solving exponential equations using properties of exponents</h3>
+            <p>Rewrite both sides with the same base, then set exponents equal. If you cannot match bases, use logarithms instead.</p>
+            <div class="example"><strong>Example:</strong> 2^{x} = 8 → 2^{x} = 2^{3} → x = 3.</div>
+        </article>
+    </section>
+
+    <!-- Unit 7: Exponential models -->
+    <section id="unit7">
+        <h2>Unit 7: Exponential models</h2>
+        <article id="exp-rate-change">
+            <h3>Interpreting the rate of change</h3>
+            <p>In exponential models, the rate of change is multiplicative, not additive. Each step scales the value by a constant factor.</p>
+            <div class="example"><strong>Example:</strong> y = 2^x doubles for each increase of 1 in x.</div>
+        </article>
+        <article id="exp-models-building">
+            <h3>Building exponential models according to rate of change</h3>
+            <p>Use y = a*b^x, where b is the growth/decay factor. The initial value a is the value when x = 0.</p>
+            <div class="example"><strong>Example:</strong> A population triples each year: y = 100*3^x.</div>
+        </article>
+        <article id="exp-models-advanced">
+            <h3>Advanced interpretation of exponential models</h3>
+            <p>Analyze how changes in the base or exponent affect the model's growth or decay. Small changes in the base can lead to large long-term differences.</p>
+        </article>
+    </section>
+
+    <!-- Unit 8: Logarithms -->
+    <section id="unit8">
+        <h2>Unit 8: Logarithms</h2>
+        <article id="log-intro">
+            <h3>Introduction to logarithms</h3>
+            <p><strong>Logarithms</strong> are the inverse operation of exponentials. They answer the question: "What exponent must I raise the base to in order to get this number?" Logarithms and exponentials are inverse functions, just as square roots and squaring are inverse.
+            </p>
+            <p><strong>Definition:</strong> log<sub>b</sub>(a) = c means b<sup>c</sup> = a (where b > 0, b ≠ 1, a > 0)</p>
+            <p><strong>Key interpretations:</strong></p>
+            <ul>
+                <li>log<sub>b</sub>(a) is the exponent you need</li>
+                <li>b is the <strong>base</strong></li>
+                <li>a is the <strong>argument</strong> (the number inside the logarithm)</li>
+                <li>c is the <strong>result</strong> (the exponent)</li>
+            </ul>
+            <p><strong>Common logarithmic bases:</strong></p>
+            <ul>
+                <li><strong>log<sub>10</sub>(x)</strong> = common logarithm (base 10, denoted log x)</li>
+                <li><strong>log<sub>2</sub>(x)</strong> = binary logarithm (base 2, used in computer science)</li>
+                <li><strong>ln(x)</strong> = natural logarithm (base e ≈ 2.718, denoted log<sub>e</sub>) <span style="color:blue;">Most important in calculus</span></li>
+            </ul>
+            <div class="example"><strong>Example:</strong> log<sub>2</sub>(8) = 3 because 2<sup>3</sup> = 8. log<sub>10</sub>(1000) = 3 because 10<sup>3</sup> = 1000. ln(e) = 1 because e<sup>1</sup> = e.</div>
+        </article>
+        <article id="log-e">
+            <h3>Constant e and natural logarithm</h3>
+            <p>The number <strong>e</strong> (approximately 2.71828) is one of the most important constants in mathematics. It arises naturally in continuous growth and decay problems. The <strong>natural logarithm</strong> ln(x) is the logarithm with base e: ln(x) = log<sub>e</sub>(x).</p>
+            <p><strong>Why e is special:</strong></p>
+            <ul>
+                <li>e is irrational and transcendental (not a root of any polynomial with integer coefficients)</li>
+                <li>The function e<sup>x</sup> has the unique property that its derivative equals itself: d/dx(e<sup>x</sup>) = e<sup>x</sup></li>
+                <li>Continuous compound interest uses e</li>
+                <li>Exponential growth/decay models naturally use e</li>
+            </ul>
+            <p><strong>Natural logarithm properties:</strong></p>
+            <ul>
+                <li>ln(e) = 1 (because e<sup>1</sup> = e)</li>
+                <li>ln(1) = 0 (because e<sup>0</sup> = 1)</li>
+                <li>ln(e<sup>x</sup>) = x (they are inverse functions)</li>
+                <li>e<sup>ln(x)</sup> = x</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> ln(7.389) ≈ 2 because e² ≈ 7.389. A population growing continuously at 5% per year follows P(t) = P<sub>0</sub>e<sup>0.05t</sup>.</div>
+        </article>
+        <article id="log-props">
+            <h3>Properties of logarithms</h3>
+            <p>Logarithms have algebraic properties that make them powerful for simplifying and solving exponential equations. These properties mirror the rules of exponents because logarithms are exponents.</p>
+            <p><strong>Logarithm properties (base b > 0, b ≠ 1):</strong></p>
+            <ul>
+                <li><strong>Product rule:</strong> log<sub>b</sub>(xy) = log<sub>b</sub>(x) + log<sub>b</sub>(y)</li>
+                <li><strong>Quotient rule:</strong> log<sub>b</sub>(x/y) = log<sub>b</sub>(x) - log<sub>b</sub>(y)</li>
+                <li><strong>Power rule:</strong> log<sub>b</sub>(x<sup>k</sup>) = k · log<sub>b</sub>(x)</li>
+                <li><strong>Identity:</strong> log<sub>b</sub>(b) = 1 and log<sub>b</sub>(1) = 0</li>
+                <li><strong>Reciprocal:</strong> log<sub>b</sub>(1/x) = -log<sub>b</sub>(x)</li>
+            </ul>
+            <p><strong>Using properties to expand:</strong> Write a single logarithm as a sum/difference of simpler logs. Example: log(xy) = log(x) + log(y)</p>
+            <p><strong>Using properties to condense:</strong> Combine multiple logarithms into a single log. Example: log(x) + log(y) = log(xy)</p>
+            <div class="example"><strong>Example of expanding:</strong> log<sub>2</sub>(8x<sup>3</sup>) = log<sub>2</sub>(8) + log<sub>2</sub>(x<sup>3</sup>) = 3 + 3log<sub>2</sub>(x). Example of condensing: ln(x) + ln(5) - ln(2) = ln(5x/2).</div>
+        </article>
+        <article id="log-change-base">
+            <h3>Change of base formula for logarithms</h3>
+            <p>The <strong>change of base formula</strong> allows you to convert a logarithm from one base to another. This is essential because most calculators only have log (base 10) and ln (base e).</p>
+            <p><strong>Change of base formula:</strong></p>
+            <p style="text-align: center; font-weight: bold;">log<sub>b</sub>(a) = log<sub>c</sub>(a) / log<sub>c</sub>(b)</p>
+            <p>where b, c > 0 and b, c ≠ 1. You can choose any base c that your calculator supports (typically base 10 or base e).</p>
+            <p><strong>Most common forms:</strong></p>
+            <ul>
+                <li>log<sub>b</sub>(a) = ln(a) / ln(b) (using natural logarithm)</li>
+                <li>log<sub>b</sub>(a) = log(a) / log(b) (using common logarithm base 10)</li>
+            </ul>
+            <p><strong>Why this works:</strong> If log<sub>b</sub>(a) = x, then b<sup>x</sup> = a. Taking log<sub>c</sub> of both sides: x · log<sub>c</sub>(b) = log<sub>c</sub>(a), so x = log<sub>c</sub>(a) / log<sub>c</sub>(b).</p>
+            <div class="example"><strong>Example:</strong> Find log<sub>2</sub>(10) using a calculator:
+            <ul>
+                <li>log<sub>2</sub>(10) = ln(10) / ln(2) ≈ 2.3026 / 0.6931 ≈ 3.322</li>
+                <li>Check: 2<sup>3.322</sup> ≈ 10 ✓</li>
+            </ul>
+            </div>
+        </article>
+        <article id="log-solve-exp">
+            <h3>Solving exponential equations with logarithms</h3>
+            <p>When exponential equations have different bases or non-integer exponents, logarithms are essential for solving. The key strategy is to <strong>take the logarithm of both sides</strong>, which allows you to bring the exponent down as a coefficient using the power rule.</p>
+            <p><strong>Steps to solve exponential equations:</strong></p>
+            <ol>
+                <li>Isolate the exponential term if possible</li>
+                <li>Take the logarithm (any base, but usually ln or log) of both sides</li>
+                <li>Use the power rule: log(a<sup>x</sup>) = x · log(a)</li>
+                <li>Solve for the variable algebraically</li>
+                <li>Check your answer (optional but recommended)</li>
+            </ol>
+            <p><strong>Strategy when bases match:</strong> If 2<sup>x</sup> = 8, write both sides as powers of 2: 2<sup>x</sup> = 2<sup>3</sup>, so x = 3. This avoids logarithms.</p>
+            <p><strong>Strategy when bases differ:</strong> Use logarithms. Example: 3<sup>x</sup> = 10 requires logs.</p>
+            <div class="example"><strong>Example:</strong> Solve 2<sup>x</sup> = 10:
+            <ul>
+                <li>ln(2<sup>x</sup>) = ln(10)</li>
+                <li>x · ln(2) = ln(10)</li>
+                <li>x = ln(10) / ln(2) ≈ 3.322</li>
+                <li>Check: 2<sup>3.322</sup> ≈ 10 ✓</li>
+            </ul>
+            Another example: Solve e<sup>2x</sup> = 20:
+            <ul>
+                <li>ln(e<sup>2x</sup>) = ln(20)</li>
+                <li>2x = ln(20)</li>
+                <li>x = ln(20) / 2 ≈ 1.497</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+
+    <!-- Unit 9: Transformation of functions -->
+    <section id="unit9">
+        <h2>Unit 9: Transformation of functions</h2>
+        <article id="shift-functions">
+            <h3>Shifting functions</h3>
+            <p>f(x) + k shifts up/down; f(x + h) shifts left/right. Positive k moves the graph up, positive h moves it left.</p>
+            <div class="example"><strong>Example:</strong> y = x^2 + 3 shifts y = x^2 up by 3.</div>
+        </article>
+        <article id="reflect-functions">
+            <h3>Reflecting functions</h3>
+            <p>-f(x) reflects over x-axis; f(-x) reflects over y-axis. Reflections change the orientation but not the shape.</p>
+            <div class="example"><strong>Example:</strong> y = -x^2 is a reflection of y = x^2 over the x-axis.</div>
+        </article>
+        <article id="symmetry-functions">
+            <h3>Symmetry of functions</h3>
+            <p>Even functions: f(-x) = f(x). Odd: f(-x) = -f(x). Even functions are symmetric about the y-axis, odd about the origin.</p>
+            <div class="example"><strong>Example:</strong> y = x^2 is even; y = x^3 is odd.</div>
+        </article>
+        <article id="scale-functions">
+            <h3>Scaling functions</h3>
+            <p>af(x) stretches vertically; f(bx) compresses horizontally. Values of a and b control how steep or wide the graph becomes.</p>
+            <div class="example"><strong>Example:</strong> y = 2x^2 is a vertical stretch of y = x^2.</div>
+        </article>
+        <article id="graph-sqrt-cube">
+            <h3>Graphs of square and cubre root functions</h3>
+            <p>y = √x is a half-parabola; y = ∛x is an S-shaped curve. The square root starts at (0,0) and only takes nonnegative inputs.</p>
+        </article>
+        <article id="graph-exponential">
+            <h3>Graphs of exponential functions</h3>
+            <p>y = a^x grows rapidly for a > 1, decays for 0 < a < 1. Exponential graphs cross the y-axis at 1.</p>
+        </article>
+        <article id="graph-log">
+            <h3>Graphs of logarithmic funcitons</h3>
+            <p>y = log_b(x) increases slowly, undefined for x ≤ 0. The graph passes through (1,0).</p>
+        </article>
+    </section>
+
+    <!-- Unit 10: Equations -->
+    <section id="unit10">
+        <h2>Unit 10: Equations</h2>
+        <article id="rational-eq">
+            <h3>Rational equations</h3>
+            <p>Equations with fractions whose numerators and/or denominators are polynomials. Always check for excluded values that make denominators zero.</p>
+            <div class="example"><strong>Example:</strong> 1/(x+1) = 2/(x-1).</div>
+        </article>
+        <article id="sqrt-eq">
+            <h3>Square root equations</h3>
+            <p>Equations involving square roots. Isolate the root, then square both sides. Check solutions to avoid extraneous answers.</p>
+            <div class="example"><strong>Example:</strong> √(x+3) = 5 → x+3 = 25 → x = 22.</div>
+        </article>
+        <article id="extraneous">
+            <h3>Extraneous solutions</h3>
+            <p>Squaring both sides can introduce false solutions. Always check answers in the original equation. This is especially common with radicals and rational equations.</p>
+        </article>
+        <article id="cube-root-eq">
+            <h3>Cube-root equations</h3>
+            <p>Equations with cube roots. Cube both sides to solve. Unlike square roots, cubing does not introduce sign ambiguity.</p>
+            <div class="example"><strong>Example:</strong> ∛(x-1) = 3 → x-1 = 27 → x = 28.</div>
+        </article>
+        <article id="quadratic-systems">
+            <h3>Quadratic systems</h3>
+            <p>Systems with at least one quadratic equation. Solve by substitution or graphing. Solutions are intersection points of the graphs.</p>
+        </article>
+        <article id="solve-graphing">
+            <h3>Solving equations by graphing</h3>
+            <p>Graph both sides and find intersection points. Each intersection gives a solution that satisfies both equations.</p>
+        </article>
+    </section>
+
+    <!-- Unit 11: Trigonometry -->
+    <section id="unit11">
+        <h2>Unit 11: Trigonometry</h2>
+        <article id="unit-circle">
+            <h3>Unit circle introduction</h3>
+            <p>The unit circle is a circle of radius 1 centered at the origin. It helps define sine and cosine for all angles. Each point on the circle corresponds to an angle.</p>
+            <div class="example"><strong>Example:</strong> The point (√2/2, √2/2) on the unit circle corresponds to 45° (π/4 radians).</div>
+        </article>
+        <article id="radians">
+            <h3>Radians</h3>
+            <p>Radians are another way to measure angles: 180° = π radians. Many trig formulas are simplest in radians.</p>
+            <div class="example"><strong>Example:</strong> 90° = π/2 radians.</div>
+        </article>
+        <article id="pythagorean-id">
+            <h3>Pythagorean Identity</h3>
+            <p>sin^2(θ) + cos^2(θ) = 1 for any angle θ. This comes from the unit circle equation x^2 + y^2 = 1.</p>
+        </article>
+        <article id="trig-special-angles">
+            <h3>Trigonometric value for special angles</h3>
+            <p>Special angles: 0°, 30°, 45°, 60°, 90° (and their radian equivalents) have known sine and cosine values. Memorizing these helps solve many problems quickly.</p>
+            <div class="example"><strong>Example:</strong> sin(30°) = 1/2, cos(60°) = 1/2.</div>
+        </article>
+        <article id="amplitude-period">
+            <h3>Amplitude, midline, period</h3>
+            <p>For y = a sin(bx) + d, amplitude = |a|, period = 2π/|b|, midline = y = d. These features describe the size, speed, and vertical shift of the wave.</p>
+        </article>
+    </section>
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>

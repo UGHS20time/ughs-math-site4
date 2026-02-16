@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algebra 1</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade9.html">9th Grade</a>
+    <span>›</span>
+    Algebra 1
+</div>
+
+<div class="header">
+    <h1>Algebra 1</h1>
+    <!-- PDF link placeholder -->
+    <a href="prontuarios/Prontuario Matemáticas Algebra II (9no) 2023.pdf" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Algebra Fundamentals</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#intro-variables">Introduction to variables</a></li>
+                <li><a href="#eval-one-var">Evaluating expressions with one variable</a></li>
+                <li><a href="#eval-two-vars">Evaluating expressions with two variables</a></li>
+                <li><a href="#eval-two-vars-fractions">Evaluating expressions with two variables, fractions and decimals</a></li>
+                <li><a href="#like-terms">Unification of like terms</a></li>
+                <li><a href="#equivalent-expr">Equivalent expressions</a></li>
+                <li><a href="#division-zero">Division by zero / undefined or undetermined expressions</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Solving Equations and Inequalities</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#linear-both-sides">Linear equations with variables on both sides</a></li>
+                <li><a href="#linear-parenthesis">Linear equations with parenthesis</a></li>
+                <li><a href="#num-solutions">Number of solutions</a></li>
+                <li><a href="#unknown-coefficients">Unknown coefficients</a></li>
+                <li><a href="#inequalities-steps">Inequalities with various steps</a></li>
+                <li><a href="#compound-inequalities">Compound inequalities</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Working with Units</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#conversion-rates">Conversion rates</a></li>
+                <li><a href="#appropriate-units">Appropriate units</a></li>
+                <li><a href="#verbal-problems-units">Verbal problems with varied units</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Linear Equations and Graphs</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#linear-two-vars">Linear equations with two variables</a></li>
+                <li><a href="#the-slope">The Slope</a></li>
+                <li><a href="#horizontal-vertical">Horizontal and vertical lines</a></li>
+                <li><a href="#intercepts">Intersections in x-axis / y-axis</a></li>
+                <li><a href="#app-slope-intercepts">Application of intersections and slope</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit5">Unit 5: Forms of Linear Equations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#slope-intercept-form">Slope-Intercept form</a></li>
+                <li><a href="#graphing-slope-intercept">Graphing slope-intercept equations</a></li>
+                <li><a href="#writing-slope-intercept">Writing slope-intercept equations</a></li>
+                <li><a href="#point-slope-form">Point-slope form</a></li>
+                <li><a href="#standard-form">Standard form</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit6">Unit 6: Systems of Equations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#systems-intro">Introduction</a></li>
+                <li><a href="#solving-substitution">Solving with substitution</a></li>
+                <li><a href="#solving-elimination">Solving with elimination</a></li>
+                <li><a href="#equivalent-systems">Equivalent systems</a></li>
+                <li><a href="#solutions-system">Number of solutions to a system</a></li>
+                <li><a href="#verbal-systems">Verbal problems</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit7">Unit 7: Inequalities</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#checking-two-var-ineq">Checking solutions of two-variable inequalities</a></li>
+                <li><a href="#graphing-two-var-ineq">Graphing two-variable inequalities</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit8">Unit 8: Functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#evaluating-functions">Evaluating functions</a></li>
+                <li><a href="#domain-range">Domain and range</a></li>
+                <li><a href="#finding-domain">Finding the domain</a></li>
+                <li><a href="#recognizing-functions">Recognizing functions</a></li>
+                <li><a href="#max-min-graph">Maximum and minimum of a graph</a></li>
+                <li><a href="#intervals">Increasing, decreasing, positive, and negative intervals</a></li>
+                <li><a href="#rate-of-change">Average rate of change</a></li>
+                <li><a href="#inverse-functions">Inverse functions</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit9">Unit 9: Sequences</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#arith-seq-intro">Introduction to arithmetic sequences</a></li>
+                <li><a href="#arith-seq-building">Building arithmetic sequences</a></li>
+                <li><a href="#geom-seq-intro">Introduction to geometric sequences</a></li>
+                <li><a href="#geom-seq-building">Building geometric sequences</a></li>
+                <li><a href="#general-sequences">General sequences</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit10">Unit 10: Absolute value and piecewise-defined functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#absval-graphs">Graphs for absolute value functions</a></li>
+                <li><a href="#piecewise">Piece-wise defined functions</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit11">Unit 11: Radicals and exponents</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#exponent-laws">Exponents laws</a></li>
+                <li><a href="#radicals">Radicals</a></li>
+                <li><a href="#simplify-sqrt">Simplifying square roots</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit12">Unit 12: Exponential growth and decay</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#linear-vs-exponential">Linear vs exponential growth</a></li>
+                <li><a href="#exponential-expr">Exponential expressions</a></li>
+                <li><a href="#growth-decay">Growth and decay</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit13">Unit 13: Multiplying and factorizing quadratic equations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#monomial-poly">Monomials X Polynomials</a></li>
+                <li><a href="#multiply-binomials">Multiplying binomials</a></li>
+                <li><a href="#factoring">Factoring</a></li>
+                <li><a href="#factoring-grouping">Factoring by grouping</a></li>
+                <li><a href="#diff-squares">Difference of squares</a></li>
+                <li><a href="#perfect-squares">Perfect squares</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit14">Unit 14: Quadratic functions and equations</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#parabolas">Parabolas</a></li>
+                <li><a href="#factored-form">Solving and graphing with factored form</a></li>
+                <li><a href="#solve-sqrt">Solving by taking square root</a></li>
+                <li><a href="#solve-factoring">Solving by factoring</a></li>
+                <li><a href="#vertex-form">Vertex form</a></li>
+                <li><a href="#quadratic-formula">Quadratic formula</a></li>
+                <li><a href="#complete-square">Completing the square</a></li>
+                <li><a href="#quadratic-strategy">Strategizing to solve quadratic equations</a></li>
+                <li><a href="#quadratic-std">Quadratic standard form</a></li>
+                <li><a href="#quadratic-forms">Forms of quadratic equations</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit15">Unit 15: Irrational numbers</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#irrational-intro">Introduction</a></li>
+                <li><a href="#rational-irrational">Sums and products of rational and irrational numbers</a></li>
+                <li><a href="#irrational-proofs">Proofs concerning irrational numbers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="unit1">
+        <h2>Unit 1: Algebra Fundamentals</h2>
+
+        <article id="intro-variables">
+            <h3>Introduction to variables</h3>
+            <p><strong>Variables</strong> are letters or symbols that stand for numbers we don't yet know or haven't specified yet. They are fundamental tools in algebra that allow us to describe patterns, write general formulas, and solve problems without always requiring specific numerical values. Variables serve multiple important roles:</p>
+            <ul>
+                <li><strong>Unknowns to solve for:</strong> Used to represent missing values we need to find (e.g., x in 2x = 10)</li>
+                <li><strong>Parameters that vary:</strong> Stand-in values that can change and affect the output of an expression (e.g., temperature t in a formula)</li>
+                <li><strong>General representation:</strong> Allow us to express patterns and relationships that apply to many different situations</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Let x be the number of apples. If x = 5, then x + 2 = 7.</div>
+            <div class="example"><strong>Example 2:</strong> Let t represent temperature in °C. The expression 2t + 1 gives a value that depends on t: if t = 10, 2t+1 = 21.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) If x = 4, evaluate x + 3 = <input data-answer="7" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) If t = 7, evaluate 2t + 1 = <input data-answer="15" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) If p = -2, evaluate p^2 = <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="eval-one-var">
+            <h3>Evaluating expressions with one variable</h3>
+            <p>To <strong>evaluate</strong> an expression with one variable, substitute the variable with the given number and then compute the result carefully using the order of operations. This systematic approach ensures accurate calculations regardless of the complexity of the expression. Key steps include:</p>
+            <ul>
+                <li>Replace the variable with the given numerical value, using parentheses if needed</li>
+                <li>Follow the correct order of operations: <strong>PEMDAS</strong> (Parentheses, Exponents, Multiplication/Division, Addition/Subtraction)</li>
+                <li>Pay special attention to <strong>negative numbers</strong> and ensure parentheses are handled correctly to avoid sign errors</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Evaluate 3x + 2 when x = 5: 3(5) + 2 = 15 + 2 = 17.</div>
+            <div class="example"><strong>Example 2:</strong> Evaluate 3(x - 2) + 4 when x = 5: 3(3) + 4 = 9 + 4 = 13.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Evaluate 2x + 5 when x = 3: <input data-answer="11" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Evaluate 4a - 1 when a = 2: <input data-answer="7" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Evaluate -2m + 6 when m = -1: <input data-answer="8" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="eval-two-vars">
+            <h3>Evaluating expressions with two variables</h3>
+            <p>When expressions have <strong>two variables</strong>, you must substitute the correct value for each distinct variable before evaluating. The process is similar to single-variable evaluation but requires careful tracking of which value corresponds to which variable. Pay special attention to:</p>
+            <ul>
+                <li><strong>Implicit multiplication:</strong> When variables are next to each other (like xy), they are being multiplied together</li>
+                <li><strong>Variables as exponents:</strong> If a variable appears as an exponent (like x^y), calculate the exponent first, then apply it</li>
+                <li><strong>Order of operations:</strong> Still apply PEMDAS after substituting both variables</li>
+            </ul>
+            <div class="example"><strong>Example 2:</strong> If x = 4 and y = 1, x + 2y = 4 + 2(1) = 6.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) If x = 4 and y = 1, evaluate x + 2y = <input data-answer="6" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) If m = 3 and n = 5, evaluate mn + n = <input data-answer="20" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) If x = 4 and y = 3, evaluate x^2 - y = <input data-answer="13" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="eval-two-vars-fractions">
+            <h3>Evaluating expressions with two variables, fractions and decimals</h3>
+            <p>When substituting <strong>fractions and decimals</strong> into algebraic expressions, all previous substitution and evaluation rules apply without change. You have flexibility in your approach and can choose the method that feels most natural:</p>
+            <ul>
+                <li><strong>Fraction method:</strong> Add, subtract, multiply, and divide fractions directly by finding common denominators when needed</li>
+                <li><strong>Decimal method:</strong> Convert all fractions to decimals and perform calculations in decimal form</li>
+                <li><strong>Mixed method:</strong> Convert only when necessary for simplification or clarity</li>
+                <li><strong>Rounding awareness:</strong> Keep track of when results are approximations versus exact values</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> If x = 1/2 and y = 0.5, x + y = 0.5 + 0.5 = 1.</div>
+            <div class="example"><strong>Example 2:</strong> If x = 1/4 and y = 0.5, x + y = 0.25 + 0.5 = 0.75.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) If x = 1/4 and y = 0.5, evaluate x + y = <input data-answer="0.75" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) If a = 0.2 and b = 1/5, evaluate a + b = <input data-answer="0.4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) If x = 2/3 and y = 0.5, evaluate x + y (rounded to 2 decimal places) = <input data-answer="1.17" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="like-terms">
+            <h3>Unification of like terms</h3>
+            <p><strong>Like terms</strong> are terms in an algebraic expression that have identical variable parts. This means they must contain the exact same variables raised to the exact same powers. Combining like terms is a fundamental skill that simplifies expressions and is essential for solving equations. To combine like terms:</p>
+            <ul>
+                <li><strong>Identify like terms:</strong> Look for terms with the same variable(s) and exponent(s) (e.g., 3x and 5x are like; 3x and 3x² are not)</li>
+                <li><strong>Group them together:</strong> Rearrange the expression to place like terms adjacent to each other</li>
+                <li><strong>Add/subtract coefficients:</strong> Combine by adding or subtracting only the numerical coefficients while keeping the variable part unchanged</li>
+                <li><strong>Constants as like terms:</strong> Numbers without variables are all like terms with each other</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> 3x + 5x = (3 + 5)x = 8x.</div>
+            <div class="example"><strong>Example 2:</strong> 2x^2 + 3x^2 = 5x^2. Note that 3x and 3x^2 are not like terms because the powers differ.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Combine: 4x + 7x = <input data-answer="11x" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Combine: 5a - 2a = <input data-answer="3a" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Combine: 2x^2 + 4x^2 - x^2 = <input data-answer="5x^2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="equivalent-expr">
+            <h3>Equivalent expressions</h3>
+            <p><strong>Equivalent expressions</strong> are two or more expressions that represent the same mathematical value for all possible values of the variables. Understanding equivalence is crucial for solving equations and simplifying complex expressions. You can demonstrate equivalence through two main approaches:</p>
+            <ul>
+                <li><strong>Algebraic manipulation:</strong> Transform one expression into another using valid operations such as the distributive property, factoring, combining like terms, or expanding products</li>
+                <li><strong>Numerical verification:</strong> Test both expressions using several different variable values and verify that they produce identical results in each case</li>
+                <li><strong>Why it matters:</strong> Different forms of equivalent expressions often reveal different insights about a problem's structure</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> 2(x + 3) and 2x + 6 are equivalent because distributing gives 2x + 6.</div>
+            <div class="example"><strong>Example 2:</strong> (x + 1)^2 and x^2 + 2x + 1 are equivalent after expanding the square.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Are 3(x + 2) and 3x + 6 equivalent? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Are x + x + x and 3x equivalent? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Is x(x+2) equivalent to x^2 + 2x? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="division-zero">
+            <h3>Division by zero / undefined or undetermined expressions</h3>
+            <p><strong>Division by zero is undefined</strong> and cannot be evaluated in standard arithmetic. When we encounter expressions containing variables in denominators, we must identify which input values would make the denominator zero and exclude those from the domain. This concept is essential for understanding the domain of rational expressions. Key distinctions include:</p>
+            <ul>
+                <li><strong>Simple undefined cases:</strong> Any expression like 5/0 or 1/(x-2) when x=2 has no meaningful value</li>
+                <li><strong>Indeterminate form (0/0):</strong> Expressions like (x²-4)/(x-2) produce 0/0 when x=2, suggesting a removable discontinuity or common factor that needs investigation</li>
+                <li><strong>Domain restrictions:</strong> Always identify which input values make any denominator equal zero and exclude those values from the domain</li>
+                <li><strong>Removable vs. non-removable:</strong> 0/0 forms may simplify after factoring, while other undefined cases represent permanent gaps in the function</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> The expression 1/(x - 2) is undefined when x = 2 because the denominator is zero.</div>
+            <div class="example"><strong>Example 2:</strong> (x^2 - 4)/(x - 2) gives 0/0 when x = 2, but after factoring (x-2)(x+2)/(x-2) it simplifies to x+2 for x ≠ 2; the original expression is still undefined at x = 2 (a "hole").</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Is 7/0 defined? (answer: no) <input data-answer="no" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) For 1/(x-3), is x = 3 allowed? (answer: no) <input data-answer="no" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) For (x^2-4)/(x-2), is x = 2 allowed? (answer: no) <input data-answer="no" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+    <section id="unit2">
+        <h2>Unit 2: Solving Equations and Inequalities</h2>
+
+        <article id="linear-both-sides">
+            <h3>Linear equations with variables on both sides</h3>
+            <p>When solving equations with variables on both sides, the fundamental principle is <strong>keeping the equation balanced</strong>—whatever operation you perform must be applied to both sides equally. The strategy is to systematically isolate the variable by collecting all variable terms on one side and constant terms on the other side. Here's the systematic approach:</p>
+            <ul>
+                <li><strong>Collect variable terms:</strong> Move all terms containing the variable to one side using inverse operations (typically subtraction if adding, or addition if subtracting)</li>
+                <li><strong>Collect constants:</strong> Move all number-only terms to the opposite side using the same inverse operation principle</li>
+                <li><strong>Isolate the variable:</strong> Divide both sides by the coefficient to get the variable alone</li>
+                <li><strong>Verify your solution:</strong> Substitute back into the original equation to confirm both sides equal the same value</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Solve 3x + 5 = 2x + 9. Subtract 2x from both sides: x + 5 = 9. Subtract 5: x = 4.</div>
+            <div class="example"><strong>Example 2:</strong> Solve 4x - 2 = 2x + 6. Subtract 2x: 2x - 2 = 6. Add 2: 2x = 8. Divide by 2: x = 4.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Solve: 2x + 3 = x + 7, x = <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Solve: 5x - 1 = 3x + 5, x = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Solve: 7x + 2 = 4x - 4, x = <input data-answer="-2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="linear-parenthesis">
+            <h3>Linear equations with parenthesis</h3>
+            <p>Equations containing parentheses require you to expand them fully before collecting like terms and solving. The <strong>distributive property</strong> is the key tool here, which states that a(b + c) = ab + ac. Understanding the order of operations when parentheses are involved is crucial for accurate solutions. Follow these steps:</p>
+            <ul>
+                <li><strong>Distribute first:</strong> Multiply the coefficient outside the parentheses by each term inside using the distributive property</li>
+                <li><strong>Simplify each side:</strong> Combine like terms on both sides of the equation</li>
+                <li><strong>Move variable terms:</strong> Collect all variables on one side and constants on the other</li>
+                <li><strong>Solve for the variable:</strong> Isolate the variable by dividing by its coefficient</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Solve 2(x + 3) = 10. Distribute: 2x + 6 = 10. Subtract 6: 2x = 4. Divide by 2: x = 2.</div>
+            <div class="example"><strong>Example 2:</strong> Solve 3(x - 1) + 2 = 11. Distribute: 3x - 3 + 2 = 11. Simplify: 3x - 1 = 11. Add 1: 3x = 12. Divide by 3: x = 4.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Solve: 3(x + 2) = 15, x = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Solve: 2(x - 1) + 4 = 8, x = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Solve: 4(x + 1) - 3 = 9, x = <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="num-solutions">
+            <h3>Number of solutions</h3>
+            <p>Linear equations are remarkable because they can have exactly one solution, no solutions, or infinitely many solutions. Understanding which case you're in requires paying attention to what happens when you simplify the equation. Here's how to identify each type:</p>
+            <ul>
+                <li><strong>One unique solution:</strong> Most linear equations have one answer; you'll get a variable equal to a number (e.g., x = 5)</li>
+                <li><strong>Infinitely many solutions:</strong> When simplifying leads to a true statement (like 5 = 5 or 0 = 0), every value of the variable is a solution—the two equations represent the same line</li>
+                <li><strong>No solution:</strong> When simplifying leads to a false statement (like 5 = 3 or 0 = 7), there's no value of the variable that makes the equation true—the equations represent parallel but distinct lines</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Solve x + 3 = x + 3. Subtract x: 3 = 3. This is true, so infinitely many solutions (the equation is always true).</div>
+            <div class="example"><strong>Example 2:</strong> Solve x + 2 = x + 5. Subtract x: 2 = 5. This is false, so no solution (the equation is never true).</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Solve: 2x = 2x. How many solutions? (answer: infinitely many) <input data-answer="infinitely many" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Solve: x + 1 = x + 2. How many solutions? (answer: none) <input data-answer="none" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Solve: 3x = 12. How many solutions? (answer: one) <input data-answer="one" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="unknown-coefficients">
+            <h3>Unknown coefficients</h3>
+            <p>Sometimes you encounter equations where a <strong>coefficient is unknown</strong> and you need to find its value given additional information about the variable. This type of problem reverses the typical solving process; instead of finding the variable, you're finding the coefficient. The solving method remains the same:
+            <ul>
+                <li><strong>Substitute the known variable:</strong> Replace the variable with its given value</li>
+                <li><strong>Simplify:</strong> Perform the mental arithmetic with the known value</li>
+                <li><strong>Solve for the coefficient:</strong> Use inverse operations to isolate the unknown coefficient just as you would isolate a variable</li>
+                <li><strong>Verify:</strong> Substitute both values back into the original equation to confirm correctness</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> If ax + 2 = 8 and x = 2, find a. Substitute: a(2) + 2 = 8. Simplify: 2a + 2 = 8. Subtract 2: 2a = 6. Divide: a = 3.</div>
+            <div class="example"><strong>Example 2:</strong> If bx - 1 = 5 and x = 3, find b. Substitute: b(3) - 1 = 5. Add 1: 3b = 6. Divide: b = 2.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) If ax + 3 = 11 and x = 2, find a: <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) If 2x + b = 10 and x = 3, find b: <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) If cx - 2 = 7 and x = 3, find c: <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="inequalities-steps">
+            <h3>Inequalities with various steps</h3>
+            <p>Inequalities are solved almost identically to equations, with one critical exception that students must remember: the inequality symbol flips when you multiply or divide by a negative number. This rule exists because multiplying by a negative reverses the order of numbers on the number line. The complete process involves:</p>
+            <ul>
+                <li><strong>Use inverse operations:</strong> Add, subtract, multiply, and divide exactly as in equation-solving to isolate the variable</li>
+                <li><strong>Flip the symbol:</strong> Whenever you multiply or divide both sides by a negative number, reverse the inequality symbol (&lt; becomes &gt;, ≤ becomes ≥, and vice versa)</li>
+                <li><strong>Express the solution:</strong> Write the final answer in inequality form (e.g., x &gt; 3) or in interval notation</li>
+                <li><strong>Verify with test points:</strong> Choose values on both sides of your boundary and verify they satisfy or don't satisfy the inequality as expected</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Solve 2x + 3 &lt; 9. Subtract 3: 2x &lt; 6. Divide by 2: x &lt; 3.</div>
+            <div class="example"><strong>Example 2:</strong> Solve -x + 5 ≥ 2. Subtract 5: -x ≥ -3. Multiply by -1 (flip): x ≤ 3.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Solve: 3x - 2 &lt; 10, x &lt; <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Solve: -2x + 1 ≥ -3, x ≤ <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Solve: 4x + 2 &gt; 18, x &gt; <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="compound-inequalities">
+            <h3>Compound inequalities</h3>
+            <p><strong>Compound inequalities</strong> combine two separate inequalities using either "and" or "or". These connectors create fundamentally different solution sets. Learning to work with both types is essential for describing ranges and excluding regions on the number line. The key differences are:</p>
+            <ul>
+                <li><strong>"And" inequalities (conjunctions):</strong> Both conditions must be true simultaneously (e.g., 2 &lt; x &lt; 5 means x is between 2 and 5 inclusive); solve by treating all three parts equally with the same operations</li>
+                <li><strong>"Or" inequalities (disjunctions):</strong> Either condition can be true, representing two separate regions on the number line (e.g., x &lt; 2 or x ≥ 5 means x is less than 2 or at least 5); solve each inequality separately</li>
+                <li><strong>Graphing compound inequalities:</strong> For "and", shade the overlapping region; for "or", shade both separate regions</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Solve 2 &lt; x + 1 &lt; 5. Subtract 1 from all parts: 1 &lt; x &lt; 4.</div>
+            <div class="example"><strong>Example 2:</strong> Solve x &lt; 2 or x ≥ 5. This represents two separate regions: all values less than 2, and all values 5 or greater.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Solve: 1 &lt; x + 2 &lt; 5, (answer: -1 &lt; x &lt; 3) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Solve: -2 &lt; x - 1 &lt; 2, what is the upper bound? x &lt; <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) For 0 &lt; 2x &lt; 6, what is x? (answer: 0 &lt; x &lt; 3) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit3">
+        <h2>Unit 3: Working with Units</h2>
+
+        <article id="conversion-rates">
+            <h3>Conversion rates</h3>
+            <p>A <strong>conversion rate</strong> (or conversion factor) is a ratio that expresses the relationship between two different measurement units. The key to successful unit conversion is dimensional analysis: arranging the conversion ratio so that the original unit cancels out algebraically, leaving only the desired unit. Understanding conversion factors allows you to:
+            <div class="example"><strong>Example 1:</strong> Convert 5 kilometers to meters. Use the conversion rate: 1 km = 1000 m. So 5 km × (1000 m / 1 km) = 5000 m.</div>
+            <div class="example"><strong>Example 2:</strong> Convert 60 miles per hour to feet per second. Use: 60 mi/hr × (5280 ft/mi) × (1 hr/3600 s) = 88 ft/s.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Convert 3 km to m: <input data-answer="3000" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Convert 24 hours to minutes: <input data-answer="1440" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Convert 100 cm to meters: <input data-answer="1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="appropriate-units">
+            <h3>Appropriate units</h3>
+            <p>Choosing the right <strong>measurement unit</strong> is crucial for clear communication and practical understanding of quantities. Different situations call for different scales. A well-chosen unit makes the resulting number reasonable and easy to interpret. Guidelines for selecting appropriate units include:</p>
+            <ul>
+                <li><strong>Avoid extreme values:</strong> Choose units that produce numbers in a reasonable range (heights in meters, not kilometers; pencil width in millimeters, not meters)</li>
+                <li><strong>Match the context:</strong> Scientific precision might require smaller units; everyday conversation often uses larger, more familiar units</li>
+                <li><strong>Compare similar quantities:</strong> When comparing measurements, use the same unit for fairness and clarity</li>
+                <li><strong>Consider precision:</strong> The unit choice should match the accuracy of your measurement</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> To measure the height of a person, use meters or centimeters, not kilometers. A height of 1.75 m is more sensible than 0.00175 km.</div>
+            <div class="example"><strong>Example 2:</strong> To measure the thickness of paper, use millimeters, not meters. Paper thickness is about 0.1 mm, which is clearer than 0.0001 m.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Which unit is most appropriate for the width of a pencil? (answer: millimeters) <input data-answer="millimeters" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Which unit is most appropriate for distance between two cities? (answer: kilometers) <input data-answer="kilometers" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Which unit is most appropriate for the weight of a person? (answer: kilograms) <input data-answer="kilograms" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="verbal-problems-units">
+            <h3>Verbal problems with varied units</h3>
+            <p>Real-world word problems often involve quantities expressed in different units, requiring you to convert before combining or comparing them. The systematic approach ensures accuracy and helps you catch errors. When solving problems with multiple units:</p>
+            <ul>
+                <li><strong>Identify all quantities and their units:</strong> Write them down clearly to avoid confusion</li>
+                <li><strong>Choose a target unit:</strong> Decide what unit the final answer should be in</li>
+                <li><strong>Convert all quantities to that unit:</strong> Use appropriate conversion factors, applying dimensional analysis carefully</li>
+                <li><strong>Set up and solve the equation:</strong> Perform calculations as usual</li>
+                <li><strong>Include units throughout:</strong> Write units with every number to track what you're calculating and verify the answer makes sense</li>
+                <li><strong>Check reasonableness:</strong> Does your answer's magnitude make sense? Are the units correct?</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> A recipe calls for 250 mL of water and 2 liters of milk. How much liquid total in liters? Convert 250 mL to liters: 250 mL ÷ 1000 = 0.25 L. Total: 0.25 L + 2 L = 2.25 L.</div>
+            <div class="example"><strong>Example 2:</strong> A car travels 60 km in 1.5 hours. What is the speed in km/h? Speed = Distance ÷ Time = 60 km ÷ 1.5 h = 40 km/h.</div>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) A pool holds 2000 liters. How many cubic meters? (1 m³ = 1000 L): <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) A runner runs 8 km in 40 minutes. What is the speed in km/h? <input data-answer="12" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) A recipe needs 500 mL of juice and 2 liters of water. How many liters total? <input data-answer="2.5" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit4">
+        <h2>Unit 4: Linear Equations and Graphs</h2>
+
+        <article id="linear-two-vars">
+            <h3>Linear equations with two variables</h3>
+            <p>A <strong>linear equation with two variables</strong> establishes a relationship between two quantities, and when graphed, always produces a straight line. Understanding this relationship is essential for analyzing dependencies between variables. These equations can be expressed in multiple equivalent forms, each revealing different information:</p>
+            <ul>
+                <li><strong>Slope-intercept form (y = mx + b):</strong> Shows the slope and y-intercept directly; easiest for graphing and understanding growth rate</li>
+                <li><strong>Standard form (Ax + By = C):</strong> Uses integers and is useful for finding intercepts algebraically</li>
+                <li><strong>Point-slope form (y - y₁ = m(x - x₁)):</strong> Uses a known point and slope; useful when those are what you're given</li>
+                <li><strong>Solutions as points:</strong> Any point (x, y) that makes the equation true represents a solution and lies on the corresponding line</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> The equation y = 2x + 1 is linear. The point (0, 1) is on the line because y = 2(0) + 1 = 1. The point (2, 5) is on the line because y = 2(2) + 1 = 5.</div>
+            <div class="example"><strong>Example 2:</strong> The equation 3x + 2y = 12 is linear in standard form. The point (2, 3) is on the line because 3(2) + 2(3) = 6 + 6 = 12.</div>
+            <svg width="300" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 300 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .graph-line { stroke: #0950c5; stroke-width: 2.5; }
+                        .point { fill: #e74c3c; r: 4; }
+                        .axis-label { font-size: 12px; font-family: Arial; }
+                    </style>
+                </defs>
+                <!-- Grid -->
+                <line x1="0" y1="150" x2="300" y2="150" class="grid-line"/>
+                <line x1="150" y1="0" x2="150" y2="300" class="grid-line"/>
+                <line x1="30" y1="150" x2="270" y2="150" class="axis"/>
+                <line x1="150" y1="30" x2="150" y2="270" class="axis"/>
+                <!-- Use consistent pixel mapping: origin at (150,150), scale = 25 px/unit -->
+                <!-- (0,1) -> (150,125); (2,5) -> (200,25) -->
+                <!-- Compute a line that crosses those pixel points and spans the SVG area -->
+                <line x1="62" y1="300" x2="213" y2="0" class="graph-line"/>
+                <!-- Points (pixel-mapped) -->
+                <circle cx="150" cy="125" class="point"/>
+                <circle cx="200" cy="25" class="point"/>
+                <!-- Labels -->
+                <text x="155" y="115" class="axis-label" font-size="11">y=2x+1</text>
+                <text x="160" y="145" class="axis-label" font-size="10">(0,1)</text>
+                <text x="205" y="20" class="axis-label" font-size="10">(2,5)</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) For y = 3x - 2, is the point (1, 1) on the line? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) For y = -x + 4, what is y when x = 2? <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) For 2x + y = 8, is the point (3, 2) on the line? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="the-slope">
+            <h3>The Slope</h3>
+            <p><strong>Slope</strong> is a fundamental measure of how a line tilts, representing the rate of change between any two points. It's calculated as the ratio of vertical change (rise) to horizontal change (run): m = (y₂ - y₁) / (x₂ - x₁). Understanding slope allows you to predict outputs, compare rates, and interpret real-world change. Key slope concepts include:</p>
+            <ul>
+                <li><strong>Positive slope:</strong> The line rises from left to right, indicating an increasing relationship</li>
+                <li><strong>Negative slope:</strong> The line falls from left to right, indicating a decreasing relationship</li>
+                <li><strong>Zero slope:</strong> A horizontal line where y stays constant regardless of x</li>
+                <li><strong>Undefined slope:</strong> A vertical line where x is constant; division by zero occurs because there's no horizontal change</li>
+                <li><strong>Interpretation:</strong> The slope value tells you how much y changes for each unit increase in x</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> Find the slope between (1, 2) and (3, 6). m = (6 - 2) / (3 - 1) = 4 / 2 = 2. The slope is 2, meaning for every 1 unit right, y increases by 2.</div>
+            <div class="example"><strong>Example 2:</strong> Find the slope between (2, 5) and (4, 1). m = (1 - 5) / (4 - 2) = -4 / 2 = -2. The slope is -2, a negative slope.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .slope-pos { stroke: #27ae60; stroke-width: 2; }
+                        .point { r: 4; }
+                        .axis-label { font-size: 11px; font-family: Arial; }
+                        .rise-run { stroke: #999; stroke-width: 1.5; stroke-dasharray: 3,3; }
+                    </style>
+                </defs>
+                <!-- Grid -->
+                <line x1="40" y1="150" x2="300" y2="150" class="grid-line"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="grid-line"/>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Positive slope line through (1,2) and (3,6), scale 25 px/unit: (1,2)=(185,100), (3,6)=(235,0) -->
+                <line x1="85" y1="250" x2="235" y2="0" class="slope-pos"/>
+                <!-- Points for positive slope (pixel-mapped correctly) -->
+                <circle cx="185" cy="100" class="point" fill="#27ae60"/>
+                <circle cx="235" cy="0" class="point" fill="#27ae60"/>
+                <!-- Rise/Run for positive slope (use correct y for the top point) -->
+                <line x1="185" y1="100" x2="185" y2="0" class="rise-run"/>
+                <line x1="185" y1="0" x2="235" y2="0" class="rise-run"/>
+                <text x="70" y="155" class="axis-label" fill="#27ae60" font-weight="bold">m=2</text>
+                <text x="190" y="90" class="axis-label" font-size="10">(1,2)</text>
+                <text x="240" y="10" class="axis-label" font-size="10">(3,6)</text>
+                <text x="175" y="50" class="axis-label" font-size="9">Rise</text>
+                <text x="205" y="10" class="axis-label" font-size="9">Run</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) Find the slope between (0, 0) and (2, 4): <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) Find the slope between (1, 5) and (4, 2): <input data-answer="-1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Find the slope between (3, 3) and (6, 3): <input data-answer="0" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="horizontal-vertical">
+            <h3>Horizontal and vertical lines</h3>
+            <p><strong>Horizontal and vertical lines</strong> are special cases that don't follow the typical slope formula. Understanding these lines is important because they have unique properties that affect equation-solving and graphing. Here's what distinguishes them:</p>
+            <ul>
+                <li><strong>Horizontal lines:</strong> Expressed as y = c (where c is a constant), they have a slope of 0 because there is zero vertical change; every point has the same y-coordinate</li>
+                <li><strong>Vertical lines:</strong> Expressed as x = c, they have undefined slope because calculating rise/run requires division by zero; every point has the same x-coordinate</li>
+                <li><strong>Function test:</strong> Vertical lines fail the vertical line test and are not functions (one x-value maps to multiple y-values)</li>
+                <li><strong>Graphing:</strong> Horizontal lines are easy to graph; vertical lines require special handling since they can't be written in slope-intercept form</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> The equation y = 5 represents a horizontal line. Every point has y-coordinate 5, like (0, 5), (2, 5), (-3, 5). The slope is 0.</div>
+            <div class="example"><strong>Example 2:</strong> The equation x = -2 represents a vertical line. Every point has x-coordinate -2, like (-2, 0), (-2, 3), (-2, -1). The slope is undefined.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .h-line { stroke: #9b59b6; stroke-width: 2.5; }
+                        .v-line { stroke: #f39c12; stroke-width: 2.5; }
+                        .point { r: 4; }
+                        .axis-label { font-size: 11px; font-family: Arial; }
+                    </style>
+                </defs>
+                <!-- Grid -->
+                <line x1="40" y1="150" x2="300" y2="150" class="grid-line"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="grid-line"/>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Horizontal line y=5 (mapped to y=110) -->
+                <line x1="60" y1="110" x2="280" y2="110" class="h-line"/>
+                <circle cx="100" cy="110" class="point" fill="#9b59b6"/>
+                <circle cx="160" cy="110" class="point" fill="#9b59b6"/>
+                <circle cx="220" cy="110" class="point" fill="#9b59b6"/>
+                <text x="290" y="115" class="axis-label" fill="#9b59b6">y=5</text>
+                <!-- Vertical line x=2 (mapped to x=220) -->
+                <line x1="220" y1="50" x2="220" y2="250" class="v-line"/>
+                <circle cx="220" cy="80" class="point" fill="#f39c12"/>
+                <circle cx="220" cy="150" class="point" fill="#f39c12"/>
+                <circle cx="220" cy="220" class="point" fill="#f39c12"/>
+                <text x="225" y="30" class="axis-label" fill="#f39c12">x=2</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) What is the slope of y = 7? <input data-answer="0" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) What is the form of a vertical line? (answer: x = c) <input data-answer="x = c" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Is y = -3 horizontal or vertical? (answer: horizontal) <input data-answer="horizontal" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="intercepts">
+            <h3>Intersections in x-axis / y-axis</h3>
+            <p><strong>Intercepts</strong> are the points where a line crosses the coordinate axes. These points are particularly important because they often have real-world meaning and provide useful information for graphing. Finding intercepts requires a systematic approach:</p>
+            <ul>
+                <li><strong>X-intercept (zero of function):</strong> The point where the line crosses the x-axis; occurs when y = 0. Set y = 0 in the equation and solve for x. Written as (x,0)</li>
+                <li><strong>Y-intercept:</strong> The point where the line crosses the y-axis; occurs when x = 0. Set x = 0 in the equation and solve for y. Written as (0,y)</li>
+                <li><strong>Graphing utility:</strong> These two points alone are usually sufficient to draw an accurate line graph</li>
+                <li><strong>Relationship to forms:</strong> In y = mx + b form, b is the y-intercept; in standard form Ax + By = C, intercepts come from setting x and y to zero</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> For y = 2x + 4, find the y-intercept: set x = 0, y = 2(0) + 4 = 4. y-intercept is (0, 4). Find x-intercept: set y = 0, 0 = 2x + 4, so x = -2. x-intercept is (-2, 0).</div>
+            <div class="example"><strong>Example 2:</strong> For 3x - y = 6, find y-intercept: set x = 0, -y = 6, so y = -6. y-intercept is (0, -6). Find x-intercept: set y = 0, 3x = 6, so x = 2. x-intercept is (2, 0).</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .line { stroke: #0950c5; stroke-width: 2.5; }
+                        .intercept { r: 5; }
+                        .axis-label { font-size: 11px; font-family: Arial; }
+                    </style>
+                </defs>
+                <!-- Grid -->
+                <line x1="40" y1="150" x2="300" y2="150" class="grid-line"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="grid-line"/>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Line y = 2x + 4: drawn so it passes through the pixel-mapped intercepts -->
+                <!-- Pixel mapping: origin at (160,150), scale = 25 px per unit -->
+                <!-- Y-intercept (0,4) -> (160,50); X-intercept (-2,0) -> (110,150) -->
+                <!-- Draw extended line through those two pixel points so it crosses the SVG area correctly -->
+                <line x1="40" y1="290" x2="280" y2="-190" class="line"/>
+                <!-- Y-intercept (0, 4) -->
+                <circle cx="160" cy="50" class="intercept" fill="#27ae60"/>
+                <!-- X-intercept (-2, 0) -->
+                <circle cx="110" cy="150" class="intercept" fill="#e74c3c"/>
+                <!-- Labels -->
+                <text x="165" y="110" class="axis-label" fill="#27ae60" font-weight="bold">y-int</text>
+                <text x="100" y="165" class="axis-label" fill="#e74c3c" font-weight="bold">x-int</text>
+                <text x="250" y="50" class="axis-label">y=2x+4</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) For y = 3x - 6, what is the x-intercept? (answer: 2) <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) For y = -x + 5, what is the y-intercept? (answer: 5) <input data-answer="5" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) For 2x + y = 8, what is the x-intercept? (answer: 4) <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="app-slope-intercepts">
+            <h3>Application of intersections and slope</h3>
+            <p>Linear relationships appear throughout the real world, and understanding how to interpret slope and intercepts in context allows you to extract meaning from mathematical models. The parameters of a linear equation often represent real quantities with practical significance:</p>
+            <ul>
+                <li><strong>Y-intercept meaning:</strong> Often represents an initial value, starting amount, or fixed cost before any variable activity occurs</li>
+                <li><strong>Slope meaning:</strong> Represents a rate of change — how much one quantity changes per unit change in another (cost per item, distance per hour, growth per year)</li>
+                <li><strong>X-intercept meaning:</strong> Often represents when something reaches zero, becomes unprofitable, or concludes (when debt is paid off, when a tank empties, break-even point)</li>
+                <li><strong>Building context equations:</strong> From a real situation, identify these values and write the appropriate linear equation</li>
+                <li><strong>Predicting values:</strong> Use the equation to answer "what-if" questions about values beyond your original data</li>
+            </ul>
+            <div class="example"><strong>Example 1:</strong> A phone plan costs $20 monthly plus $0.10 per minute. The equation is y = 0.10x + 20. The y-intercept (20) is the base monthly cost. The slope (0.10) is the cost per minute. If x = 100 minutes, the cost is y = 0.10(100) + 20 = $30.</div>
+            <div class="example"><strong>Example 2:</strong> A car depreciates at $2000 per year, starting at $25000. The equation is y = -2000x + 25000. The y-intercept (25000) is the initial price. The slope (-2000) is the yearly depreciation. The x-intercept (when y = 0) is when the car is worth nothing: 0 = -2000x + 25000, so x = 12.5 years.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .app-line { stroke: #16a085; stroke-width: 2.5; }
+                        .point { r: 5; }
+                        .axis-label { font-size: 10px; font-family: Arial; }
+                        .title-label { font-size: 12px; font-weight: bold; }
+                    </style>
+                </defs>
+                <!-- Grid -->
+                <line x1="40" y1="30" x2="40" y2="250" class="axis"/>
+                <line x1="40" y1="250" x2="300" y2="250" class="axis"/>
+                <!-- Minor grid lines -->
+                <line x1="40" y1="220" x2="295" y2="220" class="grid-line"/>
+                <line x1="40" y1="190" x2="295" y2="190" class="grid-line"/>
+                <line x1="40" y1="160" x2="295" y2="160" class="grid-line"/>
+                <line x1="80" y1="250" x2="80" y2="255" class="axis"/>
+                <line x1="140" y1="250" x2="140" y2="255" class="axis"/>
+                <line x1="200" y1="250" x2="200" y2="255" class="axis"/>
+                <line x1="260" y1="250" x2="260" y2="255" class="axis"/>
+                <!-- Cost line y = 50x, y-int at (40,250), slope=50: (10,500)=(140,150) -->
+                <line x1="40" y1="250" x2="200" y2="50" class="app-line"/>
+                <!-- Y-intercept point (pixel-mapped) -->
+                <circle cx="40" cy="250" class="point" fill="#27ae60"/>
+                <!-- Slope point (10,500)=(140,150) -->
+                <circle cx="140" cy="150" class="point" fill="#27ae60"/>
+                <!-- Labels -->
+                <text x="10" y="35" class="title-label">Cost</text>
+                <text x="250" y="270" class="title-label">Time</text>
+                <text x="45" y="270" class="axis-label">0</text>
+                <text x="135" y="270" class="axis-label">5</text>
+                <text x="195" y="270" class="axis-label">10</text>
+                <text x="255" y="270" class="axis-label">15</text>
+                <text x="10" y="255" class="axis-label">$0</text>
+                <text x="10" y="225" class="axis-label">$50</text>
+                <text x="5" y="195" class="axis-label">$100</text>
+                <text x="5" y="165" class="axis-label">$150</text>
+                <!-- Annotation -->
+                <text x="50" y="245" class="axis-label" fill="#27ae60">y-int</text>
+                <text x="145" y="140" class="axis-label" fill="#27ae60">slope=50</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice (challenge):</strong>
+                <div class="problem">1) A gym charges $50 upfront and $10 monthly. After 6 months, total cost = <input data-answer="110" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) A tree is 60 cm tall and grows 2 cm per month. After 12 months, height = <input data-answer="84" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">3) Water drains from a tank at 3 gallons per minute, starting with 120 gallons. How many minutes until empty? <input data-answer="40" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit5">
+        <h2>Unit 5: Forms of linear equations</h2>
+
+        <article id="slope-intercept-form">
+            <h3>Slope-Intercept form</h3>
+            <p><strong>Slope-intercept form</strong> is the most popular form for writing linear equations because it clearly displays both essential pieces of information about the line. The standard format is y = mx + b, where each parameter has a specific meaning. This form's clarity makes it ideal for graphing, comparing lines, and understanding behavior:</p>
+            <ul>
+                <li><strong>m is the slope:</strong> The rate of change; how much y increases (or decreases if negative) for each unit increase in x</li>
+                <li><strong>b is the y-intercept:</strong> The y-coordinate where the line crosses the y-axis; occurs when x = 0</li>
+                <li><strong>Graphing advantage:</strong> Plot the point (0, b), then use the slope to find more points by moving right and up (or down if slope is negative)</li>
+                <li><strong>Easy to identify:</strong> Comparison between equations is straightforward—lines with the same m are parallel; lines with different m intersect</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> y = 2x + 1 has slope m = 2 and y-intercept b = 1.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #e0e0e0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .line { stroke: #0b6cd6; stroke-width: 3; }
+                        .point { fill: #e74c3c; r: 5; }
+                        .label { font-size: 11px; font-family: Arial; }
+                        .title { font-size: 12px; font-weight: bold; }
+                    </style>
+                </defs>
+                <!-- Axes centered at (160,150). Use consistent mapping: origin_px=(160,150), scale=25 px/unit -->
+                <line x1="40" y1="150" x2="300" y2="150" class="grid-line"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="grid-line"/>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- For y=2x+1: pixel mapping -> y-int (0,1) => (160,125), point (2,5) => (210,25) -->
+                <line x1="40" y1="365" x2="300" y2="-155" class="line"/>
+                <circle cx="160" cy="125" class="point"/>
+                <text x="165" y="120" class="label">(0,1)</text>
+                <circle cx="210" cy="25" class="point"/>
+                <text x="215" y="20" class="label">(2,5)</text>
+                <text x="60" y="35" class="title">Slope-Intercept: y = 2x + 1</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Identify m and b in y = -3x + 4: m = <input data-answer="-3" type="text"> b = <input data-answer="4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="graphing-slope-intercept">
+            <h3>Graphing slope-intercept equations</h3>
+            <p>Graphing a linear equation in slope-intercept form is systematic and efficient. The format y = mx + b gives you everything needed to quickly create an accurate graph. This skill bridges the gap between algebraic and visual understanding of linear relationships. The process involves:</p>
+            <ul>
+                <li><strong>Plot the y-intercept:</strong> Mark the point (0, b) on the y-axis</li>
+                <li><strong>Use the slope as a tool:</strong> From (0, b), move using the slope rise/run; if m = 2/1, go right 1 and up 2 to get another point</li>
+                <li><strong>Connect the points:</strong> Draw a straight line through the points extending across the entire graph</li>
+                <li><strong>Check negative slopes:</strong> If m is negative, moving right means moving down; if m is a fraction, the denominator tells you horizontal distance</li>
+                <li><strong>Verify with a second point:</strong> Calculate another point using a different x-value to ensure your line is correct</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Graph y = 2x + 1 by plotting (0,1) then moving right 1 and up 2 to (1,3).</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .grid-line { stroke: #f0f0f0; stroke-width: 1; }
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .line { stroke: #16a085; stroke-width: 3; }
+                        .point { fill: #e74c3c; r: 5; }
+                        .helper { stroke: #999; stroke-width: 1.5; stroke-dasharray: 3,3; }
+                        .label { font-size: 11px; font-family: Arial; }
+                    </style>
+                </defs>
+                <!-- Axes with origin at (160,150) scale=25 -->
+                <line x1="40" y1="150" x2="300" y2="150" class="grid-line"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="grid-line"/>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- y=2x+1 through (160,125) and (185,75) for (1,3) => (160+25,150-75) -->
+                <line x1="40" y1="365" x2="300" y2="-155" class="line"/>
+                <circle cx="160" cy="125" class="point"/>
+                <circle cx="185" cy="75" class="point"/>
+                <line x1="160" y1="125" x2="185" y2="75" class="helper"/>
+                <text x="165" y="120" class="label">(0,1)</text>
+                <text x="190" y="70" class="label">(1,3)</text>
+                <text x="60" y="35" class="label">Graphing y = 2x + 1</text>
+            </svg>
+        </article>
+
+        <article id="writing-slope-intercept">
+            <h3>Writing slope-intercept equations</h3>
+            <p>Writing equations in slope-intercept form requires identifying two key pieces of information: the slope and the y-intercept. The scenarios you'll encounter vary, but the procedure remains consistent. Understanding how to extract parameters from different given information is essential:</p>
+            <ul>
+                <li><strong>Given slope and y-intercept:</strong> Directly substitute m and b into y = mx + b</li>
+                <li><strong>Given slope and a point:</strong> Substitute the slope and point into y = mx + b, solve for b, then write the complete equation</li>
+                <li><strong>Given two points:</strong> Calculate slope using m = (y₂ - y₁)/(x₂ - x₁), then use one point to find b, and write the equation</li>
+                <li><strong>Given graph or table:</strong> Identify the y-intercept directly as a point on the y-axis, then calculate slope from any two clear points</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Points (2,3) and (4,7). m = (7-3)/(4-2) = 2. Use (2,3): 3 = 2(2) + b → b = -1. Equation: y = 2x - 1.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Write equation through (1,2) with slope 3: y = <input data-answer="3x-1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="point-slope-form">
+            <h3>Point-slope form</h3>
+            <p><strong>Point-slope form</strong> is y - y₁ = m(x - x₁), where (x₁, y₁) is a known point on the line and m is the slope. This form is particularly powerful when you have a specific point and the slope, as you can write the equation without first finding the y-intercept. Understanding this form provides flexibility in equation-writing:</p>
+            <ul>
+                <li><strong>Direct use of given information:</strong> If you know a point and slope, use them directly without extra calculation</li>
+                <li><strong>Conversion to slope-intercept:</strong> Expand and simplify to get y = mx + b when that form is desired</li>
+                <li><strong>Conceptual clarity:</strong> The form emphasizes that the slope between any point (x, y) and the known point (x₁, y₁) must equal m</li>
+                <li><strong>Real-world modeling:</strong> Useful when you have an initial point and a known rate of change</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> With point (2,3) and m=4: y - 3 = 4(x - 2) → y = 4x - 5.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .line { stroke: #8e44ad; stroke-width: 3; }
+                        .point { fill: #e74c3c; r: 5; }
+                        .label { font-size: 11px; }
+                    </style>
+                </defs>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- For point (2,3) pixel (160+50,150-75)=(210,75) and slope 4 -->
+                <!-- Pixel line through (210,75) with pixel-slope -4: y = 75 + (-4)*(x-210) -->
+                <line x1="40" y1="755" x2="300" y2="-285" class="line"/>
+                <circle cx="210" cy="75" class="point"/>
+                <text x="215" y="70" class="label">(2,3)</text>
+                <text x="60" y="35" class="label">Point-slope: y-3=4(x-2)</text>
+            </svg>
+        </article>
+
+        <article id="standard-form">
+            <h3>Standard form</h3>
+            <p><strong>Standard form</strong> is Ax + By = C, where A, B, and C are integers. This form is algebraically elegant and useful for certain applications, particularly when finding intercepts or working with systems of equations. Each form serves different purposes, and knowing all three gives you flexibility:</p>
+            <ul>
+                <li><strong>Intercepts are easy:</strong> Set x = 0 for the y-intercept, set y = 0 for the x-intercept; no fraction manipulation needed</li>
+                <li><strong>Standard calculations:</strong> Works well with elimination method when solving systems of equations</li>
+                <li><strong>Integer coefficients:</strong> Using only integers eliminates fraction concerns in some contexts</li>
+                <li><strong>Conversion between forms:</strong> From slope-intercept y = mx + b, rearrange to -mx + y = b, or multiply through to clear fractions and get standard form</li>
+                <li><strong>Graphing note:</strong> Standard form is less intuitive for graphing than slope-intercept, so conversion is often necessary</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Convert y = 2x + 1 to standard form: subtract 2x both sides → -2x + y = 1. Multiply by -1 to make A positive: 2x - y = -1 (or leave as -2x + y = 1).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Convert y = -3x + 6 to standard form: <input data-answer="3x+y=6" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="unit6">
+        <h2>Unit 6: Systems of Equations</h2>
+
+        <article id="systems-intro">
+            <h3>Introduction</h3>
+            <p>A system of equations is a set of two or more equations with the same variables. A solution to a system is an ordered pair (or tuple) that satisfies all equations simultaneously. For example, the system y = 2x + 1 and y = -x + 4 has a solution at the point where both lines intersect.</p>
+            <div class="example"><strong>Example:</strong> Check if (1, 3) is a solution to y = 2x + 1 and y = -x + 4: First equation: 3 = 2(1) + 1 = 3 ✓. Second: 3 = -(1) + 4 = 3 ✓. Yes, (1,3) is the solution.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .line-blue { stroke: #0950c5; stroke-width: 2.5; }
+                        .line-red { stroke: #e74c3c; stroke-width: 2.5; }
+                        .point { fill: #27ae60; r: 6; }
+                        .label { font-size: 11px; font-family: Arial; }
+                    </style>
+                </defs>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- y = 2x + 1: point (0,1)→(160,125), slope 2, pixel-slope=-2 -->
+                <!-- Line: y = 125 - 2*(x-160); at x=50: y=365, at x=280: y=-115 -->
+                <line x1="50" y1="365" x2="280" y2="-115" class="line-blue"/>
+                <!-- y = -x + 4: point (0,4)→(160,50), slope -1, pixel-slope=1 -->
+                <!-- Line: y = 50 + 1*(x-160); at x=50: y=-60, at x=280: y=170 -->
+                <line x1="50" y1="-60" x2="280" y2="170" class="line-red"/>
+                <!-- Intersection point (1,3) => pixel (185, 75) -->
+                <circle cx="185" cy="75" class="point"/>
+                <text x="190" y="65" class="label">(1,3)</text>
+                <text x="60" y="35" class="label" fill="#0950c5">y=2x+1</text>
+                <text x="60" y="50" class="label" fill="#e74c3c">y=-x+4</text>
+            </svg>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Check if (2, 0) is a solution to y = x - 2 and y = -2x + 4: <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="solving-substitution">
+            <h3>Solving with substitution</h3>
+            <p>Substitution method: Solve one equation for one variable, then substitute that expression into the other equation. This reduces the system to a single equation in one variable, which you can solve.</p>
+            <div class="example"><strong>Example:</strong> Solve: y = 2x and 3x + y = 10. Substitute: 3x + (2x) = 10 → 5x = 10 → x = 2. Then y = 2(2) = 4. Solution: (2, 4).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Solve y = x + 1 and 2x + y = 7 using substitution. x = <input data-answer="2" type="text"> y = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="solving-elimination">
+            <h3>Solving with elimination</h3>
+            <p>Elimination method: Multiply one or both equations so that a variable has opposite coefficients in each equation. Then add the equations to eliminate that variable and solve for the remaining variable.</p>
+            <div class="example"><strong>Example:</strong> Solve: 2x + y = 5 and x - y = 1. Add the equations: 3x = 6 → x = 2. Substitute: 2 - y = 1 → y = 1. Solution: (2, 1).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Solve 3x + 2y = 12 and x - 2y = 0 using elimination. x = <input data-answer="3" type="text"> y = <input data-answer="1.5" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="equivalent-systems">
+            <h3>Equivalent systems</h3>
+            <p>Two systems are equivalent if they have the same solution set. Performing operations like multiplying an equation by a non-zero constant or adding a multiple of one equation to another creates an equivalent system. These operations preserve solutions.</p>
+            <div class="example"><strong>Example:</strong> x + y = 3 and 2x + 2y = 6 are equivalent (multiply first by 2). Both have infinite solutions since the second is just a multiple of the first.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Are x + y = 5 and 2x + 2y = 10 equivalent systems? (answer: yes) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="solutions-system">
+            <h3>Number of solutions to a system</h3>
+            <p>A system of two linear equations can have: (1) exactly one solution (lines intersect at one point), (2) infinitely many solutions (lines are the same), or (3) no solution (lines are parallel but distinct).</p>
+            <div class="example"><strong>Example 1:</strong> y = 2x + 1 and y = 2x + 3: parallel lines (same slope, different intercepts) → no solution.</div>
+            <div class="example"><strong>Example 2:</strong> y = 2x + 1 and 2y = 4x + 2: the second simplifies to y = 2x + 1, so they're the same line → infinitely many solutions.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .line { stroke: #27ae60; stroke-width: 2.5; }
+                        .line-parallel { stroke: #e74c3c; stroke-width: 2.5; stroke-dasharray: 4,2; }
+                        .label { font-size: 10px; font-family: Arial; }
+                    </style>
+                </defs>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- y = 2x + 1 (green, solid): point (0,1)→(160,125), pixel-slope=-2 -->
+                <!-- Line: y = 125 - 2*(x-160); at x=50: y=365, at x=280: y=-115 -->
+                <line x1="50" y1="365" x2="280" y2="-115" class="line"/>
+                <!-- y = 2x + 3 (red, dashed - parallel): point (0,3)→(160,75), pixel-slope=-2 -->
+                <!-- Line: y = 75 - 2*(x-160); at x=50: y=315, at x=280: y=-165 -->
+                <line x1="50" y1="315" x2="280" y2="-165" class="line-parallel"/>
+                <text x="60" y="35" class="label" fill="#27ae60">y=2x+1</text>
+                <text x="60" y="50" class="label" fill="#e74c3c">y=2x+3 (no solution)</text>
+            </svg>
+        </article>
+
+        <article id="verbal-systems">
+            <h3>Verbal problems</h3>
+            <p>Real-world situations often involve systems of equations. Identify the variables, write equations based on the conditions, and solve the system to answer the question.</p>
+            <div class="example"><strong>Example:</strong> Alice and Bob have 20 dollars combined. Alice has 4 more than Bob. Let a = Alice's money, b = Bob's money: a + b = 20 and a = b + 4. Substitute: (b+4) + b = 20 → 2b = 16 → b = 8, a = 12. Alice has $12, Bob has $8.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) A pen costs $2 and a notebook $3. You buy 5 items for $12. How many pens? (hint: p + n = 5, 2p + 3n = 12) <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="unit7">
+        <h2>Unit 7: Inequalities</h2>
+
+        <article id="checking-two-var-ineq">
+            <h3>Checking solutions of two-variable inequalities</h3>
+            <p>For a two-variable inequality like y > 2x + 1, check if a point (x, y) is a solution by substituting x and y into the inequality. If the resulting statement is true, the point is a solution.</p>
+            <div class="example"><strong>Example:</strong> Is (2, 6) a solution to y > 2x + 1? Substitute: 6 > 2(2) + 1 = 5 → 6 > 5 is true. Yes, (2,6) is a solution.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Is (1, 4) a solution to y ≥ 2x + 1? (answer: yes or no) <input data-answer="yes" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="graphing-two-var-ineq">
+            <h3>Graphing two-variable inequalities</h3>
+            <p>To graph y > mx + b: (1) Draw the line y = mx + b as a dashed line (for > or <) or solid line (for ≥ or ≤). (2) Pick a test point not on the line (often (0,0)). (3) If it satisfies the inequality, shade the side containing it; otherwise, shade the other side.</p>
+            <div class="example"><strong>Example:</strong> Graph y > 2x - 1. Line is y = 2x - 1 (dashed). Test (0,0): 0 > 2(0) - 1 = -1 → true. Shade the region above and to the left including origin.</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .shaded { fill: #3498db; opacity: 0.2; }
+                        .line-dashed { stroke: #e74c3c; stroke-width: 2.5; stroke-dasharray: 4,2; }
+                        .point { fill: #27ae60; r: 5; }
+                        .label { font-size: 10px; font-family: Arial; }
+                    </style>
+                </defs>
+                <!-- Shaded region: above the line y=2x-1, so from left edge up to the line and right/top -->
+                <polygon points="40,150 160,175 300,150 300,20 40,20" class="shaded"/>
+                <!-- Axes -->
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Dashed line y = 2x - 1: (0,-1)=(160,175), (2,3)=(210,75) -->
+                <line x1="40" y1="275" x2="300" y2="25" class="line-dashed"/>
+                <!-- Test point (0,0) -->
+                <circle cx="160" cy="150" class="point"/>
+                <text x="165" y="145" class="label">(0,0)</text>
+                <text x="60" y="35" class="label" fill="#e74c3c">y > 2x - 1</text>
+            </svg>
+        </article>
+
+    </section>
+
+    <section id="unit8">
+        <h2>Unit 8: Functions</h2>
+
+        <article id="evaluating-functions">
+            <h3>Evaluating functions</h3>
+            <p>A function f(x) is a rule that assigns exactly one output y for each input x. To evaluate f(a), replace every x with a and compute the result. Notation: f(x) = 2x + 1 means the function doubles x and adds 1.</p>
+            <div class="example"><strong>Example:</strong> If f(x) = 2x + 1, find f(3): f(3) = 2(3) + 1 = 7.</div>
+            <div class="example"><strong>Example 2:</strong> If g(x) = x², find g(-2): g(-2) = (-2)² = 4.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = 3x - 5, find f(2): <input data-answer="1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+                <div class="problem">2) If h(x) = x² + 2x, find h(3): <input data-answer="15" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="domain-range">
+            <h3>Domain and range</h3>
+            <p>The domain of a function is the set of all possible input values (x). The range is the set of all possible output values (y). For example, f(x) = √x has domain x ≥ 0 (non-negative reals) and range y ≥ 0.</p>
+            <div class="example"><strong>Example:</strong> f(x) = 1/x has domain x ≠ 0 (all reals except 0) and range y ≠ 0.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) For f(x) = √(x - 1), what is the domain? (answer: x ≥ 1) <input data-answer="x ≥ 1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="finding-domain">
+            <h3>Finding the domain</h3>
+            <p>To find domain, identify restrictions: (1) Denominators ≠ 0, (2) Expressions under square roots ≥ 0, (3) Logarithm arguments > 0. The domain is all real numbers excluding these restricted values.</p>
+            <div class="example"><strong>Example 1:</strong> f(x) = 1/(x - 3). Denominator ≠ 0: x ≠ 3. Domain: all reals except 3, or (-∞, 3) ∪ (3, ∞).</div>
+            <div class="example"><strong>Example 2:</strong> f(x) = √(2x - 4). Radicand ≥ 0: 2x - 4 ≥ 0 → x ≥ 2. Domain: [2, ∞).</div>
+        </article>
+
+        <article id="recognizing-functions">
+            <h3>Recognizing functions</h3>
+            <p>A relation is a function if each input has exactly one output. The vertical line test: if every vertical line intersects the graph at most once, it's a function. If any vertical line intersects twice or more, it's not.</p>
+            <div class="example"><strong>Example:</strong> y = x² is a function (vertical line test passes). x = y² is not a function (a vertical line can intersect it twice).</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .curve { stroke: #27ae60; stroke-width: 2.5; fill: none; }
+                        .vline { stroke: #999; stroke-width: 1; stroke-dasharray: 2,2; }
+                        .label { font-size: 10px; font-family: Arial; }
+                    </style>
+                </defs>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Parabola y = x² (approximation) -->
+                <path d="M 70 270 Q 160 30 250 270" class="curve"/>
+                <!-- Vertical line at x=1 (intersects once) -->
+                <line x1="185" y1="20" x2="185" y2="280" class="vline"/>
+                <text x="60" y="35" class="label">y = x² (function)</text>
+                <text x="190" y="150" class="label" font-size="9">One intersection</text>
+            </svg>
+        </article>
+
+        <article id="max-min-graph">
+            <h3>Maximum and minimum of a graph</h3>
+            <p>A maximum is the highest point on a graph (locally or globally). A minimum is the lowest point. For a parabola f(x) = ax², if a > 0 the vertex is a minimum; if a < 0 the vertex is a maximum. The vertex is at x = -b/(2a).</p>
+            <div class="example"><strong>Example:</strong> f(x) = x² - 4x + 3. Here a=1 > 0, so minimum at x = -(-4)/(2·1) = 2. f(2) = 4 - 8 + 3 = -1. Minimum: (2, -1).</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .curve { stroke: #9b59b6; stroke-width: 2.5; fill: none; }
+                        .point { fill: #e74c3c; r: 5; }
+                        .label { font-size: 10px; font-family: Arial; }
+                    </style>
+                </defs>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Parabola f(x)=x²-4x+3, vertex at x=2 → pixel x=210, f(2)=-1 → pixel y=175; arms at (0,3)=(110,75), (4,3)=(260,75) -->
+                <path d="M 110 75 Q 210 175 260 75" class="curve"/>
+                <!-- Minimum point at vertex (210, 175) -->
+                <circle cx="210" cy="175" class="point"/>
+                <text x="215" y="170" class="label">Minimum</text>
+            </svg>
+        </article>
+
+        <article id="intervals">
+            <h3>Increasing, decreasing, positive, and negative intervals</h3>
+            <p>A function is increasing where the graph goes up as x increases, and decreasing where it goes down. It's positive where y > 0 (above x-axis) and negative where y < 0 (below x-axis). Use interval notation like [a,b] or (a,b).</p>
+            <div class="example"><strong>Example:</strong> For f(x) = x² - 4: positive on (-∞, -2) ∪ (2, ∞), negative on (-2, 2), decreasing on (-∞, 0), increasing on (0, ∞).</div>
+            <svg width="320" height="300" style="border: 1px solid #ccc; border-radius: 8px; margin: 15px 0;" viewBox="0 0 320 300">
+                <defs>
+                    <style>
+                        .axis { stroke: #333; stroke-width: 2; }
+                        .curve { stroke: #16a085; stroke-width: 2.5; fill: none; }
+                        .label { font-size: 9px; font-family: Arial; }
+                    </style>
+                </defs>
+                <line x1="40" y1="150" x2="300" y2="150" class="axis"/>
+                <line x1="160" y1="20" x2="160" y2="280" class="axis"/>
+                <!-- Parabola f(x)=x²-4, vertex at (0,-4)=(160,250), arms at (-2,0)=(110,150), (2,0)=(210,150) -->
+                <path d="M 110 150 Q 160 250 210 150" class="curve"/>
+                <text x="60" y="140" class="label" fill="#16a085">Decreasing</text>
+                <text x="200" y="140" class="label" fill="#16a085">Increasing</text>
+                <text x="100" y="120" class="label" fill="#27ae60">Positive</text>
+                <text x="140" y="170" class="label" fill="#e74c3c">Negative</text>
+            </svg>
+        </article>
+
+        <article id="rate-of-change">
+            <h3>Average rate of change</h3>
+            <p>The average rate of change of f(x) from x = a to x = b is [f(b) - f(a)] / (b - a). It represents the slope of the secant line connecting two points on the graph and shows how fast the function changes on average over an interval.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x². From x=1 to x=3: [f(3) - f(1)] / (3 - 1) = [9 - 1] / 2 = 4. Average rate of change is 4.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) For f(x) = 2x + 1, find average rate of change from x=0 to x=5: <input data-answer="2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="inverse-functions">
+            <h3>Inverse functions</h3>
+            <p>The inverse function f⁻¹(x) undoes the operation of f(x). If f(a) = b, then f⁻¹(b) = a. To find f⁻¹, replace f(x) with y, swap x and y, solve for y. The domain of f⁻¹ is the range of f, and vice versa.</p>
+            <div class="example"><strong>Example:</strong> f(x) = 2x + 3. Let y = 2x + 3, swap: x = 2y + 3, solve: y = (x - 3)/2. So f⁻¹(x) = (x - 3)/2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = x/2 + 1, find f⁻¹(5): <input data-answer="8" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+    </section>
+
+    <section id="unit9">
+        <h2>Unit 9: Sequences</h2>
+        <article id="arith-seq-intro">
+            <h3>Introduction to arithmetic sequences</h3>
+            <p>An arithmetic sequence is a list of numbers where each term is found by adding the same value (the common difference) to the previous term. The constant difference makes the sequence grow or shrink at a steady rate.</p>
+            <div class="example"><strong>Example:</strong> 2, 5, 8, 11, ... (common difference is 3)</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What is the next term in 7, 10, 13, 16, ...? <input data-answer="19" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="arith-seq-building">
+            <h3>Building arithmetic sequences</h3>
+            <p>To build an arithmetic sequence, start with the first term and repeatedly add the common difference. Keeping track of the difference helps you generate any term quickly.</p>
+            <div class="example"><strong>Example:</strong> Start at 4, add 6 each time: 4, 10, 16, 22, ...</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If the first term is 3 and the common difference is 5, what is the 4th term? <input data-answer="18" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="geom-seq-intro">
+            <h3>Introduction to geometric sequences</h3>
+            <p>A geometric sequence is a list of numbers where each term is found by multiplying the previous term by the same value (the common ratio). The ratio can create rapid growth or decay depending on its size.</p>
+            <div class="example"><strong>Example:</strong> 3, 6, 12, 24, ... (common ratio is 2)</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What is the next term in 5, 10, 20, 40, ...? <input data-answer="80" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="geom-seq-building">
+            <h3>Building geometric sequences</h3>
+            <p>To build a geometric sequence, start with the first term and repeatedly multiply by the common ratio. This is useful for modeling repeated percent changes.</p>
+            <div class="example"><strong>Example:</strong> Start at 2, multiply by 3 each time: 2, 6, 18, 54, ...</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If the first term is 4 and the common ratio is 2, what is the 5th term? <input data-answer="64" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="general-sequences">
+            <h3>General sequences</h3>
+            <p>Sequences can be defined by a formula for the nth term. For arithmetic: a_n = a_1 + (n-1)d. For geometric: a_n = a_1 * r^(n-1). The formula lets you jump directly to any term without listing all prior terms.</p>
+            <div class="example"><strong>Example:</strong> Find the 6th term of 2, 5, 8, ... (arithmetic, d=3): a_6 = 2 + 5*3 = 17.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What is the 4th term of the geometric sequence 3, 6, 12, ...? <input data-answer="24" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit10">
+        <h2>Unit 10: Absolute value and piecewise-defined functions</h2>
+        <article id="absval-graphs">
+            <h3>Graphs for absolute value functions</h3>
+            <p>The graph of y = |x| is a "V" shape. For y = |x - h| + k, the vertex is at (h, k). Absolute value graphs reflect distances from a point, so they are always nonnegative.</p>
+            <div class="example"><strong>Example:</strong> y = |x - 2| + 1 has vertex at (2, 1).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What is the vertex of y = |x + 3| - 2? <input data-answer="(-3,-2)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="piecewise">
+            <h3>Piece-wise defined functions</h3>
+            <p>A piecewise function is defined by different formulas for different parts of its domain. For example, f(x) = x for x ≥ 0, f(x) = -x for x < 0. Pay close attention to the boundary values where the rule changes.</p>
+            <div class="example"><strong>Example:</strong> f(x) = { x if x ≥ 0; -x if x < 0 } is the same as f(x) = |x|.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = {2x for x ≥ 0; -x for x < 0}, what is f(-3)? <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit11">
+        <h2>Unit 11: Radicals and exponents</h2>
+        <article id="exponent-laws">
+            <h3>Exponents laws</h3>
+            <p>Exponent laws help simplify expressions: a^m * a^n = a^{m+n}, (a^m)^n = a^{mn}, a^0 = 1, a^{-n} = 1/a^n. These rules let you combine powers without expanding.</p>
+            <div class="example"><strong>Example:</strong> 2^3 * 2^4 = 2^{3+4} = 2^7 = 128.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Simplify: 5^2 * 5^3 = <input data-answer="3125" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="radicals">
+            <h3>Radicals</h3>
+            <p>A radical is an expression involving roots, like √x. The square root of x is a number which, when squared, gives x. Radicals often represent exact values that are not whole numbers.</p>
+            <div class="example"><strong>Example:</strong> √9 = 3 because 3^2 = 9.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What is √25? <input data-answer="5" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="simplify-sqrt">
+            <h3>Simplifying square roots</h3>
+            <p>To simplify √a, factor a into perfect squares. For example, √18 = √(9*2) = 3√2. This keeps the radical in simplest exact form.</p>
+            <div class="example"><strong>Example:</strong> √50 = √(25*2) = 5√2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Simplify √32: <input data-answer="4√2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit12">
+        <h2>Unit 12: Exponential growth and decay</h2>
+        <article id="linear-vs-exponential">
+            <h3>Linear vs exponential growth</h3>
+            <p>Linear growth adds the same amount each time. Exponential growth multiplies by the same factor each time. Exponential change becomes much larger over long periods.</p>
+            <div class="example"><strong>Example:</strong> Linear: 2, 4, 6, 8 (add 2). Exponential: 2, 4, 8, 16 (multiply by 2).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Which is exponential: 3, 6, 12, 24 or 5, 10, 15, 20? <input data-answer="3, 6, 12, 24" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="exponential-expr">
+            <h3>Exponential expressions</h3>
+            <p>Exponential expressions have the form a*b^x. The variable is in the exponent, which makes the rate of change proportional to the current value.</p>
+            <div class="example"><strong>Example:</strong> 5*2^x is exponential; 2x + 5 is linear.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Is 3^x + 2 exponential or linear? <input data-answer="exponential" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="growth-decay">
+            <h3>Growth and decay</h3>
+            <p>Exponential growth: y = a(1 + r)^t. Exponential decay: y = a(1 - r)^t. r is the rate, t is time. The base (1 ± r) is called the growth or decay factor.</p>
+            <div class="example"><strong>Example:</strong> A population doubles every year: y = 100*2^t.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If a car loses 20% of its value each year, what is the decay factor? <input data-answer="0.8" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit13">
+        <h2>Unit 13: Multiplying and factorizing quadratic equations</h2>
+        <article id="monomial-poly">
+            <h3>Monomials X Polynomials</h3>
+            <p>Multiply a monomial by a polynomial by distributing: a(b + c) = ab + ac. Each term must be multiplied by the monomial.</p>
+            <div class="example"><strong>Example:</strong> 2(x + 3) = 2x + 6.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Multiply: 3(x + 4) = <input data-answer="3x+12" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="multiply-binomials">
+            <h3>Multiplying binomials</h3>
+            <p>Use FOIL: (a + b)(c + d) = ac + ad + bc + bd. This is just the distributive property applied twice.</p>
+            <div class="example"><strong>Example:</strong> (x + 2)(x + 3) = x^2 + 3x + 2x + 6 = x^2 + 5x + 6.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) (x + 1)(x + 4) = <input data-answer="x^2+5x+4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="factoring">
+            <h3>Factoring</h3>
+            <p>Factoring is writing an expression as a product of its factors. For quadratics: x^2 + bx + c = (x + p)(x + q) where p and q multiply to c and add to b. Factoring is the reverse of multiplying.</p>
+            <div class="example"><strong>Example:</strong> x^2 + 5x + 6 = (x + 2)(x + 3).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Factor x^2 + 7x + 10: <input data-answer="(x+5)(x+2)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="factoring-grouping">
+            <h3>Factoring by grouping</h3>
+            <p>Group terms to factor: ax + ay + bx + by = a(x + y) + b(x + y) = (a + b)(x + y). This works when two terms share a common factor in each group.</p>
+            <div class="example"><strong>Example:</strong> x^2 + 3x + 2x + 6 = (x^2 + 3x) + (2x + 6) = x(x + 3) + 2(x + 3) = (x + 2)(x + 3).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Factor by grouping: x^2 + 4x + 3x + 12: <input data-answer="(x+3)(x+4)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="diff-squares">
+            <h3>Difference of squares</h3>
+            <p>a^2 - b^2 = (a + b)(a - b). Look for two perfect squares with a minus sign.</p>
+            <div class="example"><strong>Example:</strong> x^2 - 9 = (x + 3)(x - 3).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Factor x^2 - 16: <input data-answer="(x+4)(x-4)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="perfect-squares">
+            <h3>Perfect squares</h3>
+            <p>(a + b)^2 = a^2 + 2ab + b^2. (a - b)^2 = a^2 - 2ab + b^2. These patterns help you factor trinomials quickly.</p>
+            <div class="example"><strong>Example:</strong> (x + 5)^2 = x^2 + 10x + 25.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Expand (x - 3)^2: <input data-answer="x^2-6x+9" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+    </section>
+
+    <section id="unit14">
+        <h2>Unit 14: Quadratic functions and equations</h2>
+        <article id="parabolas">
+            <h3>Parabolas</h3>
+            <p>The graph of a quadratic function y = ax^2 + bx + c is a parabola. If a > 0, it opens upward; if a < 0, downward. The vertex gives the maximum or minimum value.</p>
+            <div class="example"><strong>Example:</strong> y = x^2 - 4x + 3 is a parabola opening upward.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Does y = -x^2 + 2x - 1 open up or down? <input data-answer="down" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="factored-form">
+            <h3>Solving and graphing with factored form</h3>
+            <p>Factored form: y = a(x - r1)(x - r2). The x-intercepts are r1 and r2. This form makes zeros easy to read.</p>
+            <div class="example"><strong>Example:</strong> y = (x - 1)(x - 3) has x-intercepts at 1 and 3.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What are the x-intercepts of y = (x - 2)(x + 4)? <input data-answer="2,-4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="solve-sqrt">
+            <h3>Solving by taking square root</h3>
+            <p>For equations like x^2 = k, take the square root: x = ±√k. Remember to include both the positive and negative roots.</p>
+            <div class="example"><strong>Example:</strong> x^2 = 9 → x = ±3.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Solve x^2 = 25: x = <input data-answer="5,-5" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="solve-factoring">
+            <h3>Solving by factoring</h3>
+            <p>Set the quadratic equal to zero, factor, and set each factor to zero. This uses the zero-product property.</p>
+            <div class="example"><strong>Example:</strong> x^2 - 5x + 6 = 0 → (x - 2)(x - 3) = 0 → x = 2 or 3.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Solve x^2 - 4x = 0: x = <input data-answer="0,4" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="vertex-form">
+            <h3>Vertex form</h3>
+            <p>Vertex form: y = a(x - h)^2 + k. The vertex is at (h, k). This form shows the maximum or minimum directly.</p>
+            <div class="example"><strong>Example:</strong> y = 2(x - 1)^2 + 3 has vertex at (1, 3).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) What is the vertex of y = (x + 2)^2 - 5? <input data-answer="(-2,-5)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="quadratic-formula">
+            <h3>Quadratic formula</h3>
+            <p>The solutions to ax^2 + bx + c = 0 are x = [-b ± √(b^2 - 4ac)] / (2a). The discriminant b^2 - 4ac tells how many real solutions exist.</p>
+            <div class="example"><strong>Example:</strong> x^2 - 3x + 2 = 0 → x = [3 ± √(9 - 8)]/2 = [3 ± 1]/2 → x = 2 or 1.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Solve x^2 - 2x - 3 = 0 using the quadratic formula: x = <input data-answer="3,-1" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="complete-square">
+            <h3>Completing the square</h3>
+            <p>To complete the square: x^2 + bx + c = (x + b/2)^2 - (b^2/4) + c. This method is useful for converting to vertex form.</p>
+            <div class="example"><strong>Example:</strong> x^2 + 6x + 5 = (x + 3)^2 - 4.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Complete the square: x^2 + 4x + 1 = <input data-answer="(x+2)^2-3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="quadratic-strategy">
+            <h3>Strategizing to solve quadratic equations</h3>
+            <p>Choose factoring, completing the square, or the quadratic formula based on the equation. Try factoring first if possible, then move to other methods.</p>
+            <div class="example"><strong>Example:</strong> x^2 - 5x + 6 = 0 factors easily; x^2 - 2x + 1 = 0 is a perfect square; x^2 - 2x - 3 = 0 use quadratic formula.</div>
+        </article>
+        <article id="quadratic-std">
+            <h3>Quadratic standard form</h3>
+            <p>Standard form: y = ax^2 + bx + c. All quadratic equations can be written this way. This form makes coefficients easy to compare.</p>
+            <div class="example"><strong>Example:</strong> y = 2x^2 - 3x + 1 is in standard form.</div>
+        </article>
+        <article id="quadratic-forms">
+            <h3>Forms of quadratic equations</h3>
+            <p>Quadratics can be written in standard, factored, or vertex form. Each form highlights different features, like zeros or the vertex.</p>
+            <div class="example"><strong>Example:</strong> y = (x - 1)(x - 3) (factored), y = x^2 - 4x + 3 (standard), y = (x - 2)^2 - 1 (vertex).</div>
+        </article>
+    </section>
+
+    <section id="unit15">
+        <h2>Unit 15: Irrational numbers</h2>
+        <article id="irrational-intro">
+            <h3>Introduction</h3>
+            <p>Irrational numbers cannot be written as a ratio of integers. Their decimal expansions never repeat or terminate. They often arise from roots and geometric measurements.</p>
+            <div class="example"><strong>Example:</strong> π and √2 are irrational numbers.</div>
+        </article>
+        <article id="rational-irrational">
+            <h3>Sums and products of rational and irrational numbers</h3>
+            <p>The sum or product of a rational and an irrational number is always irrational (unless the rational is zero for products). This is a key closure property to remember.</p>
+            <div class="example"><strong>Example:</strong> 2 + √3 is irrational; 0 × √5 = 0 (rational).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Is 3 + π rational or irrational? <input data-answer="irrational" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+        <article id="irrational-proofs">
+            <h3>Proofs concerning irrational numbers</h3>
+            <p>To prove a number is irrational, show it cannot be written as a fraction. For example, √2 is irrational because no fraction squared equals 2. Many proofs use contradiction and parity arguments.</p>
+            <div class="example"><strong>Example:</strong> Proof by contradiction: Assume √2 = a/b in lowest terms. Then 2b^2 = a^2, so a is even, a = 2k. Substitute: 2b^2 = 4k^2 → b^2 = 2k^2, so b is even. Both a and b are even, contradicting lowest terms.</div>
+        </article>
+    </section>
+
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    // 9th Grade - Algebra 1
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    // 9th Grade - Geometry
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    // 10th Grade - Algebra 2
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    // 10th Grade - Trigonometry
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    // 11th Grade - Pre-Calculus
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    // 12th Grade - Calculus
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    // 12th Grade - Statistics
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>

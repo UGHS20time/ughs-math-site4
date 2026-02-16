@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculus</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade11.html">11th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade12.html">12th Grade</a>
+    <span>›</span>
+    Calculus
+</div>
+
+<div class="header">
+    <h1>Calculus</h1>
+    <!-- PDF link placeholder -->
+    <a href="prontuarios/Copia de prontuario_calculo_2024-25_jecruz.docx.pdf" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Limits and continuity</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#intro-limits">Intro to limits</a></li>
+                <li><a href="#estimate-limits-graphs">Estimating limits from graphs/tables</a></li>
+                <li><a href="#formal-limits">Formal definition of limits</a></li>
+                <li><a href="#limit-properties">Properties of limits</a></li>
+                <li><a href="#squeeze-theorem">Squeeze theorem</a></li>
+                <li><a href="#discontinuities">Types of discontinuities</a></li>
+                <li><a href="#continuity-point">Continuity at a point</a></li>
+                <li><a href="#continuity-interval">Continuity over an interval</a></li>
+                <li><a href="#remove-discontinuities">Removing discontinuities</a></li>
+                <li><a href="#infinite-limits">Infinite limits</a></li>
+                <li><a href="#limits-infinity">Limits at infinity</a></li>
+                <li><a href="#ivt">Intermediate value theorem</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Derivatives, definition and basic rules</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#derivative-def">Derivative definition</a></li>
+                <li><a href="#estimate-derivatives">Estimating derivatives</a></li>
+                <li><a href="#differentiability">Differentiability</a></li>
+                <li><a href="#power-rule">Power rule</a></li>
+                <li><a href="#product-rule">Product rule</a></li>
+                <li><a href="#quotient-rule">Quotient rule</a></li>
+                <li><a href="#deriv-basic-rules">Derivative rules (constant, sum, difference, constant multiple)</a></li>
+                <li><a href="#deriv-trig-exp">Derivatives of cos(x), sin(x), e^x, and ln(x)</a></li>
+                <li><a href="#deriv-trig-other">Derivatives of tan(x), cot(x), sec(x), and csc(x)</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Chain rule</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#chain-rule">Chain rule</a></li>
+                <li><a href="#implicit-diff">Implicit differentiation</a></li>
+                <li><a href="#deriv-inverse">Differentiating inverse functions</a></li>
+                <li><a href="#deriv-inverse-trig">Derivatives of inverse trigonometric functions</a></li>
+                <li><a href="#second-derivatives">Second derivatives</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Applications of derivatives</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#deriv-meaning">Meaning of the derivative in context</a></li>
+                <li><a href="#motion">Straight line motion</a></li>
+                <li><a href="#non-motion">Non-motion applications of derivatives</a></li>
+                <li><a href="#related-rates">Related rates</a></li>
+                <li><a href="#lhopital-deriv">L'Hôpital's rule: Applications of derivatives</a></li>
+                <li><a href="#lhopital-exponential">L'Hôpital's rule: composite exponential functions</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit5">Unit 5: Analyzing functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#mvt">Mean value theorem</a></li>
+                <li><a href="#evt-critical">Extreme value theorem and critical points</a></li>
+                <li><a href="#increasing-decreasing">Decreasing and increasing intervals</a></li>
+                <li><a href="#local-extrema">Relative (local) extrema</a></li>
+                <li><a href="#global-extrema">Absolute (global) extrema</a></li>
+                <li><a href="#concavity-intro">Concavity and inflection points intro</a></li>
+                <li><a href="#concavity-inflection">Analyzing concavity and inflection points</a></li>
+                <li><a href="#second-deriv-test">Second derivative test</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit6">Unit 6: Parametric equations, polar coordinates, and vector valued functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#parametric-intro">Intro to parametric equations</a></li>
+                <li><a href="#parametric-second">Second derivatives of parametric equations</a></li>
+                <li><a href="#vector-functions">Vector-valued functions</a></li>
+                <li><a href="#planar-motion">Planar motion</a></li>
+                <li><a href="#polar-functions">Polar functions</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="unit1">
+        <h2>Unit 1: Limits and continuity</h2>
+
+        <article id="intro-limits">
+            <h3>Intro to limits</h3>
+            <p>A limit describes the value a function approaches as the input approaches a specific value. The key insight is that we care about where the function is heading, not necessarily where it is at that exact point. In notation, lim(x→a) f(x) = L means the function approaches the value L as x gets closer to a. The limit can exist even if f(a) is undefined or different from L.</p>
+            <div class="example"><strong>Example:</strong> lim(x→2) (x² − 4)/(x − 2) = 4, even though the function is undefined at x = 2.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) Does lim(x→1) f(x) require f(1) to be defined? (answer: no) <input data-answer="no" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="estimate-limits-graphs">
+            <h3>Estimating limits from graphs/tables</h3>
+            <p>Graphically, to find lim(x→a) f(x), look at the y-value the curve approaches as x approaches a from both sides. From a table, examine values to the left and right of a. The limit exists and equals L only if both the left-hand limit and right-hand limit equal L.</p>
+            <div class="example"><strong>Example:</strong> If f(1.9)=3.8 and f(2.1)=4.2, the limit near 2 is approximately 4.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If approaching from the left gives 3 and from the right gives 5, does the limit exist? (answer: no) <input data-answer="no" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="formal-limits">
+            <h3>Formal definition of limits</h3>
+            <p>The ε-δ definition states: lim(x→a) f(x) = L if for every ε > 0, there exists δ > 0 such that whenever 0 < |x − a| < δ, we have |f(x) − L| < ε. This formalizes "getting arbitrarily close to L" by saying for any small distance ε, we can always find an input window δ around a where outputs stay within ε of L.</p>
+            <div class="example"><strong>Example:</strong> For f(x) = 2x, lim(x→1) f(x) = 2 because we can make |2x − 2| small by making |x − 1| small.</div>
+        </article>
+
+        <article id="limit-properties">
+            <h3>Properties of limits</h3>
+            <p>If lim(x→a) f(x) = L and lim(x→a) g(x) = M, then limits respect algebraic operations:</p>
+            <ul>
+                <li><strong>Sum:</strong> lim(x→a) [f(x) + g(x)] = L + M</li>
+                <li><strong>Difference:</strong> lim(x→a) [f(x) − g(x)] = L − M</li>
+                <li><strong>Product:</strong> lim(x→a) [f(x) · g(x)] = L · M</li>
+                <li><strong>Quotient:</strong> lim(x→a) [f(x)/g(x)] = L/M (provided M ≠ 0)</li>
+            </ul>
+            <p>These properties let you break complex limits into simpler ones.</p>
+            <div class="example"><strong>Example:</strong> lim(x→1) (x² + 3x) = lim(x→1) x² + lim(x→1) 3x = 1 + 3 = 4.</div>
+        </article>
+
+        <article id="squeeze-theorem">
+            <h3>Squeeze theorem</h3>
+            <p>If f(x) ≤ g(x) ≤ h(x) for all x near a, and lim(x→a) f(x) = lim(x→a) h(x) = L, then lim(x→a) g(x) = L. This theorem "squeezes" a hard-to-analyze function between two easier functions that converge to the same limit.</p>
+            <div class="example"><strong>Example:</strong> lim(x→0) x² sin(1/x) = 0 because −x² ≤ x² sin(1/x) ≤ x² and both bounds approach 0.</div>
+        </article>
+
+        <article id="discontinuities">
+            <h3>Types of discontinuities</h3>
+            <ul>
+                <li><strong>Removable:</strong> A factor cancels or function is undefined, but the limit exists. Appears as a "hole" on the graph.</li>
+                <li><strong>Jump:</strong> Left-hand and right-hand limits exist but differ. The function "jumps" at that point.</li>
+                <li><strong>Infinite:</strong> Occurs at vertical asymptotes where the function shoots to ±∞.</li>
+            </ul>
+            <p>Discontinuities can be identified by checking if the limit equals the function value.</p>
+            <div class="example"><strong>Example:</strong> f(x) = (x² − 1)/(x − 1) has a removable discontinuity at x = 1 (hole), while f(x) = 1/(x − 1) has an infinite discontinuity (asymptote).</div>
+        </article>
+
+        <article id="continuity-point">
+            <h3>Continuity at a point</h3>
+            <p>A function is continuous at x = a if all three conditions hold:</p>
+            <ol>
+                <li>f(a) is defined</li>
+                <li>lim(x→a) f(x) exists</li>
+                <li>lim(x→a) f(x) = f(a)</li>
+            </ol>
+            <p>Intuitively, you can draw the graph without lifting your pencil at that point.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x² is continuous everywhere because for any a, the limit as x→a equals a².</div>
+        </article>
+
+        <article id="continuity-interval">
+            <h3>Continuity over an interval</h3>
+            <p>A function is continuous on an interval if it is continuous at every point in that interval. For closed intervals [a,b], we also check one-sided continuity at the endpoints. Polynomial, exponential, and trigonometric functions are continuous wherever they are defined.</p>
+            <div class="example"><strong>Example:</strong> f(x) = √x is continuous on [0, ∞) but not on (−∞, ∞) because it is not defined for x < 0.</div>
+        </article>
+
+        <article id="remove-discontinuities">
+            <h3>Removing discontinuities</h3>
+            <p>Removable discontinuities (holes) can be "fixed" by redefining the function value at that point. Find the limit value and set f(a) equal to that limit. This only works for removable discontinuities, not jumps or infinite discontinuities.</p>
+            <div class="example"><strong>Example:</strong> f(x) = (x² − 1)/(x − 1) has a hole at x = 1. Define f(1) = 2 (the limit), and the function becomes continuous.</div>
+        </article>
+
+        <article id="infinite-limits">
+            <h3>Infinite limits</h3>
+            <p>An infinite limit occurs when a function grows unboundedly. Notation: lim(x→a) f(x) = ∞ means f(x) grows arbitrarily large as x approaches a. Similarly, lim(x→a) f(x) = −∞ means f(x) becomes arbitrarily negative. These often occur at vertical asymptotes where a denominator equals zero.</p>
+            <div class="example"><strong>Example:</strong> lim(x→0⁺) 1/x = ∞ and lim(x→0⁻) 1/x = −∞.</div>
+        </article>
+
+        <article id="limits-infinity">
+            <h3>Limits at infinity</h3>
+            <p>These describe function behavior as x approaches ±∞. Notation: lim(x→∞) f(x) = L means f(x) approaches L as x grows large. To evaluate, compare the degrees of numerator and denominator in rational functions: if degrees are equal, the limit is the ratio of leading coefficients; if the numerator degree is larger, the limit is ±∞.</p>
+            <div class="example"><strong>Example:</strong> lim(x→∞) (3x² + 1)/(2x² − 5) = 3/2 because the highest-degree terms dominate.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) lim(x→∞) (5x)/(x² + 1) = <input data-answer="0" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="ivt">
+            <h3>Intermediate value theorem</h3>
+            <p>If f is continuous on [a,b] and N is any value between f(a) and f(b), then there exists at least one c in (a,b) such that f(c) = N. In plain language: a continuous function passes through every output value between its starting and ending values. This is useful for proving solutions exist without finding them explicitly.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x² is continuous on [1,3]. Since f(1) = 1 and f(3) = 9, there must be some x where f(x) = 5.</div>
+        </article>
+    </section>
+
+    <section id="unit2">
+        <h2>Unit 2: Derivatives, definition and basic rules</h2>
+
+        <article id="derivative-def">
+            <h3>Derivative definition</h3>
+            <p>The derivative f'(a) measures the instantaneous rate of change of f at x = a. Formally, f'(a) = lim(h→0) [f(a+h) − f(a)]/h. Geometrically, it is the slope of the tangent line at (a, f(a)). The derivative tells you how fast the output is changing at that instant. If the limit does not exist, the function is not differentiable at that point.</p>
+            <div class="example"><strong>Example:</strong> For f(x) = x², f'(2) = lim(h→0) [(2+h)² − 4]/h = lim(h→0) [4h + h²]/h = 4.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = 3x, then f'(2) = <input data-answer="3" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="estimate-derivatives">
+            <h3>Estimating derivatives</h3>
+            <p>You can estimate the derivative at a point by computing the slope between two nearby points on the curve, using the secant line slope (f(a+h) − f(a))/h for small h. The symmetric difference quotient [f(a+h) − f(a−h)]/(2h) often gives a better approximation. Graphically, draw the tangent line and measure its slope.</p>
+            <div class="example"><strong>Example:</strong> To estimate f'(1) for f(x) = x³, use f(1.1) ≈ 1.331 and f(0.9) ≈ 0.729, then [1.331 − 0.729]/0.2 ≈ 3.</div>
+        </article>
+
+        <article id="differentiability">
+            <h3>Differentiability</h3>
+            <p>A function is differentiable at a point if the derivative exists there. Continuous functions are not always differentiable—cusps, corners, and vertical tangents create points where the derivative does not exist. If a function has a break (discontinuity), it is not differentiable there. Conversely, if f is differentiable at a, then f is continuous at a.</p>
+            <div class="example"><strong>Example:</strong> f(x) = |x| is continuous at x = 0 but not differentiable there because the left and right derivatives differ.</div>
+        </article>
+
+        <article id="power-rule">
+            <h3>Power rule</h3>
+            <p>If f(x) = xⁿ, then f'(x) = n·xⁿ⁻¹. This is one of the most useful rules in calculus. The power rule works for any real exponent, including negative and fractional powers.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x⁵ has f'(x) = 5x⁴. f(x) = x^(−2) has f'(x) = −2x^(−3) = −2/x³.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) If f(x) = x³, then f'(x) = <input data-answer="3x^2" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="product-rule">
+            <h3>Product rule</h3>
+            <p>If f(x) = u(x)·v(x), then f'(x) = u'(x)·v(x) + u(x)·v'(x). Memorize this as "first times derivative of second plus second times derivative of first." This rule handles products of two functions and extends to products of more functions.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x²·sin(x). Using product rule: f'(x) = 2x·sin(x) + x²·cos(x).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) f(x) = x·e^x, then f'(x) contains the term <input data-answer="e^x" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="quotient-rule">
+            <h3>Quotient rule</h3>
+            <p>If f(x) = u(x)/v(x), then f'(x) = [u'(x)·v(x) − u(x)·v'(x)] / [v(x)]². A common mnemonic is "low d-high minus high d-low, square the bottom and away we go." Always check whether the numerator can be simplified or rewritten to use product rule instead.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x/(x² + 1). Using quotient rule: f'(x) = [(1)(x² + 1) − (x)(2x)] / (x² + 1)² = (1 − x²) / (x² + 1)².</div>
+        </article>
+
+        <article id="deriv-basic-rules">
+            <h3>Derivative rules (constant, sum, difference, constant multiple)</h3>
+            <ul>
+                <li><strong>Constant:</strong> If f(x) = c, then f'(x) = 0</li>
+                <li><strong>Sum/Difference:</strong> (f ± g)' = f' ± g'</li>
+                <li><strong>Constant Multiple:</strong> (k·f)' = k·f'</li>
+            </ul>
+            <p>These rules let you differentiate term by term and factor out constants for simplification.</p>
+            <div class="example"><strong>Example:</strong> f(x) = 3x² + 2x + 5 gives f'(x) = 6x + 2 + 0 = 6x + 2.</div>
+        </article>
+
+        <article id="deriv-trig-exp">
+            <h3>Derivatives of cos(x), sin(x), e^x, and ln(x)</h3>
+            <p><strong>Key derivatives:</strong></p>
+            <ul>
+                <li>d/dx[sin(x)] = cos(x)</li>
+                <li>d/dx[cos(x)] = −sin(x)</li>
+                <li>d/dx[e^x] = e^x</li>
+                <li>d/dx[ln(x)] = 1/x</li>
+            </ul>
+            <p>The exponential function e^x is notable because it is its own derivative, making it solutions to many important differential equations.</p>
+            <div class="example"><strong>Example:</strong> f(x) = sin(x) + e^x gives f'(x) = cos(x) + e^x.</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) d/dx[cos(x)] = <input data-answer="-sin(x)" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="deriv-trig-other">
+            <h3>Derivatives of tan(x), cot(x), sec(x), and csc(x)</h3>
+            <ul>
+                <li>d/dx[tan(x)] = sec²(x)</li>
+                <li>d/dx[cot(x)] = −csc²(x)</li>
+                <li>d/dx[sec(x)] = sec(x)tan(x)</li>
+                <li>d/dx[csc(x)] = −csc(x)cot(x)</li>
+            </ul>
+            <p>These follow from the quotient rule applied to tan = sin/cos, etc. Notice the pattern: the derivatives of the "co-" functions have a negative sign.</p>
+            <div class="example"><strong>Example:</strong> f(x) = tan(x) gives f'(x) = sec²(x).</div>
+        </article>
+    </section>
+
+    <section id="unit3">
+        <h2>Unit 3: Chain rule</h2>
+
+        <article id="chain-rule">
+            <h3>Chain rule</h3>
+            <p>If f(x) = g(h(x)) (a composition), then f'(x) = g'(h(x))·h'(x). In words, differentiate the outer function (keeping the inner function), multiply by the derivative of the inner function. This is one of the most important rules because many real functions are compositions. Think of it as "peel off one layer, multiply by the derivative of that layer."</p>
+            <div class="example"><strong>Example:</strong> f(x) = sin(x²). Outer: sin(u) → cos(u), Inner: u = x² → du/dx = 2x. So f'(x) = cos(x²)·2x = 2x·cos(x²).</div>
+            <div class="practice">
+                <strong>Practice:</strong>
+                <div class="problem">1) f(x) = (3x + 1)⁵, then f'(x) has outer exponent factor <input data-answer="5" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div>
+            </div>
+        </article>
+
+        <article id="implicit-diff">
+            <h3>Implicit differentiation</h3>
+            <p>When a relation is given implicitly (like x² + y² = 25) rather than as y = f(x), differentiate both sides with respect to x, treating y as a function of x. When you differentiate y terms, include dy/dx using the chain rule. Solve for dy/dx algebraically. This technique finds slopes without explicitly solving for y.</p>
+            <div class="example"><strong>Example:</strong> x² + y² = 25. Differentiating: 2x + 2y(dy/dx) = 0, so dy/dx = −x/y.</div>
+        </article>
+
+        <article id="deriv-inverse">
+            <h3>Differentiating inverse functions</h3>
+            <p>If y = f(x) and x = g(y) are inverses, then g'(y) = 1/f'(x). In general, if f is differentiable and invertible, then [f⁻¹]'(y) = 1/f'(f⁻¹(y)). This relationship comes from the chain rule applied to f(f⁻¹(x)) = x.</p>
+            <div class="example"><strong>Example:</strong> f(x) = 2x + 3 has inverse f⁻¹(x) = (x − 3)/2. Since f'(x) = 2, we have [f⁻¹]'(x) = 1/2.</div>
+        </article>
+
+        <article id="deriv-inverse-trig">
+            <h3>Derivatives of inverse trigonometric functions</h3>
+            <p><strong>Key derivatives:</strong></p>
+            <ul>
+                <li>d/dx[arcsin(x)] = 1/√(1 − x²)</li>
+                <li>d/dx[arccos(x)] = −1/√(1 − x²)</li>
+                <li>d/dx[arctan(x)] = 1/(1 + x²)</li>
+            </ul>
+            <p>These follow from implicit differentiation or the inverse function derivative formula. When combined with the chain rule, these allow you to differentiate more complex expressions.</p>
+            <div class="example"><strong>Example:</strong> f(x) = arctan(3x). Using chain rule: f'(x) = 1/(1 + (3x)²) · 3 = 3/(1 + 9x²).</div>
+        </article>
+
+        <article id="second-derivatives">
+            <h3>Second derivatives</h3>
+            <p>The second derivative f''(x) is the derivative of the first derivative, measuring how the rate of change itself is changing. Notation: f''(x), d²y/dx², or d/dx[dy/dx]. The second derivative relates to concavity: if f''(x) > 0, the curve is concave up (U-shaped); if f''(x) < 0, it is concave down (∩-shaped). Second derivatives appear in acceleration (if position is f(x)).</p>
+            <div class="example"><strong>Example:</strong> f(x) = x³ gives f'(x) = 3x² and f''(x) = 6x.</div>
+        </article>
+    </section>
+
+    <section id="unit4">
+        <h2>Unit 4: Applications of derivatives</h2>
+
+        <article id="deriv-meaning">
+            <h3>Meaning of the derivative in context</h3>
+            <p>The derivative f'(a) is an instantaneous rate of change. In context, this might be velocity (rate of position change), marginal cost (rate of cost change per item), population growth rate, or any other rate. Always connect the derivative to the real-world interpretation: what is changing, with respect to what, and what does the sign mean?</p>
+            <div class="example"><strong>Example:</strong> If h(t) is height at time t, then h'(t) is the rate of height change, measured in units per second.</div>
+        </article>
+
+        <article id="motion">
+            <h3>Straight line motion</h3>
+            <p>For motion along a line with position s(t):</p>
+            <ul>
+                <li><strong>Velocity:</strong> v(t) = s'(t)</li>
+                <li><strong>Acceleration:</strong> a(t) = v'(t) = s''(t)</li>
+                <li><strong>Speed:</strong> |v(t)| (always positive)</li>
+            </ul>
+            <p><strong>Interpretation:</strong></p>
+            <ul>
+                <li>Object moves <strong>forward</strong> when v > 0</li>
+                <li>Object moves <strong>backward</strong> when v < 0</li>
+                <li>Object is <strong>stationary</strong> when v = 0</li>
+            </ul>
+            <p>Acceleration direction and magnitude determine whether motion is speeding up or slowing down.</p>
+            <div class="example"><strong>Example:</strong> s(t) = −16t² + 20t (height in feet). Then v(t) = −32t + 20 ft/s, and v = 0 at t = 5/8 seconds (peak height).</div>
+        </article>
+
+        <article id="non-motion">
+            <h3>Non-motion applications of derivatives</h3>
+            <p>Derivatives apply wherever rates matter: revenue and marginal revenue, cost and marginal cost, concentration of pollutants, temperature change, etc. Set up the relevant equation, differentiate, and interpret the result in the context. Common problems ask for maximum profit or minimum cost.</p>
+            <div class="example"><strong>Example:</strong> If profit P(x) = −x² + 100x, find the production level x that maximizes profit by setting P'(x) = 0.</div>
+        </article>
+
+        <article id="related-rates">
+            <h3>Related rates</h3>
+            <p>Related rates problems involve quantities that change over time and are related by an equation.</p>
+            <p><strong>Method:</strong></p>
+            <ol>
+                <li>Identify the constraint equation relating all variables</li>
+                <li>Differentiate implicitly with respect to time t</li>
+                <li>Substitute known values</li>
+                <li>Solve for the desired rate (usually dr/dt)</li>
+            </ol>
+            <div class="example"><strong>Example:</strong> A ladder 10 ft long leans against a wall. If the bottom slides away at 2 ft/s, how fast is the top sliding down when the base is 6 ft from the wall? Use x² + y² = 100, differentiate to get 2x(dx/dt) + 2y(dy/dt) = 0, then solve for dy/dt.</div>
+        </article>
+
+        <article id="lhopital-deriv">
+            <h3>L'Hôpital's rule: Applications of derivatives</h3>
+            <p>When lim(x→a) f(x)/g(x) is <strong>indeterminate</strong> (0/0 or ∞/∞), you can compute:</p>
+            <p style="text-align: center; font-weight: bold;">lim(x→a) f'(x)/g'(x)</p>
+            <p>instead, provided this limit exists. This replaces an algebraically difficult limit with derivatives.</p>
+            <p><strong>Note:</strong> Some indeterminate forms like 0·∞ can be rewritten as 0/0 or ∞/∞ first.</p>
+            <div class="example"><strong>Example:</strong> lim(x→0) sin(x)/x gives 0/0, so apply L'Hôpital's: lim(x→0) cos(x)/1 = 1.</div>
+        </article>
+
+        <article id="lhopital-exponential">
+            <h3>L'Hôpital's rule: composite exponential functions</h3>
+            <p>Forms like 1^∞, 0^0, or ∞^0 are indeterminate. To handle these, use logarithms: if y = f(x)^g(x), then ln(y) = g(x)·ln(f(x)), which may become a 0·∞ form, then 0/0 or ∞/∞ suitable for L'Hôpital's rule. Differentiate, apply L'Hôpital's if needed, then exponentiate to recover y.</p>
+            <div class="example"><strong>Example:</strong> lim(x→∞) (1 + 1/x)^x. Take ln: lim(x→∞) x·ln(1 + 1/x) = lim(x→∞) ln(1 + 1/x)/(1/x), which is 0/0. Apply L'Hôpital's to find the limit is ln(e) = 1, so the original limit is e.</div>
+        </article>
+    </section>
+
+    <section id="unit5">
+        <h2>Unit 5: Analyzing functions</h2>
+
+        <article id="mvt">
+            <h3>Mean value theorem</h3>
+            <p>If f is continuous on [a,b] and differentiable on (a,b), then there exists at least one c in (a,b) such that f'(c) = [f(b) − f(a)]/(b − a). Geometrically, the instantaneous rate of change at some point equals the average rate of change over the interval. This theorem guarantees that level roads must have a point where you match the average slope.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x² on [1,3]. Average rate = (9 − 1)/(3 − 1) = 4. At c = 2, f'(2) = 4.</div>
+        </article>
+
+        <article id="evt-critical">
+            <h3>Extreme value theorem and critical points</h3>
+            <p>The extreme value theorem states that a continuous function on a closed interval [a,b] attains its maximum and minimum. Extrema occur at:</p>
+            <ul>
+                <li><strong>Critical points:</strong> where f'(x) = 0 or is undefined</li>
+                <li><strong>Endpoints:</strong> a and b</li>
+            </ul>
+            <p>To find extrema: compute critical points, evaluate f at each critical point and endpoint, then compare values.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x² − 4x on [0,3]. f'(x) = 2x − 4 = 0 at x = 2. Check f(0) = 0, f(2) = −4, f(3) = −3. Minimum is −4 at x = 2.</div>
+        </article>
+
+        <article id="increasing-decreasing">
+            <h3>Decreasing and increasing intervals</h3>
+            <ul>
+                <li><strong>Increasing:</strong> If f'(x) > 0 on an interval, f(x) is increasing there</li>
+                <li><strong>Decreasing:</strong> If f'(x) < 0 on an interval, f(x) is decreasing there</li>
+            </ul>
+            <p><strong>Process:</strong> Find critical points, place them on a number line, test the sign of f' in each region, and mark accordingly. This analysis helps sketch the graph and understand the function's behavior.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x³ − 3x has f'(x) = 3x² − 3 = 3(x² − 1). Critical points: x = ±1. f' > 0 when x < −1 or x > 1 (increasing); f' < 0 when −1 < x < 1 (decreasing).</div>
+        </article>
+
+        <article id="local-extrema">
+            <h3>Relative (local) extrema</h3>
+            <p>A <strong>local maximum</strong> is where f(c) ≥ f(x) for all x in some neighborhood of c.</p>
+            <p>A <strong>local minimum</strong> is where f(c) ≤ f(x) nearby.</p>
+            <p>Local extrema occur at critical points. Use the <strong>first derivative test:</strong></p>
+            <ul>
+                <li>If f' changes from positive to negative: local <strong>max</strong></li>
+                <li>If f' changes from negative to positive: local <strong>min</strong></li>
+            </ul>
+            <div class="example"><strong>Example:</strong> f(x) = x³ − 3x has a local max at x = −1 (where f' goes from + to −) and local min at x = 1.</div>
+        </article>
+
+        <article id="global-extrema">
+            <h3>Absolute (global) extrema</h3>
+            <p>Global extrema are the largest and smallest values of f over an entire domain. On a closed interval, they occur at critical points or endpoints. On an open interval or the entire real line, analyze the behavior as x → ±∞. Global extrema may not exist if the function is unbounded.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x² on ℝ has a global minimum at x = 0 (value 0) and no global maximum (grows to ∞).</div>
+        </article>
+
+        <article id="concavity-intro">
+            <h3>Concavity and inflection points intro</h3>
+            <p><strong>Concavity</strong> describes the curving direction of a graph:</p>
+            <ul>
+                <li><strong>Concave up:</strong> f''(x) > 0 (U-shape)</li>
+                <li><strong>Concave down:</strong> f''(x) < 0 (∩-shape)</li>
+            </ul>
+            <p>An <strong>inflection point</strong> is where concavity changes. It occurs where f''(x) = 0 or is undefined, and the sign of f'' changes. At inflection points, the curve transitions from bending one way to bending the other.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x³ has f''(x) = 6x. For x < 0, f'' < 0 (concave down); for x > 0, f'' > 0 (concave up). Inflection point at x = 0.</div>
+        </article>
+
+        <article id="concavity-inflection">
+            <h3>Analyzing concavity and inflection points</h3>
+            <p>Compute f''(x), find points where f''(x) = 0 or is undefined, place these on a number line, test the sign of f'' in each region, and mark each region as concave up or down. Inflection points are where the sign changes. Sketch the graph showing these concavity regions for a more accurate picture.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x⁴ − 4x² has f''(x) = 12x² − 8. Solve 12x² − 8 = 0 to get x = ±√(2/3). Analyze concavity in three regions.</div>
+        </article>
+
+        <article id="second-deriv-test">
+            <h3>Second derivative test</h3>
+            <p>At a critical point c where f'(c) = 0, examine f''(c):</p>
+            <ul>
+                <li>If f''(c) > 0: local <strong>minimum</strong></li>
+                <li>If f''(c) < 0: local <strong>maximum</strong></li>
+                <li>If f''(c) = 0: test is inconclusive (use first derivative test instead)</li>
+            </ul>
+            <p>The second derivative test is faster than the first test when f'' is easy to compute.</p>
+            <div class="example"><strong>Example:</strong> f(x) = x³ − 3x has f'(x) = 3x² − 3, critical points at x = ±1. f''(x) = 6x, so f''(−1) = −6 < 0 (local max) and f''(1) = 6 > 0 (local min).</div>
+        </article>
+    </section>
+
+    <section id="unit6">
+        <h2>Unit 6: Parametric equations, polar coordinates, and vector valued functions</h2>
+
+        <article id="parametric-intro">
+            <h3>Intro to parametric equations</h3>
+            <p>Parametric equations describe a curve using a parameter t:</p>
+            <ul>
+                <li>x = f(t)</li>
+                <li>y = g(t)</li>
+            </ul>
+            <p>As t varies, the point (x, y) traces out the curve. Parametric form is useful for:</p>
+            <ul>
+                <li><strong>Motion problems:</strong> where t represents time</li>
+                <li><strong>Curves that fail vertical line test:</strong> like circles or loops</li>
+            </ul>
+            <p>To find dy/dx, use the chain rule: <strong>dy/dx = (dy/dt) / (dx/dt)</strong>. Parametric curves are oriented—they show the direction of motion as t increases.</p>
+            <div class="example"><strong>Example:</strong> x = cos(t), y = sin(t) for t ∈ [0, 2π] traces a unit circle counterclockwise as t increases.</div>
+        </article>
+
+        <article id="parametric-second">
+            <h3>Second derivatives of parametric equations</h3>
+            <p>For parametric curves, the second derivative d²y/dx² measures concavity. Use d²y/dx² = d/dx(dy/dx) = d/dt(dy/dx) ÷ (dx/dt). This requires computing the derivative of (dy/dt)/(dx/dt) with respect to t, then dividing by dx/dt. It is tedious but necessary for analyzing concavity on parametric curves.</p>
+            <div class="example"><strong>Example:</strong> For x = t², y = t³, compute dy/dx = (3t²)/(2t) = 3t/2, then d²y/dx² involves further differentiation and division.</div>
+        </article>
+
+        <article id="vector-functions">
+            <h3>Vector-valued functions</h3>
+            <p>A vector-valued function assigns a vector to each input:</p>
+            <ul>
+                <li><strong>2D:</strong> r(t) = ⟨f(t), g(t)⟩</li>
+                <li><strong>3D:</strong> r(t) = ⟨f(t), g(t), h(t)⟩</li>
+            </ul>
+            <p><strong>Key concepts:</strong></p>
+            <ul>
+                <li><strong>Derivative:</strong> r'(t) = ⟨f'(t), g'(t)⟩ (tangent vector)</li>
+                <li>Tangent vector shows <strong>direction and speed</strong> of motion</li>
+                <li>Used for curves and central to multivariable calculus</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> r(t) = ⟨2cos(t), 3sin(t)⟩ traces an ellipse. Then r'(t) = ⟨−2sin(t), 3cos(t)⟩.</div>
+        </article>
+
+        <article id="planar-motion">
+            <h3>Planar motion</h3>
+            <p>Planar motion is motion in 2D described by r(t) = ⟨x(t), y(t)⟩.</p>
+            <p><strong>Key quantities:</strong></p>
+            <ul>
+                <li><strong>Velocity:</strong> v(t) = r'(t) = ⟨x'(t), y'(t)⟩ (points in direction of motion)</li>
+                <li><strong>Speed:</strong> |v(t)| = √[x'(t)² + y'(t)²]</li>
+                <li><strong>Acceleration:</strong> a(t) = v'(t) = r''(t) = ⟨x''(t), y''(t)⟩</li>
+            </ul>
+            <p>Acceleration has components: <strong>tangential</strong> (speeding up/down) and <strong>normal</strong> (curving).</p>
+            <div class="example"><strong>Example:</strong> Projectile motion: r(t) = ⟨v₀cos(θ)·t, v₀sin(θ)·t − (1/2)g·t²⟩. Velocity and acceleration describe the trajectory.</div>
+        </article>
+
+        <article id="polar-functions">
+            <h3>Polar functions</h3>
+            <p><strong>Polar coordinates:</strong> (r, θ) describe points as:</p>
+            <ul>
+                <li>r: distance from the origin</li>
+                <li>θ: angle from the positive x-axis</li>
+            </ul>
+            <p>A polar function r = f(θ) describes a curve where r depends on θ. To find dy/dx in polar form:</p>
+            <ol>
+                <li>Convert to parametric: x = r cos(θ), y = r sin(θ)</li>
+                <li>Apply parametric derivative formula: dy/dx = (dy/dθ) / (dx/dθ)</li>
+            </ol>
+            <p>Polar curves can have loops, spirals, and other shapes not easily describable in Cartesian form.</p>
+            <div class="example"><strong>Example:</strong> r = 1 + cos(θ) is a cardioid. As θ goes from 0 to 2π, this traces a heart-shaped curve. At θ = 0, r = 2; at θ = π, r = 0.</div>
+        </article>
+    </section>
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>

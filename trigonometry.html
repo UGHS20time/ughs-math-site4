@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trigonometry</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="grade9.html">9th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade10.html">10th</a>
+    <a href="grade12.html">12th</a>
+</div>
+
+<!-- Search Bar -->
+<div class="search-container">
+    <div class="search-wrapper">
+        <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search topics, units, or classes..."
+            autocomplete="off"
+        />
+        <i class="fas fa-search search-icon"></i>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</div>
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs">
+    <a href="index.html">Home</a>
+    <span>›</span>
+    <a href="grade10.html">10th Grade</a>
+    <span>›</span>
+    Trigonometry
+</div>
+
+<div class="header">
+    <h1>Trigonometry</h1>
+    <!-- PDF link placeholder -->
+    <a href="#" class="pdf-link" target="_blank">Prontuario</a>
+</div>
+
+
+
+<div class="units">
+    <!-- Table of Contents -->
+    <div class="table-of-contents">
+        <h3>Course Contents:</h3>
+        <div class="toc-unit">
+            <h4><a href="#unit1">Unit 1: Right triangles</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#right-ratios">Ratios in right triangles</a></li>
+                <li><a href="#trig-ratios-intro">Intro to trigonometric ratios</a></li>
+                <li><a href="#solve-side">Solving for a side in a right triangle using the trigonometric ratios</a></li>
+                <li><a href="#solve-angle">Solving for an angle in a right triangle using trigonometric ratios</a></li>
+                <li><a href="#sine-cos-comp">Sine and cosine of complementary angles</a></li>
+                <li><a href="#reciprocal-ratios">Reciprocal ratios</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit2">Unit 2: Trigonometric functions</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#unit-circle-intro">Intro to unit circle</a></li>
+                <li><a href="#radians">Radians</a></li>
+                <li><a href="#pythagorean-id">Pythagorean Identity</a></li>
+                <li><a href="#special-values">Special trigonometric values in first quadrant</a></li>
+                <li><a href="#unit-circle-values">Trigonometric values in unit circle</a></li>
+                <li><a href="#amplitude-period">Amplitude, midline and period</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit3">Unit 3: Non-right triangles</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#law-sines">Law of sines</a></li>
+                <li><a href="#law-cosines">Law of cosines</a></li>
+                <li><a href="#solve-general-tri">Solving general triangles</a></li>
+            </ul>
+        </div>
+        <div class="toc-unit">
+            <h4><a href="#unit4">Unit 4: Trigonometric equations and identities</a></h4>
+            <ul class="toc-topics">
+                <li><a href="#inverse-trig">Inverse trigonometric functions</a></li>
+                <li><a href="#angle-addition">Angle addition identities</a></li>
+                <li><a href="#trig-identities">Using trigonometric identities</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Unit 1: Right triangles -->
+    <section id="unit1">
+        <h2>Unit 1: Right triangles</h2>
+        <article id="right-ratios">
+            <h3>Ratios in right triangles</h3>
+            <p>In a <strong>right triangle</strong>, the sides are related by special ratios that depend on the angles. These ratios are <strong>scale-independent</strong> — meaning similar triangles (triangles with the same angles but different sizes) have identical ratio values. This fundamental property allows us to use trigonometry to solve any right triangle.</p>
+            <p><strong>The three parts of a right triangle relative to an angle θ:</strong></p>
+            <ul>
+                <li><strong>Opposite:</strong> The side across from angle θ</li>
+                <li><strong>Adjacent:</strong> The side next to angle θ (but not the hypotenuse)</li>
+                <li><strong>Hypotenuse:</strong> The longest side, opposite the right angle</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> In a right triangle with angle θ = 30°, if the opposite side is 3 and hypotenuse is 5, then sin(30°) = 3/5 = 0.6. In a similar triangle scaled up where opposite is 6 and hypotenuse is 10, sin(30°) is still 6/10 = 0.6.</div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) If the opposite side is 3 and hypotenuse is 5, sin(θ) = <input data-answer="0.6" type="text"> <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="trig-ratios-intro">
+            <h3>Intro to trigonometric ratios</h3>
+            <p>The three main trigonometric ratios are <strong>sine (sin)</strong>, <strong>cosine (cos)</strong>, and <strong>tangent (tan)</strong>. Each ratio compares two sides of a right triangle relative to a specific angle θ. Memory aid: <strong>SOH-CAH-TOA</strong>.</p>
+            <ul>
+                <li><strong>sin(θ) = opposite/hypotenuse</strong> (<strong>S</strong>ine = <strong>O</strong>pposite/<strong>H</strong>ypotenuse)</li>
+                <li><strong>cos(θ) = adjacent/hypotenuse</strong> (<strong>C</strong>osine = <strong>A</strong>djacent/<strong>H</strong>ypotenuse)</li>
+                <li><strong>tan(θ) = opposite/adjacent</strong> (<strong>T</strong>angent = <strong>O</strong>pposite/<strong>A</strong>djacent)</li>
+            </ul>
+            <p><strong>Important:</strong> These ratios are properties of the angle, not the triangle. Any two right triangles with the same angle θ will have the same sine, cosine, and tangent values.</p>
+            <div class="example"><strong>Example:</strong> In a 3-4-5 right triangle, if θ is the angle opposite the side of length 3: sin(θ) = 3/5, cos(θ) = 4/5, tan(θ) = 3/4.</div>
+        </article>
+        <article id="solve-side">
+            <h3>Solving for a side in a right triangle using the trigonometric ratios</h3>
+            <p>To find an unknown side in a right triangle, identify which ratio (sin, cos, or tan) connects your <strong>known angle</strong>, <strong>known side</strong>, and <strong>unknown side</strong>. Then use algebra to solve.</p>
+            <p><strong>Steps:</strong></p>
+            <ol>
+                <li>Label opposite, adjacent, and hypotenuse for the given angle</li>
+                <li>Choose the correct ratio (SOH-CAH-TOA) that uses both the known and unknown sides</li>
+                <li>Write an equation with the ratio</li>
+                <li>Solve for the unknown side</li>
+            </ol>
+            <div class="example"><strong>Example:</strong> In a right triangle, angle A = 30°, hypotenuse = 10, find the opposite side.
+            <ul>
+                <li>sin(30°) = opposite/10</li>
+                <li>opposite = 10 × sin(30°) = 10 × 0.5 = 5</li>
+            </ul>
+            Another example: If cos(30°) = x/10 and cos(30°) = √3/2, then x = 10 × √3/2 = 5√3 ≈ 8.66.
+            </div>
+        </article>
+        <article id="solve-angle">
+            <h3>Solving for an angle in a right triangle using trigonometric ratios</h3>
+            <p>To find an unknown <strong>angle</strong> when you know two sides, use the <strong>inverse trigonometric functions</strong> (<strong>arcsin, arccos, arctan</strong> or written as sin⁻¹, cos⁻¹, tan⁻¹). These "reverse" the trigonometric ratios to give you the angle.</p>
+            <p><strong>Process:</strong></p>
+            <ol>
+                <li>Identify which two sides you know relative to the unknown angle θ</li>
+                <li>Form the appropriate ratio (sin, cos, or tan)</li>
+                <li>Apply the inverse function to solve for θ</li>
+                <li>Result is typically in degrees or radians (check your calculator)</li>
+            </ol>
+            <div class="example"><strong>Example:</strong> If opposite = 5 and hypotenuse = 10, find θ:
+            <ul>
+                <li>sin(θ) = 5/10 = 0.5</li>
+                <li>θ = sin⁻¹(0.5) = 30°</li>
+            </ul>
+            Another example: If adjacent = 4 and opposite = 3, find θ:
+            <ul>
+                <li>tan(θ) = 3/4 = 0.75</li>
+                <li>θ = tan⁻¹(0.75) ≈ 36.87°</li>
+            </ul>
+            </div>
+        </article>
+        <article id="sine-cos-comp">
+            <h3>Sine and cosine of complementary angles</h3>
+            <p>In a right triangle, the two non-right angles are <strong>complementary</strong> (they sum to 90°). This creates a special relationship between sine and cosine called <strong>cofunction identities</strong>.</p>
+            <ul>
+                <li><strong>sin(90° − θ) = cos(θ)</strong></li>
+                <li><strong>cos(90° − θ) = sin(θ)</strong></li>
+            </ul>
+            <p><strong>Why this works:</strong> If you rotate perspective to the complementary angle, opposite becomes adjacent and vice versa.</p>
+            <div class="example"><strong>Example:</strong>
+            <ul>
+                <li>sin(30°) = cos(60°) = 0.5 (since 30° + 60° = 90°)</li>
+                <li>sin(40°) = cos(50°)</li>
+                <li>cos(25°) = sin(65°)</li>
+            </ul>
+            </div>
+            <div class="practice"><strong>Practice:</strong> <div class="problem">1) sin(20°) = cos( <input data-answer="70" type="text">°) <button onclick="checkThis(this)">Check</button> <span class="result"></span></div></div>
+        </article>
+        <article id="reciprocal-ratios">
+            <h3>Reciprocal ratios</h3>
+            <p>Three additional trigonometric ratios are the <strong>reciprocals</strong> of the main three. They are less commonly used but appear in identities and advanced problems.</p>
+            <ul>
+                <li><strong>csc(θ) = 1/sin(θ) = hypotenuse/opposite</strong> (cosecant)</li>
+                <li><strong>sec(θ) = 1/cos(θ) = hypotenuse/adjacent</strong> (secant)</li>
+                <li><strong>cot(θ) = 1/tan(θ) = adjacent/opposite</strong> (cotangent)</li>
+            </ul>
+            <p><strong>Key insight:</strong> You don't need to memorize these separately—they're just inverses of the main ratios. If sin(θ) = 5/13, then csc(θ) = 13/5.</p>
+            <div class="example"><strong>Example:</strong> In a 3-4-5 right triangle where sin(θ) = 3/5:
+            <ul>
+                <li>csc(θ) = 1/sin(θ) = 1/(3/5) = 5/3</li>
+                <li>cos(θ) = 4/5, so sec(θ) = 5/4</li>
+                <li>tan(θ) = 3/4, so cot(θ) = 4/3</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+
+    <!-- Unit 2: Trigonometric functions -->
+    <section id="unit2">
+        <h2>Unit 2: Trigonometric functions</h2>
+        <article id="unit-circle-intro">
+            <h3>Intro to unit circle</h3>
+            <p>The <strong>unit circle</strong> is a circle with radius 1 centered at the origin of a coordinate plane. It is the fundamental tool for extending trigonometry beyond right triangles to all angles (including negative and reflex angles). Every point on the unit circle can be written as <strong>(cosθ, sinθ)</strong>, where θ is the angle measured counterclockwise from the positive x-axis.</p>
+            <p><strong>Key insight:</strong> For any angle θ:</p>
+            <ul>
+                <li>The <strong>x-coordinate</strong> of the point is cos(θ)</li>
+                <li>The <strong>y-coordinate</strong> of the point is sin(θ)</li>
+                <li>The point is always distance 1 from the origin (by definition of unit circle)</li>
+            </ul>
+            <p><strong>Special points on unit circle:</strong></p>
+            <ul>
+                <li>0° (or 0 rad): (1, 0) → cos(0°) = 1, sin(0°) = 0</li>
+                <li>90° (or π/2 rad): (0, 1) → cos(90°) = 0, sin(90°) = 1</li>
+                <li>180° (or π rad): (-1, 0) → cos(180°) = -1, sin(180°) = 0</li>
+                <li>270° (or 3π/2 rad): (0, -1) → cos(270°) = 0, sin(270°) = -1</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> At θ = 45°, the point is (√2/2, √2/2), so cos(45°) = √2/2 and sin(45°) = √2/2.</div>
+        </article>
+        <article id="radians">
+            <h3>Radians</h3>
+            <p><strong>Radians</strong> are an angle measurement unit based on arc length rather than degrees. One <strong>radian</strong> is the angle subtended by an arc equal in length to the radius. The relationship between radians and degrees is:</p>
+            <ul>
+                <li>π radians = 180°</li>
+                <li>To convert degrees to radians: multiply by π/180°</li>
+                <li>To convert radians to degrees: multiply by 180°/π</li>
+            </ul>
+            <p><strong>Common angle conversions:</strong></p>
+            <ul>
+                <li>45° = π/4 radians</li>
+                <li>60° = π/3 radians</li>
+                <li>90° = π/2 radians</li>
+                <li>360° = 2π radians</li>
+            </ul>
+            <p><strong>Why radians matter:</strong> Radians are the standard in calculus and advanced mathematics because arc length, angular velocity, and many formulas simplify beautifully when using radians.</p>
+            <div class="example"><strong>Example:</strong> Convert 30° to radians: 30° × (π/180°) = π/6 radians. Convert π/4 to degrees: (π/4) × (180°/π) = 45°.</div>
+        </article>
+        <article id="pythagorean-id">
+            <h3>Pythagorean Identity</h3>
+            <p>The <strong>Pythagorean Identity</strong> is one of the most important trigonometric identities:</p>
+            <p style="text-align: center; font-weight: bold; font-size: 1.1em;">sin²(θ) + cos²(θ) = 1</p>
+            <p>This identity holds for <strong>all</strong> angles θ. It comes directly from the equation of the unit circle: x² + y² = 1, where x = cos(θ) and y = sin(θ).</p>
+            <p><strong>Using the Pythagorean Identity:</strong></p>
+            <ul>
+                <li>If you know sin(θ), you can find cos(θ): cos²(θ) = 1 - sin²(θ)</li>
+                <li>If you know cos(θ), you can find sin(θ): sin²(θ) = 1 - cos²(θ)</li>
+                <li>It helps <strong>simplify</strong> trigonometric expressions</li>
+                <li>It provides <strong>verification</strong> of trigonometric values</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> If cos(θ) = 3/5, find sin(θ):
+            <ul>
+                <li>sin²(θ) + (3/5)² = 1</li>
+                <li>sin²(θ) = 1 - 9/25 = 16/25</li>
+                <li>sin(θ) = ±4/5</li>
+            </ul>
+            </div>
+        </article>
+        <article id="special-values">
+            <h3>Special trigonometric values in first quadrant</h3>
+            <p>Certain angles have <strong>exact</strong> trigonometric values that deserve memorization because they appear frequently. These values come from two special right triangles: the <strong>45-45-90</strong> and <strong>30-60-90</strong> triangles.</p>
+            <p><strong>Table of special angles (degrees and radians):</strong></p>
+            <table style="width:100%; border-collapse: collapse;">
+            <tr style="border-bottom: 1px solid #ddd;">
+                <th style="padding: 8px; text-align: left;">Angle</th>
+                <th style="padding: 8px; text-align: left;">sin(θ)</th>
+                <th style="padding: 8px; text-align: left;">cos(θ)</th>
+                <th style="padding: 8px; text-align: left;">tan(θ)</th>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px;">0° (0)</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px;">30° (π/6)</td>
+                <td>1/2</td>
+                <td>√3/2</td>
+                <td>√3/3</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px;">45° (π/4)</td>
+                <td>√2/2</td>
+                <td>√2/2</td>
+                <td>1</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="padding: 8px;">60° (π/3)</td>
+                <td>√3/2</td>
+                <td>1/2</td>
+                <td>√3</td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">90° (π/2)</td>
+                <td>1</td>
+                <td>0</td>
+                <td>undefined</td>
+            </tr>
+            </table>
+            <p><strong>Derivation hint:</strong> The 45-45-90 triangle has sides 1-1-√2 (all sides divided by √2). The 30-60-90 triangle has sides 1-√3-2. These give the exact values above.</p>
+            <div class="example"><strong>Example:</strong> sin(45°) = √2/2 (not 0.707, which is an approximation). cos(60°) = 1/2 exactly.</div>
+        </article>
+        <article id="unit-circle-values">
+            <h3>Trigonometric values in unit circle</h3>
+            <p>Every point <strong>(x, y)</strong> on the unit circle represents an angle θ, and from that point you can read off the trigonometric values. The beauty of the unit circle is that it extends trigonometric values to <strong>all</strong> angles (positive, negative, and beyond 360°), and it shows how signs change in different quadrants.</p>
+            <p><strong>For any angle θ on the unit circle (point (x, y)):</strong></p>
+            <ul>
+                <li><strong>cos(θ) = x</strong> (first coordinate)</li>
+                <li><strong>sin(θ) = y</strong> (second coordinate)</li>
+                <li><strong>tan(θ) = sin(θ)/cos(θ) = y/x</strong> (if x ≠ 0)</li>
+            </ul>
+            <p><strong>Signs by quadrant:</strong></p>
+            <ul>
+                <li><strong>Quadrant I (0° to 90°):</strong> sin > 0, cos > 0, tan > 0</li>
+                <li><strong>Quadrant II (90° to 180°):</strong> sin > 0, cos < 0, tan < 0</li>
+                <li><strong>Quadrant III (180° to 270°):</strong> sin < 0, cos < 0, tan > 0</li>
+                <li><strong>Quadrant IV (270° to 360°):</strong> sin < 0, cos > 0, tan < 0</li>
+            </ul>
+            <p><strong>Memory aid (ASTC):</strong> "All Students Take Calculus" reminds you which functions are positive in each quadrant: <strong>A</strong>ll (Q1), <strong>S</strong>ine (Q2), <strong>T</strong>angent (Q3), <strong>C</strong>osine (Q4).</p>
+            <div class="example"><strong>Example:</strong> At θ = 150° (in Quadrant II): sin(150°) = 1/2 (positive), cos(150°) = -√3/2 (negative), tan(150°) = -1/√3 (negative).</div>
+        </article>
+        <article id="amplitude-period">
+            <h3>Amplitude, midline and period</h3>
+            <p>Trigonometric functions create <strong>periodic waves</strong> with predictable patterns. For a function of the form <strong>y = a sin(b(x - c)) + d</strong> (or cosine), each coefficient controls a different aspect of the wave.</p>
+            <ul>
+                <li><strong>Amplitude = |a|:</strong> Measures the maximum distance from the midline to the peak. The wave oscillates between d - |a| and d + |a|.</li>
+                <li><strong>Period = 2π/|b|:</strong> The horizontal distance for one complete cycle. For regular sine/cosine, period = 2π.</li>
+                <li><strong>Midline = y = d:</strong> The vertical shift. The wave oscillates around this horizontal line.</li>
+                <li><strong>Phase shift = c:</strong> The horizontal shift. Positive c shifts right, negative shifts left.</li>
+            </ul>
+            <p><strong>Example interpretations:</strong></p>
+            <ul>
+                <li>y = 3 sin(x): Amplitude 3, period 2π, midline y = 0</li>
+                <li>y = sin(2x): Amplitude 1, period π (twice as fast), midline y = 0</li>
+                <li>y = sin(x) + 5: Amplitude 1, period 2π, midline y = 5 (shifted up)</li>
+                <li>y = 2 sin(3x - π) + 1: Amplitude 2, period 2π/3, phase shift π/3 right, midline y = 1</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> For y = 4 sin(2(x - π/4)) + 1:
+            <ul>
+                <li>Amplitude = 4 (wave goes from -3 to 5)</li>
+                <li>Period = 2π/2 = π (one cycle every π units)</li>
+                <li>Midline = 1 (centered at y = 1)</li>
+                <li>Shifted π/4 units to the right</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+
+    <!-- Unit 3: Non-right triangles -->
+    <section id="unit3">
+        <h2>Unit 3: Non-right triangles</h2>
+        <article id="law-sines">
+            <h3>Law of sines</h3>
+            <p>The <strong>Law of Sines</strong> relates the sides and angles of <strong>any</strong> triangle (not just right triangles). It states that the ratio of each side to the sine of its opposite angle is constant:</p>
+            <p style="text-align: center; font-weight: bold;">sin(A)/a = sin(B)/b = sin(C)/c</p>
+            <p>Where capital letters denote angles and lowercase letters denote the sides opposite those angles.</p>
+            <p><strong>When to use Law of Sines:</strong></p>
+            <ul>
+                <li><strong>ASA (Angle-Side-Angle):</strong> Two angles and one side known</li>
+                <li><strong>AAS (Angle-Angle-Side):</strong> Two angles and a non-included side known</li>
+                <li><strong>SSA (Angle-Angle-Side, ambiguous case):</strong> Two sides and a non-included angle known (may have 0, 1, or 2 solutions)</li>
+            </ul>
+            <p><strong>Steps to solve:</strong></p>
+            <ol>
+                <li>Set up the ratio equation</li>
+                <li>Cross multiply if necessary</li>
+                <li>Solve for the unknown</li>
+                <li>Check for ambiguous cases (SSA can have multiple solutions)</li>
+            </ol>
+            <div class="example"><strong>Example:</strong> Triangle with A = 30°, B = 45°, a = 5. Find b:
+            <ul>
+                <li>sin(30°)/5 = sin(45°)/b</li>
+                <li>0.5/5 = (√2/2)/b</li>
+                <li>b = 5 × sin(45°)/sin(30°) = 5 × (√2/2)/0.5 = 5√2 ≈ 7.07</li>
+            </ul>
+            </div>
+        </article>
+        <article id="law-cosines">
+            <h3>Law of cosines</h3>
+            <p>The <strong>Law of Cosines</strong> is a generalization of the Pythagorean Theorem that works for <strong>any</strong> triangle. It relates all three sides and one angle:</p>
+            <p style="text-align: center; font-weight: bold;">c² = a² + b² − 2ab cos(C)</p>
+            <p>Where C is the angle between sides a and b, and c is the opposite side.</p>
+            <p><strong>When to use Law of Cosines:</strong></p>
+            <ul>
+                <li><strong>SAS (Side-Angle-Side):</strong> Two sides and the included angle known</li>
+                <li><strong>SSS (Side-Side-Side):</strong> All three sides known (need to find an angle)</li>
+            </ul>
+            <p><strong>Finding angles with Law of Cosines:</strong> Rearrange to cos(C) = (a² + b² - c²)/(2ab), then use inverse cosine.</p>
+            <p><strong>Connection to Pythagorean Theorem:</strong> If C = 90°, then cos(90°) = 0, and we get c² = a² + b² (the Pythagorean Theorem).</p>
+            <div class="example"><strong>Example:</strong> Triangle with a = 3, b = 4, C = 60°. Find c:
+            <ul>
+                <li>c² = 3² + 4² - 2(3)(4)cos(60°)</li>
+                <li>c² = 9 + 16 - 24(0.5) = 25 - 12 = 13</li>
+                <li>c = √13 ≈ 3.61</li>
+            </ul>
+            </div>
+        </article>
+        <article id="solve-general-tri">
+            <h3>Solving general triangles</h3>
+            <p>Solving a general (non-right) triangle means finding all unknown sides and angles given some starting information. The strategy depends on what you know (ASA, AAS, SAS, SSS, or SSA).</p>
+            <p><strong>Decision tree for triangle solving:</strong></p>
+            <ul>
+                <li><strong>ASA or AAS (two angles given):</strong> Use Law of Sines directly</li>
+                <li><strong>SAS (two sides + included angle):</strong> Use Law of Cosines to find 3rd side, then Law of Sines for remaining angles</li>
+                <li><strong>SSS (all three sides):</strong> Use Law of Cosines rearranged to find each angle</li>
+                <li><strong>SSA (two sides + non-included angle, ambiguous case):</strong> Use Law of Sines; check if 0, 1, or 2 solutions exist</li>
+            </ul>
+            <p><strong>Ambiguous case (SSA):</strong> Given sides a, b and angle A opposite side a. If a < b sin(A), no triangle exists. If a = b sin(A), one right triangle. If b sin(A) < a < b, two triangles. If a ≥ b, one triangle.</p>
+            <p><strong>Steps for any case:</strong></p>
+            <ol>
+                <li>Identify what type of case you have</li>
+                <li>Choose appropriate law (Sines or Cosines)</li>
+                <li>Solve for one unknown</li>
+                <li>Use remaining information to find remaining unknowns</li>
+                <li>Verify your answer using angle sum = 180°</li>
+            </ol>
+        </article>
+    </section>
+
+    <!-- Unit 4: Trigonometric equations and identities -->
+    <section id="unit4">
+        <h2>Unit 4: Trigonometric equations and identities</h2>
+        <article id="inverse-trig">
+            <h3>Inverse trigonometric functions</h3>
+            <p>The <strong>inverse trigonometric functions</strong> (also called <strong>arcsine, arccosine, arctangent</strong>) reverse the operation of trigonometric functions. They find the angle when you know the trigonometric ratio.</p>
+            <ul>
+                <li><strong>sin⁻¹(x)</strong> or <strong>arcsin(x):</strong> Returns the angle whose sine is x. Range: [-90°, 90°] or [-π/2, π/2]</li>
+                <li><strong>cos⁻¹(x)</strong> or <strong>arccos(x):</strong> Returns the angle whose cosine is x. Range: [0°, 180°] or [0, π]</li>
+                <li><strong>tan⁻¹(x)</strong> or <strong>arctan(x):</strong> Returns the angle whose tangent is x. Range: (-90°, 90°) or (-π/2, π/2)</li>
+            </ul>
+            <p><strong>Important:</strong> Each inverse function returns a <strong>principal value</strong> (one specific angle). If other angles with the same trigonometric value are needed, you must find them using reference angles and quadrant information.</p>
+            <p><strong>Example finding all solutions:</strong> If sin(θ) = 0.5, then sin⁻¹(0.5) = 30° (principal value). But sin(θ) = 0.5 also when θ = 150°, 390°, etc.</p>
+            <div class="example"><strong>Example:</strong> If cos(θ) = 0.5, then θ = cos⁻¹(0.5) = 60° (principal). Other solutions: ..., -300°, -60°, 60°, 300°, ...</div>
+        </article>
+        <article id="angle-addition">
+            <h3>Angle addition identities</h3>
+            <p>The <strong>angle addition formulas</strong> allow you to find the trigonometric values of sums (or differences) of angles, even if the individual angles aren’t special angles. These formulas are crucial for expanding, simplifying, and solving trigonometric equations.</p>
+            <p><strong>Sine addition formulas:</strong></p>
+            <ul>
+                <li>sin(A + B) = sin(A)cos(B) + cos(A)sin(B)</li>
+                <li>sin(A − B) = sin(A)cos(B) − cos(A)sin(B)</li>
+            </ul>
+            <p><strong>Cosine addition formulas:</strong></p>
+            <ul>
+                <li>cos(A + B) = cos(A)cos(B) − sin(A)sin(B)</li>
+                <li>cos(A − B) = cos(A)cos(B) + sin(A)sin(B)</li>
+            </ul>
+            <p><strong>Tangent addition formula:</strong></p>
+            <ul>
+                <li>tan(A + B) = [tan(A) + tan(B)] / [1 − tan(A)tan(B)]</li>
+            </ul>
+            <div class="example"><strong>Example:</strong> Find sin(75°) = sin(45° + 30°):
+            <ul>
+                <li>sin(75°) = sin(45°)cos(30°) + cos(45°)sin(30°)</li>
+                <li>= (√2/2)(√3/2) + (√2/2)(1/2)</li>
+                <li>= √6/4 + √2/4 = (√6 + √2)/4 ≈ 0.966</li>
+            </ul>
+            </div>
+        </article>
+        <article id="trig-identities">
+            <h3>Using trigonometric identities</h3>
+            <p>Trigonometric <strong>identities</strong> are equations that are true for all values of the variable. They are powerful tools for simplifying expressions, solving equations, and proving other identities.</p>
+            <p><strong>Common trigonometric identities:</strong></p>
+            <ul>
+                <li><strong>Pythagorean:</strong> sin²(θ) + cos²(θ) = 1</li>
+                <li><strong>Reciprocal:</strong> csc(θ) = 1/sin(θ), sec(θ) = 1/cos(θ), cot(θ) = 1/tan(θ)</li>
+                <li><strong>Quotient:</strong> tan(θ) = sin(θ)/cos(θ), cot(θ) = cos(θ)/sin(θ)</li>
+                <li><strong>Double angle:</strong> sin(2θ) = 2sin(θ)cos(θ); cos(2θ) = cos²(θ) - sin²(θ)</li>
+                <li><strong>Cofunction:</strong> sin(90° - θ) = cos(θ), cos(90° - θ) = sin(θ)</li>
+            </ul>
+            <p><strong>Strategy for simplifying expressions and solving equations:</strong></p>
+            <ol>
+                <li>Look for patterns matching known identities</li>
+                <li>Rewrite everything in terms of sin and cos if possible</li>
+                <li>Factor and combine like terms</li>
+                <li>Apply identities to reduce complexity</li>
+                <li>Check for extraneous solutions when solving</li>
+            </ol>
+            <div class="example"><strong>Example: </strong>Simplify cos²(θ) − sin²(θ):
+            <ul>
+                <li>This is the double angle formula: cos(2θ)</li>
+                <li>Alternatively, using Pythagorean: cos²(θ) − (1 − cos²(θ)) = 2cos²(θ) − 1</li>
+            </ul>
+            </div>
+        </article>
+    </section>
+</div>
+
+<script>
+function checkThis(btn){
+    var problem = btn.parentElement;
+    var input = problem.querySelector('input');
+    var expected = input.getAttribute('data-answer').trim().toLowerCase();
+    var given = input.value.trim().toLowerCase();
+    var result = problem.querySelector('.result');
+
+    // try numeric comparison first
+    if(!isNaN(parseFloat(expected)) && expected !== ""){
+        var expNum = parseFloat(expected);
+        var givenNum = parseFloat(given);
+        if(!isNaN(givenNum) && Math.abs(expNum - givenNum) < 1e-9){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again (expected: ' + expected + ')';
+            result.style.color = 'red';
+        }
+    } else {
+        if(given === expected){
+            result.textContent = '✓ Correct';
+            result.style.color = 'green';
+        } else {
+            result.textContent = '✗ Try again';
+            result.style.color = 'red';
+        }
+    }
+}
+
+// Search functionality
+const searchIndex = [
+    { name: "Variables and Operations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 1", link: "../topics/algebra1.html#variables" },
+    { name: "Solving Equations and Inequalities", class: "9th Grade", subject: "Algebra 1", unit: "Unit 2", link: "../topics/algebra1.html#solving-equations" },
+    { name: "Working with Units", class: "9th Grade", subject: "Algebra 1", unit: "Unit 3", link: "../topics/algebra1.html#working-units" },
+    { name: "Linear Equations and Graphs", class: "9th Grade", subject: "Algebra 1", unit: "Unit 4", link: "../topics/algebra1.html#linear-equations" },
+    { name: "Forms of Linear Equations", class: "9th Grade", subject: "Algebra 1", unit: "Unit 5", link: "../topics/algebra1.html#forms-linear" },
+    { name: "Plane Figures", class: "9th Grade", subject: "Geometry", unit: "Unit 1", link: "../topics/geometry.html#unit1" },
+    { name: "Polygons", class: "9th Grade", subject: "Geometry", unit: "Unit 2", link: "../topics/geometry.html#unit2" },
+    { name: "Triangles", class: "9th Grade", subject: "Geometry", unit: "Unit 3", link: "../topics/geometry.html#unit3" },
+    { name: "Quadrilaterals", class: "9th Grade", subject: "Geometry", unit: "Unit 4", link: "../topics/geometry.html#unit4" },
+    { name: "Area and Perimeter", class: "9th Grade", subject: "Geometry", unit: "Unit 5", link: "../topics/geometry.html#unit5" },
+    { name: "Circles", class: "9th Grade", subject: "Geometry", unit: "Unit 10", link: "../topics/geometry.html#unit10" },
+    { name: "Transformations", class: "9th Grade", subject: "Geometry", unit: "Unit 13", link: "../topics/geometry.html#unit13" },
+    { name: "Polynomial Arithmetic", class: "10th Grade", subject: "Algebra 2", unit: "Unit 1", link: "../topics/algebra2.html#unit1" },
+    { name: "Complex Numbers", class: "10th Grade", subject: "Algebra 2", unit: "Unit 2", link: "../topics/algebra2.html#unit2" },
+    { name: "Logarithms", class: "10th Grade", subject: "Algebra 2", unit: "Unit 8", link: "../topics/algebra2.html#unit8" },
+    { name: "Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 1", link: "../topics/trigonometry.html#unit1" },
+    { name: "Trigonometric Functions", class: "10th Grade", subject: "Trigonometry", unit: "Unit 2", link: "../topics/trigonometry.html#unit2" },
+    { name: "Non-Right Triangles", class: "10th Grade", subject: "Trigonometry", unit: "Unit 3", link: "../topics/trigonometry.html#unit3" },
+    { name: "Equations and Identities", class: "10th Grade", subject: "Trigonometry", unit: "Unit 4", link: "../topics/trigonometry.html#unit4" },
+    { name: "Composite and Inverse Functions", class: "11th Grade", subject: "Pre-Calculus", unit: "Unit 1", link: "../topics/precalculus.html#unit1" },
+    { name: "Limits and Continuity", class: "12th Grade", subject: "Calculus", unit: "Unit 1", link: "../topics/calculus.html#unit1" },
+    { name: "Derivatives", class: "12th Grade", subject: "Calculus", unit: "Unit 2", link: "../topics/calculus.html#unit2" },
+    { name: "Analyzing Categorical Data", class: "12th Grade", subject: "Statistics", unit: "Unit 1", link: "../topics/statistics.html#unit1" },
+    { name: "Displaying Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 2", link: "../topics/statistics.html#unit2" },
+    { name: "Summarizing Quantitative Data", class: "12th Grade", subject: "Statistics", unit: "Unit 3", link: "../topics/statistics.html#unit3" },
+    { name: "Modeling Distributions", class: "12th Grade", subject: "Statistics", unit: "Unit 4", link: "../topics/statistics.html#unit4" },
+];
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+function performSearch() {
+    const query = searchInput.value.toLowerCase().trim();
+    if (query.length === 0) {
+        searchResults.innerHTML = '';
+        return;
+    }
+    const results = searchIndex.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.subject.toLowerCase().includes(query) ||
+        item.class.toLowerCase().includes(query) ||
+        item.unit.toLowerCase().includes(query)
+    );
+    if (results.length === 0) {
+        searchResults.innerHTML = '<div class="no-results">No results found</div>';
+        return;
+    }
+    searchResults.innerHTML = results.map(result => `
+        <a href="${result.link}" class="result-item">
+            <div class="result-title">${result.name}</div>
+            <div class="result-info">
+                <span class="result-class">${result.class}</span>
+                <span class="result-subject">${result.subject}</span>
+                <span class="result-unit">${result.unit}</span>
+            </div>
+        </a>
+    `).join('');
+}
+searchInput.addEventListener('input', performSearch);
+searchInput.addEventListener('focus', performSearch);
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.search-container')) {
+        searchResults.innerHTML = '';
+    }
+});
+</script>
+
+</body>
+</html>
