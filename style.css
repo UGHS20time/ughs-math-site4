@@ -599,3 +599,86 @@ body.homepage {
     color: #0c66e0;
     text-decoration: underline;
 }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #0a3d91;
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .navbar {
+        height: auto;
+        min-height: 55px;
+        padding: 6px 12px;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+    }
+
+    .navbar a {
+        margin-right: 0;
+        padding: 10px 0;
+        line-height: 1.2;
+    }
+
+    .search-container {
+        padding: 12px;
+    }
+
+    .search-input {
+        font-size: 16px;
+    }
+
+    .breadcrumbs {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+
+    .header {
+        padding: 24px 12px 8px;
+    }
+
+    h1,
+    .header h1 {
+        font-size: clamp(1.9rem, 9vw, 3rem);
+    }
+
+    .units {
+        padding: 0 12px;
+    }
+
+    .table-of-contents {
+        padding: 16px;
+    }
+
+    .units article {
+        padding: 14px;
+    }
+
+    .practice .problem {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .practice input[type="text"] {
+        width: 100%;
+        max-width: 220px;
+        min-height: 40px;
+    }
+
+    .practice button {
+        min-height: 40px;
+        padding: 8px 12px;
+    }
+
+    .toc-topics li {
+        padding-left: 16px;
+    }
+}
